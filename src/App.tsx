@@ -18,7 +18,6 @@ text-green-800
 const App = () => {
   return (
     <>
-      <p id="s-specialty"> Our Team </p>
       <h1 className="py-6 text-xl font-bold text-yellow-700 underline m-28">
         Hello world!
       </h1>
