@@ -2,6 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -15,6 +17,7 @@ html {
 }
 
 body {
+  background-color: grey;
   overflow-x: hidden;
   scrollbar-color: rgb(98 84 243);
   scrollbar-width: thin;
@@ -31,23 +34,6 @@ body::-webkit-scrollbar-thumb {
     border: 5px solid transparent;
     border-radius: 9px;
     background-clip: content-box;
-}
-
-h1{
-  color:${({ theme }) => theme.colors.heading};
-  font-size: 6rem;
-  font-weight: 900;
-}
-h2 {
-   color: ${({ theme }) => theme.colors.heading};
-   font-size: 4.4rem;
-   font-weight: 300;
-   white-space: normal;
-   text-align: center;
-}
-h3 {
-  font-size: 1.8rem;
-  font-weight: 400;
 }
 
 p {
