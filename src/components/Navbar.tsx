@@ -44,7 +44,7 @@ const Navbar = () => {
             </span>
           </LeftLogo>
 
-          <nav className="hidden gap-x-11 text-[1.9rem] md:flex">
+          <nav className="hidden gap-x-[4rem] text-[1.9rem] md:flex">
             <a href="/">
               <span className="font-bold text-teal-500 dark:text-teal-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
                 Home
