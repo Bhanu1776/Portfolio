@@ -135,8 +135,8 @@ const RayHero = styled.img`
 `;
 
 const LeftH1 = styled.h1`
-  font-size: 4.8rem !important;
   ${tw`
+    text-5xl
     order-2 
     z-10 
     col-span-5 
@@ -147,8 +147,10 @@ const LeftH1 = styled.h1`
     leading-tight 
     md:leading-normal 
     md:order-1 
-    sm:text-5xl
-`}
+    xxsm:text-6xl
+    sm:text-7xl
+    md:text-[4.8rem]
+    `}
 `;
 const ProfileImgDiv = styled.span`
   top: 3.5rem;
