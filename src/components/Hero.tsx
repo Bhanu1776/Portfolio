@@ -87,6 +87,8 @@ const Hero = () => {
           </Button2>
         </BtnDiv>
       </div>
+
+      <Hr />
     </>
   );
 };
@@ -228,6 +230,22 @@ font-semibold
 transition 
 text-midnight 
 dark:text-white
+`;
+
+const Hr = styled.hr`
+  margin-top: 7rem;
+  margin-bottom: 6.4rem;
+  height: 3.5rem;
+  width: 100%;
+  border-style: none;
+  text-align: center;
+
+  &::before {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: rgb(209 213 219 / 1);
+    content: "∿∿∿";
+  }
 `;
 
 export default Hero;
