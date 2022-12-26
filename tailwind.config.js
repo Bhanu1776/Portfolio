@@ -4,6 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: 'class', // or 'media' or 'class'
+  // important: true,
 
   theme: {
     container: {
@@ -20,6 +21,7 @@ module.exports = {
     },
     screens: {
       xsm: '425px',
+      xxsm: '320px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
