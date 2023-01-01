@@ -19,18 +19,18 @@ html {
 
 body {
   overflow-x: hidden;
-  scrollbar-color: rgb(98 84 243);
+  scrollbar-color: #14B8A6;
   scrollbar-width: thin;
 }
 body::-webkit-scrollbar {
   width: 1.5rem;
 }
 body::-webkit-scrollbar-track {
-   background-color: rgb(24 24 29);
+   background-color: white;
 }
 body::-webkit-scrollbar-thumb {
 
-  background: #fff;
+  background: #14B8A6;
     border: 5px solid transparent;
     border-radius: 9px;
     background-clip: content-box;
