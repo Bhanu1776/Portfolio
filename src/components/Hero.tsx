@@ -66,7 +66,7 @@ const Hero = () => {
             </svg>
           </BtnPrimary>
           <Button2 aria-label="button" type="button" className="group">
-            More about me
+            Download Resume
             <svg
               className="mt-0.5 ml-4 !z-50 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
               fill="none"
@@ -94,6 +94,7 @@ const Hero = () => {
 };
 
 const BgDiv = styled.span`
+  user-select: none;
   box-sizing: border-box;
   display: block;
   width: initial;
@@ -110,6 +111,7 @@ const BgDiv = styled.span`
   `}
 `;
 const RayBg = styled.img`
+  user-select: none;
   display: block;
   max-width: 100%;
   width: initial;
@@ -121,6 +123,7 @@ const RayBg = styled.img`
   padding: 0px;
 `;
 const RayHero = styled.img`
+  user-select: none;
   position: absolute;
   inset: 0px;
   box-sizing: border-box;
