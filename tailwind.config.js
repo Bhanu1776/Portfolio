@@ -20,21 +20,19 @@ module.exports = {
       },
     },
     screens: {
-      xsm: '425px',
       xxsm: '320px',
+      xsm: '425px',
+      'mobile': '425px',
       sm: '640px',
+      'tablet': '640px',
       md: '768px',
       lg: '1024px',
+      'laptop': '1024px',
       xl: '1280px',
+      'desktop': '1280px',
       '2xl': '1536px',
     },
     extend: {
-      screens: {
-        'mobile': '425px',
-        'tablet': '640px',
-        'laptop': '1024px',
-        'desktop': '1280px',
-      },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         mono: [...defaultTheme.fontFamily.mono],
