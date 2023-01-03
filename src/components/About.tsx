@@ -1,51 +1,47 @@
-import React from "react";
+import Images from "../Images/Imgindex";
 
 const About = () => {
   return (
     <>
-      <div className="grid md:grid-cols-2 gap-2 border sm:grid-row-2  border-orange-500">
-        <div className="border border-green-600 flex flex-col justify-center">
-          <h1 className="text-5xl font-headings tracking-wide font-semibold leading-tight ">
-            A Bit About Me
+      <div className="grid md:grid-cols-2 gap-2 sm:grid-row-2 ">
+        <div className="flex flex-col justify-center pr-12 ">
+          <h1 className="mobile:text-5xl xxsm:text-4xl font-headings tracking-wide font-semibold leading-tight ">
+            A Bit About Me & My Skills
           </h1>
-          <p className="font-sans tracking-wide">
-            Hello! My name is Bhanu Sunka. I am a hard-working engineering
-            student specializing in Information Technology from Xavier Institute
-            of engineering, Mumbai University.
-          </p>
-          <p>
-            I love to explore new technologies and leverage them to solve
-            real-life problems. I'm a passionate learner who's always willing to
-            learn and work across various technologies and domains. In my spare
-            time, I love contributing to open-source projects.
-          </p>
-          <p>
-            I am highly proficient in web development. I love to build
-            responsive user-friendly websites that look visually appealing, with
-            nice and fluid interactions, and close attention to User Experience.
-            I constantly strive for the best outcome on any project I take on.
-          </p>
+          <span className="bg-teal-500 mobile:w-[18rem] xxsm:w-[14rem] mt-4 min-w-20 h-2 bg-gradient-to-r from-teal-500 to-teal-300"></span>
+          <div className="mt-8">
+            <p className="font-sans tracking-wide">
+              Hello! My name is Bhanu Sunka. I am a hard-working engineering
+              student specializing in Information Technology from Xavier
+              Institute of engineering, Mumbai University.
+            </p>
+            <p>
+              I love to explore new technologies and leverage them to solve
+              real-life problems. I'm a passionate learner who's always willing
+              to learn and work across various technologies and domains. In my
+              spare time, I love contributing to open-source projects.
+            </p>
+            <p>
+              I am highly proficient in web development. I love to build
+              responsive user-friendly websites that look visually appealing,
+              with nice and fluid interactions, and close attention to User
+              Experience. I constantly strive for the best outcome on any
+              project I take on.
+            </p>
+          </div>
         </div>
-        {/* <div className="border border-yellow-600 flex flex-wrap h-[50rem]">
-          <div className="min-h-16 h-[25rem] border-b-rose-900 border-2 mr-4 mb-4 min-w-[2rem] w-[27rem] gap-2">
-            Languages
-          </div>
-          <div className="min-h-16 h-[25rem] border-b-rose-400 border-2 mb-4 min-w-[2rem] w-[27rem] mt-16">
-            Tools
-          </div>
-          <div className="min-h-16 h-[25rem] border-b-rose-900 border-2 mr-4 min-w-[2rem] mb-4 w-[27rem] gap-2">
-            Extra1
-          </div>
-          <div className="min-h-16 h-[25rem] border-b-rose-400 border-2 mb-4 min-w-[2rem] w-[27rem] mt-16">
-            Extra2
-          </div>
-        </div> */}
 
-        <div className="border border-yellow-600 grid sm:grid-cols-2 gap-3 sm:grid-rows-2 xsm:grid-cols-1">
-          <div className="border-2 h-[20rem] text-2xl bg-[#F1EFF8]">
-            <h1 className="flex justify-center mt-6 font-bold">
+        <div className="grid sm:grid-cols-2 gap-1 gap-x-14 sm:grid-rows-2 xxsm:mt-12 md:mt-0 xsm:grid-cols-1  ">
+          <img
+            src={Images.FooterBg}
+            alt=""
+            className="-scale-x-100 absolute right-0 mr-[-3.6rem] mt-[-13.7rem] tablet:h-[70rem] opacity-60 xxsm:h-[100rem] -z-4"
+          />
+          <div className=" bg-[#f2e8f39e] drop-shadow-md hover:drop-shadow-none z-10 max-h-[40rem] h-[25rem] xxsm:rounded-3xl mb-2 tablet:mb-0 tablet:rounded-xl laptop:text-2xl hover:bg-transparent hover:border-2 hover:border-pink-300 hover:border-dashed transition ease-in-out duration-700">
+            <h1 className="flex font-mono justify-center mt-10 text-slate-700 font-bold text-[1.7rem]">
               Programming Languages
             </h1>
+
             <div className="flex space-x-7 space-y-4 mt-8 flex-wrap mx-8">
               <img
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
@@ -79,11 +75,11 @@ const About = () => {
               />
             </div>
           </div>
-          <div className="border-2 h-[20rem] text-2xl bg-[#FBE6D4]">
-            <h1 className="flex justify-center mt-6 font-bold">
+          <div className="z-10 bg-[#fdffba59] drop-shadow-md hover:drop-shadow-none tablet:mt-14 max-h-[40rem] h-[25rem] xxsm:rounded-3xl mb-2 tablet:mb-0 tablet:rounded-xl text-2xl overflow-auto hover:bg-transparent hover:border-2 hover:border-yellow-300 hover:border-dashed transition ease-in-out duration-700">
+            <h1 className="flex font-mono text-slate-700 justify-center mt-10 font-bold text-[1.7rem]">
               Web Development
             </h1>
-            <div className="flex space-x-4 space-y-4 mt-8 flex-wrap mx-4">
+            <div className="flex space-x-6 space-y-4 mt-8 flex-wrap mx-6 ">
               <img
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
                 alt="html5"
@@ -131,9 +127,11 @@ const About = () => {
               />
             </div>
           </div>
-          <div className="border-2 h-[20rem] text-2xl bg-[#F0FFFC]">
-            <h1 className="flex justify-center mt-6 font-bold"> Tools </h1>
-            <div className="flex space-x-8 space-y-4 mt-8 flex-wrap mx-8">
+          <div className="z-10 bg-[#a8f9e84f] drop-shadow-md hover:drop-shadow-none mt-2 max-h-[40rem] h-[25rem] xxsm:rounded-3xl mb-2 tablet:mb-0 tablet:rounded-xl text-2xl hover:bg-transparent hover:border-2 hover:border-teal-300 hover:border-dashed transition ease-in-out duration-700">
+            <h1 className="flex font-mono text-slate-700 justify-center mt-10 font-bold text-[1.7rem]">
+              Tools
+            </h1>
+            <div className="flex space-x-7 space-y-4 mt-8 flex-wrap mx-8">
               <img
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
                 alt="Git"
@@ -162,8 +160,8 @@ const About = () => {
               /> */}
             </div>
           </div>
-          <div className="border-2 h-[20rem] text-2xl bg-[#F8E1EB]">
-            <h1 className="flex justify-center mt-6 font-bold font-mono">
+          <div className="z-10 bg-[#d6cfff52] drop-shadow-md hover:drop-shadow-none tablet:mt-14 max-h-[40rem] h-[25rem] xxsm:rounded-3xl mb-2 tablet:mb-0 tablet:rounded-xl text-2xl overflow-auto hover:bg-transparent hover:border-2 hover:border-purple-400 hover:border-dashed transition ease-in-out duration-700">
+            <h1 className="flex font-mono text-slate-700 justify-center mt-10 font-bold text-[1.7rem]">
               Other
             </h1>
             <div className="flex space-x-6 space-y-4 mt-8 flex-wrap mx-7">
