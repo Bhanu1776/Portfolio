@@ -15,20 +15,21 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scrollbar-color: #14B8A6;
+  scrollbar-width: thin;
 }
 
 body {
   overflow-x: hidden;
-  scrollbar-color: #14B8A6;
-  scrollbar-width: thin;
+
 }
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 1.5rem;
 }
-body::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
    background-color: white;
 }
-body::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
 
   background: #14B8A6;
     border: 5px solid transparent;
