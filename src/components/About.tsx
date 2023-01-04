@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import tw from "twin.macro";
 import Images from "../Images/Imgindex";
 import { Languages, Web, Tools, Other } from "./LangData";
+import Hr from "./Hr";
 // import { Tooltip } from "react-tooltip";
 // import "react-tooltip/dist/react-tooltip.css";
 
@@ -310,22 +310,6 @@ space-x-6
 space-y-4 
 mx-7
 mt-8 
-`;
-
-const Hr = styled.hr`
-  border-style: none;
-  text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 6.4rem;
-  height: 3.5rem;
-  width: 100%;
-
-  &::before {
-    content: "∿∿∿";
-    color: rgb(209 213 219 / 1);
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-  }
 `;
 
 export default About;
