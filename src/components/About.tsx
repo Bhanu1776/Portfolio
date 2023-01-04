@@ -147,7 +147,10 @@ font-headings
 tracking-wide 
 font-bold 
 leading-tight 
+xxsm:flex
+xxsm:justify-center
 xxsm:text-4xl 
+md:block
 mobile:text-5xl 
 `;
 
@@ -159,12 +162,17 @@ bg-gradient-to-r
 from-teal-500 
 to-teal-300
 // min-w-20 
-mobile:w-[18rem] 
-xxsm:w-[14rem] 
+
+mobile:w-[22rem] 
+md:w-[18rem] 
+xxsm:w-[16rem] 
+xxsm:h-[0.40rem]
+xxsm:mx-auto
+md:mx-0
 `;
 
 const LeftPara = tw.p`
-font-sans 
+font-sans
 tracking-wide 
 text-justify
 `;
