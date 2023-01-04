@@ -41,7 +41,14 @@ const About = () => {
             <CardHeading>Programming Languages</CardHeading>
             <LangDiv1>
               {Languages.map((val) => {
-                return <img src={val.src} alt={val.alt} width={val.width} />;
+                return (
+                  <img
+                    src={val.src}
+                    alt={val.alt}
+                    width={val.width}
+                    key={val.index}
+                  />
+                );
               })}
             </LangDiv1>
           </Card1>
@@ -50,7 +57,14 @@ const About = () => {
             <CardHeading>Web Development</CardHeading>
             <LangDiv2>
               {Web.map((val) => {
-                return <img src={val.src} alt={val.alt} width={val.width} />;
+                return (
+                  <img
+                    src={val.src}
+                    alt={val.alt}
+                    width={val.width}
+                    key={val.index}
+                  />
+                );
               })}
             </LangDiv2>
           </Card2>
@@ -59,7 +73,14 @@ const About = () => {
             <CardHeading>Tools</CardHeading>
             <LangDiv3>
               {Tools.map((val) => {
-                return <img src={val.src} alt={val.alt} width={val.width} />;
+                return (
+                  <img
+                    src={val.src}
+                    alt={val.alt}
+                    width={val.width}
+                    key={val.index}
+                  />
+                );
               })}
             </LangDiv3>
           </Card3>
@@ -68,7 +89,14 @@ const About = () => {
             <CardHeading>Other</CardHeading>
             <LangDiv4>
               {Other.map((val) => {
-                return <img src={val.src} alt={val.alt} width={val.width} />;
+                return (
+                  <img
+                    src={val.src}
+                    alt={val.alt}
+                    width={val.width}
+                    key={val.index}
+                  />
+                );
               })}
             </LangDiv4>
           </Card4>
