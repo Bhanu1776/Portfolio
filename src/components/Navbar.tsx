@@ -161,7 +161,7 @@ const Navbar = () => {
               <li>
                 <a href="/skills">
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
-                    Skills
+                    Blog
                   </span>
                 </a>
               </li>
@@ -198,7 +198,7 @@ h-[7rem]
 dark:bg-dark 
 dark:text-gray-100 
 backdrop-filter 
-backdrop-blur-lg 
+backdrop-blur-md 
 dark:bg-opacity-50
 `;
 
