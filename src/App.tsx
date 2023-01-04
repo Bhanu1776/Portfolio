@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import About from "./components/About";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
       <MainDiv>
         <Hero />
         <About />
-        {/* <Footer /> */}
+        <Footer />
       </MainDiv>
     </>
   );
