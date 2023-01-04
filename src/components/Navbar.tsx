@@ -62,7 +62,7 @@ const Navbar = () => {
             </a>
             <a href="/skills">
               <span className="font-normal text-gray-500 dark:text-gray-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
-                Skills
+                Blog
               </span>
             </a>
             <a href="/contact">
