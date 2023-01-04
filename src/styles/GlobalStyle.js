@@ -5,6 +5,16 @@ export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');             // For navbar
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');  // For Headings
 
+:root {
+  --rt-color-white: #fff;
+  --rt-color-dark: #222;
+  --rt-color-success: #8dc572;
+  --rt-color-error: #be6464;
+  --rt-color-warning: #f0ad4e;
+  --rt-color-info: #337ab7;
+  --rt-opacity: 0.9;
+}
+
 *{
     margin: 0;
     padding: 0;

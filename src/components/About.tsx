@@ -2,8 +2,8 @@ import tw from "twin.macro";
 import Images from "../Images/Imgindex";
 import { Languages, Web, Tools, Other } from "./LangData";
 import Hr from "./Hr";
-// import { Tooltip } from "react-tooltip";
-// import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 const About = () => {
   return (
@@ -41,14 +41,19 @@ const About = () => {
             <CardHeading>Programming Languages</CardHeading>
             <LangDiv1>
               {Languages.map((val) => {
-                return (
+                return [
                   <img
                     src={val.src}
                     alt={val.alt}
                     width={val.width}
                     key={val.index}
-                  />
-                );
+                    id={val.alt}
+                    data-tooltip-content={val.alt}
+                    data-tooltip-place="top"
+                    data-tooltip-delay-show={300}
+                  />,
+                  <Tooltip anchorId={val.alt} />,
+                ];
               })}
             </LangDiv1>
           </Card1>
@@ -57,14 +62,19 @@ const About = () => {
             <CardHeading>Web Development</CardHeading>
             <LangDiv2>
               {Web.map((val) => {
-                return (
+                return [
                   <img
                     src={val.src}
                     alt={val.alt}
                     width={val.width}
                     key={val.index}
-                  />
-                );
+                    id={val.alt}
+                    data-tooltip-content={val.alt}
+                    data-tooltip-place="top"
+                    data-tooltip-delay-show={300}
+                  />,
+                  <Tooltip anchorId={val.alt} />,
+                ];
               })}
             </LangDiv2>
           </Card2>
@@ -73,14 +83,19 @@ const About = () => {
             <CardHeading>Tools</CardHeading>
             <LangDiv3>
               {Tools.map((val) => {
-                return (
+                return [
                   <img
                     src={val.src}
                     alt={val.alt}
                     width={val.width}
                     key={val.index}
-                  />
-                );
+                    id={val.alt}
+                    data-tooltip-content={val.alt}
+                    data-tooltip-place="top"
+                    data-tooltip-delay-show={300}
+                  />,
+                  <Tooltip anchorId={val.alt} />,
+                ];
               })}
             </LangDiv3>
           </Card3>
@@ -89,14 +104,19 @@ const About = () => {
             <CardHeading>Other</CardHeading>
             <LangDiv4>
               {Other.map((val) => {
-                return (
+                return [
                   <img
                     src={val.src}
                     alt={val.alt}
                     width={val.width}
                     key={val.index}
-                  />
-                );
+                    id={val.alt}
+                    data-tooltip-content={val.alt}
+                    data-tooltip-place="top"
+                    data-tooltip-delay-show={100}
+                  />,
+                  <Tooltip anchorId={val.alt} />,
+                ];
               })}
             </LangDiv4>
           </Card4>
