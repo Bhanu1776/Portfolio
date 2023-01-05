@@ -67,7 +67,7 @@ const About = () => {
                     src={val.src}
                     alt={val.alt}
                     width={val.width}
-                    key={val.index}
+                    key={val.alt}
                     id={val.alt}
                     data-tooltip-content={val.alt}
                     data-tooltip-place="top"
@@ -88,7 +88,7 @@ const About = () => {
                     src={val.src}
                     alt={val.alt}
                     width={val.width}
-                    key={val.index}
+                    key={val.alt}
                     id={val.alt}
                     data-tooltip-content={val.alt}
                     data-tooltip-place="top"
@@ -109,7 +109,7 @@ const About = () => {
                     src={val.src}
                     alt={val.alt}
                     width={val.width}
-                    key={val.index}
+                    key={val.alt}
                     id={val.alt}
                     data-tooltip-content={val.alt}
                     data-tooltip-place="top"
@@ -149,7 +149,7 @@ font-bold
 leading-tight 
 xxsm:flex
 xxsm:justify-center
-xxsm:text-4xl 
+xxsm:text-[2.50rem] 
 md:block
 mobile:text-5xl 
 `;
@@ -207,6 +207,8 @@ z-10
 mb-3 
 max-h-[40rem] 
 drop-shadow-xl
+overflow-y-auto 
+overflow-x-hidden 
 hover:drop-shadow-none 
 hover:bg-transparent 
 hover:border-2 
@@ -245,7 +247,8 @@ mx-8
 const Card2 = tw.div`
 bg-[#fdffba59] 
 z-10 
-overflow-auto 
+overflow-y-auto 
+overflow-x-hidden 
 drop-shadow-2xl
 text-2xl 
 max-h-[40rem] 
@@ -278,6 +281,8 @@ mx-6
 const Card3 = tw.div`
 bg-[#a8f9e84f] 
 drop-shadow-2xl
+overflow-y-auto 
+overflow-x-hidden 
 z-10 
 mt-2 
 max-h-[40rem] 
@@ -310,7 +315,8 @@ mt-8
 const Card4 = tw.div`
 bg-[#d6cfff52] 
 z-10 
-overflow-auto 
+overflow-y-auto 
+overflow-x-hidden 
 drop-shadow-xl
 text-2xl 
 max-h-[40rem] 
