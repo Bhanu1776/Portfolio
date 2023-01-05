@@ -242,7 +242,7 @@ const Footer2 = () => {
               </div>
             </div>
           </div>
-          <p className="text-[1.7rem] px-4 tablet:justify-start flex justify-center md:px-24 font-headings pt-2 bg-slate-50 rounded-t-full">
+          <p className="tablet:text-[1.7rem] text-2xl px-4 tablet:justify-start flex justify-center md:px-24 font-headings pt-2 bg-slate-100 rounded-t-full">
             ©{new Date().getFullYear()} Bhanu Sunka
           </p>
         </form>

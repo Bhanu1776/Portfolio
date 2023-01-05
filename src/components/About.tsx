@@ -138,7 +138,7 @@ const LeftGrid = tw.div`
 flex 
 flex-col 
 justify-center 
-xxsm:pr-10
+xxsm:px-2
 tablet:pr-14 
 `;
 
