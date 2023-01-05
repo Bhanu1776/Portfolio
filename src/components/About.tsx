@@ -145,8 +145,9 @@ tablet:pr-14
 const LeftTitle = tw.h1`
 font-headings 
 tracking-wide 
-font-bold 
+font-extrabold
 leading-tight 
+text-slate-900
 xxsm:flex
 xxsm:justify-center
 xxsm:text-[2.50rem] 

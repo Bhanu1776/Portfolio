@@ -11,7 +11,7 @@ const Footer2 = () => {
         <form action="https://formspree.io/f/mvonoajk" method="POST">
           <BgImg src={Images.FooterBg} alt="" />
           <div className="grid md:grid-cols-3 md:grid-rows-2 gap-2 xxsm:grid-cols-1 ">
-            <div className="row-span-2 z-10 px-2 md:px-24 py-12 flex flex-col ">
+            <div className="row-span-2 z-10 !px-2 md:px-22 py-12 flex flex-col">
               <h1 className="text-[1.7rem] font-semibold text-slate-700 font-headings">
                 GENERAL
               </h1>
@@ -242,7 +242,7 @@ const Footer2 = () => {
               </div>
             </div>
           </div>
-          <p className="tablet:text-[1.7rem] text-2xl px-4 tablet:justify-start flex justify-center md:px-24 font-headings pt-2 bg-slate-100 rounded-t-full">
+          <p className="tablet:text-[1.7rem] text-2xl px-4 tablet:justify-start flex justify-center md:px-20 font-sans font-bold pt-3 pb-1 bg-slate-100 rounded-t-full">
             ©{new Date().getFullYear()} Bhanu Sunka
           </p>
         </form>

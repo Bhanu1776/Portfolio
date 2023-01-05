@@ -147,7 +147,7 @@ const LeftH1 = styled.h1`
     z-10 
     col-span-5 
     mt-[5.1rem] 
-    font-headings 
+    [font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif]
     tracking-wide 
     font-bold 
     leading-tight 
