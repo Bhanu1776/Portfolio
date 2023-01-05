@@ -11,7 +11,7 @@ const Footer2 = () => {
         <form action="https://formspree.io/f/mvonoajk" method="POST">
           <BgImg src={Images.FooterBg} alt="" />
           <div className="grid md:grid-cols-3 md:grid-rows-2 gap-2 xxsm:grid-cols-1 ">
-            <div className="row-span-2 px-2 md:px-24 py-12 flex flex-col ">
+            <div className="row-span-2 z-10 px-2 md:px-24 py-12 flex flex-col ">
               <h1 className="text-[1.7rem] font-semibold text-slate-700 font-headings">
                 GENERAL
               </h1>
@@ -24,10 +24,10 @@ const Footer2 = () => {
                 <p className="font-sans">Blog</p>
               </div>
 
-              <h1 className="mt-16 text-[1.7rem] mb-3 font-semibold text-slate-700 font-headings ">
+              <h1 className="mt-16 text-[1.7rem] z-10 mb-3 font-semibold text-slate-700 font-headings ">
                 SOCIAL
               </h1>
-              <div className="flex flex-row">
+              <div className="flex flex-row z-10">
                 <a
                   href="https://github.com/Bhanu1776"
                   className="text-gray-600 dark:text-gray-400 important"
@@ -198,7 +198,7 @@ const Footer2 = () => {
               </div>
             </div>
 
-            <div className="col-span-2 xxsm:px-2 md:px-0 pt-12">
+            <div className="col-span-2 z-10 xxsm:px-2 md:px-0 pt-12">
               <h1 className="text-4xl text-slate-700 font-headings font-bold mb-10">
                 Get In Touch
               </h1>
@@ -229,7 +229,6 @@ const Footer2 = () => {
                 id="message"
                 name="message"
                 placeholder="Enter message"
-                // type="text"
                 required
                 className="w-full px-5 mb-8 md:-mt-8 bg-[#ffffff8c] py-14 text-2xl dark:bg-dark border-gray-300 dark:border-gray-400 rounded-[2rem] placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-[#F8FAFC] dark:focus:ring-offset-midnight"
               />
@@ -243,7 +242,7 @@ const Footer2 = () => {
               </div>
             </div>
           </div>
-          <p className="text-[1.7rem] px-24 font-headings pt-2 bg-slate-50 rounded-t-full">
+          <p className="text-[1.7rem] px-4 tablet:justify-start flex justify-center md:px-24 font-headings pt-2 bg-slate-50 rounded-t-full">
             ©{new Date().getFullYear()} Bhanu Sunka
           </p>
         </form>
@@ -254,17 +253,14 @@ const Footer2 = () => {
 
 const BgImg = tw.img`
 absolute 
-
-// right-0 
-// -scale-x-100 
-// mr-[-3.6rem] 
 mt-[-5.7rem] 
-xxsm:h-[70rem] 
-xxsm:opacity-60 
+xxsm:h-[60rem] 
+xxsm:opacity-50 
+xxsm:-ml-8
+tablet:ml-0
 tablet:h-[40rem] 
 tablet:w-[80rem]
 tablet:opacity-80 
-// -z-10
 `;
 
 export default Footer2;
