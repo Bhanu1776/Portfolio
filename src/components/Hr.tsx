@@ -6,7 +6,7 @@ const Hr = () => {
 
 const HorizontalRuler = styled.hr`
   margin-top: 7rem;
-  margin-bottom: 6.4rem;
+  margin-bottom: 6rem;
   height: 3.5rem;
   width: 100%;
   border-style: none;
