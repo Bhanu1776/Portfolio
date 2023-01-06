@@ -10,31 +10,21 @@ const Footer2 = () => {
         <hr />
         <form action="https://formspree.io/f/mvonoajk" method="POST">
           <BgImg src={Images.FooterBg} alt="" />
-          <div className="grid md:grid-cols-3 md:grid-rows-2 gap-2 xxsm:grid-cols-1 ">
-            <div className="row-span-2 z-10 !px-2 md:px-22 py-12 flex flex-col">
-              <h1 className="text-[1.7rem] font-semibold text-slate-700 font-headings">
-                GENERAL
-              </h1>
-              <div className="flex flex-wrap gap-8 ">
-                <p className="font-sans hover:underline hover:text-teal-600 cursor-pointer ">
-                  Home
-                </p>
-                <p className="font-sans">About</p>
-                <p className="font-sans">Projects</p>
-                <p className="font-sans">Blog</p>
-              </div>
+          <MainGrid>
+            <LeftGrid>
+              <LeftHeading1>GENERAL</LeftHeading1>
+              <UpperDiv>
+                <List>Home</List>
+                <List>About</List>
+                <List>Projects</List>
+                <List>Blog</List>
+              </UpperDiv>
 
-              <h1 className="mt-16 text-[1.7rem] z-10 mb-3 font-semibold text-slate-700 font-headings ">
-                SOCIAL
-              </h1>
-              <div className="flex flex-row z-10">
-                <a
-                  href="https://github.com/Bhanu1776"
-                  className="text-gray-600 dark:text-gray-400 important"
-                >
+              <LeftHeading2>SOCIAL</LeftHeading2>
+              <IconsDiv>
+                <a href="https://github.com/Bhanu1776">
                   <span className="sr-only">GitHub</span>
-                  <svg
-                    className="w-14 h-14 transform hover:rotate-[-4deg] transition hover:text-teal-500"
+                  <LinkSvg
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -50,17 +40,14 @@ const Footer2 = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     ></path>
-                  </svg>
+                  </LinkSvg>
                   <Tooltip anchorId="Github" />
                 </a>
 
-                <a
-                  href="https://in.linkedin.com/in/bhanu-sunka-94a24a21a?original_referer=https%3A%2F%2Fwww.google.com%2F"
-                  className="text-gray-600 dark:text-gray-400 important"
-                >
+                <a href="https://in.linkedin.com/in/bhanu-sunka-94a24a21a?original_referer=https%3A%2F%2Fwww.google.com%2F">
                   <span className="sr-only">LinkedIn</span>
-                  <svg
-                    className="w-14 h-14 transform hover:rotate-[-7deg] transition hover:text-teal-500"
+                  <LinkSvg
+                    className=""
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -104,13 +91,10 @@ const Footer2 = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     ></path>
-                  </svg>
+                  </LinkSvg>
                   <Tooltip anchorId="LinkedIn" />
                 </a>
-                <a
-                  href="https://www.instagram.com/bhanu_1776/"
-                  className="text-gray-600 dark:text-gray-400 important"
-                >
+                <a href="https://www.instagram.com/bhanu_1776/">
                   <span className="sr-only">Instagram</span>
                   <svg
                     className="w-14 h-13 transform hover:rotate-[-7deg] fill-slate-600 transition hover:fill-teal-500"
@@ -128,13 +112,9 @@ const Footer2 = () => {
                   </svg>
                   <Tooltip anchorId="Instagram" />
                 </a>
-                <a
-                  href="https://twitter.com/SunkaBhanu"
-                  className="text-gray-600 dark:text-gray-400 important"
-                >
+                <a href="https://twitter.com/SunkaBhanu">
                   <span className="sr-only">Twitter</span>
-                  <svg
-                    className="w-14 h-14 transform hover:rotate-[-7deg] transition hover:text-teal-500"
+                  <LinkSvg
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -150,13 +130,10 @@ const Footer2 = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     ></path>
-                  </svg>
+                  </LinkSvg>
                   <Tooltip anchorId="Twitter" />
                 </a>
-                <a
-                  href="https://dev.to/bhanu1776"
-                  className="text-gray-600 dark:text-gray-400 important"
-                >
+                <a href="https://dev.to/bhanu1776">
                   <span className="sr-only">DEV</span>
                   <svg
                     stroke="currentColor"
@@ -174,10 +151,7 @@ const Footer2 = () => {
                   </svg>
                   <Tooltip anchorId="DEV" />
                 </a>
-                <a
-                  href="https://www.buymeacoffee.com/Bhanu1776"
-                  className="text-gray-600 dark:text-gray-400 important"
-                >
+                <a href="https://www.buymeacoffee.com/Bhanu1776">
                   <span className="sr-only">Support</span>
                   <svg
                     className="w-14 h-11 mt-2 transform hover:rotate-[-7deg] transition hover:text-teal-500"
@@ -195,56 +169,44 @@ const Footer2 = () => {
                   </svg>
                   <Tooltip anchorId="Support" />
                 </a>
-              </div>
-            </div>
+              </IconsDiv>
+            </LeftGrid>
 
-            <div className="col-span-2 z-10 xxsm:px-2 md:px-0 pt-12">
-              <h1 className="text-4xl text-slate-700 font-headings font-bold mb-10">
-                Get In Touch
-              </h1>
-              <div className="relative flex my-4 gap-8 space-y-0 tablet:flex-row flex-col">
+            <RightGrid>
+              <RightHeading>Get In Touch</RightHeading>
+              <UpperInputDiv>
                 <label className="sr-only">Email address</label>
-                <input
+                <UpperInput
                   id="username"
                   name="username"
                   placeholder="Enter Your Name"
                   type="text"
                   required
                   autoComplete="no"
-                  className="w-full px-5 py-5 text-2xl bg-[#ffffffa4] dark:bg-dark border-gray-300 dark:border-gray-400 rounded-full placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-[#F8FAFC] dark:focus:ring-offset-midnight"
                 />
-                <input
+                <UpperInput
                   id="email"
                   name="email"
                   placeholder="Enter Your Email"
                   type="email"
                   required
-                  className="w-full px-5 py-5 text-2xl bg-[#ffffffa4] dark:bg-dark border-gray-300 dark:border-gray-400 rounded-full placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-[#F8FAFC] dark:focus:ring-offset-midnight"
                 />
-              </div>
-            </div>
+              </UpperInputDiv>
+            </RightGrid>
 
-            <div className="col-span-2 xxsm:px-2 z-10 md:px-0">
-              <textarea
+            <LowerDiv>
+              <TextArea
                 id="message"
                 name="message"
                 placeholder="Enter message"
                 required
-                className="w-full px-5 mb-8 md:-mt-8 bg-[#ffffff8c] py-14 text-2xl dark:bg-dark border-gray-300 dark:border-gray-400 rounded-[2rem] placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-[#F8FAFC] dark:focus:ring-offset-midnight"
               />
-              <div className="flex flex-row-reverse">
-                <button
-                  type="submit"
-                  className="flex items-center mb-4 justify-center text-2xl w-full px-12 py-3 font-medium text-white bg-indigo-500 border border-transparent rounded-full hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0"
-                >
-                  Contact Me!
-                </button>
-              </div>
-            </div>
-          </div>
-          <p className="tablet:text-[1.7rem] text-2xl px-4 tablet:justify-start flex justify-center md:px-20 font-sans font-bold pt-3 pb-1 bg-slate-100 rounded-t-full">
-            ©{new Date().getFullYear()} Bhanu Sunka
-          </p>
+              <ButtonDiv>
+                <PurpleBtn type="submit">Contact Me!</PurpleBtn>
+              </ButtonDiv>
+            </LowerDiv>
+          </MainGrid>
+          <Copyright>©{new Date().getFullYear()} Bhanu Sunka</Copyright>
         </form>
       </footer>
     </>
@@ -261,6 +223,190 @@ tablet:ml-0
 tablet:h-[40rem] 
 tablet:w-[80rem]
 tablet:opacity-80 
+`;
+
+const MainGrid = tw.div`
+grid 
+gap-2 
+xxsm:grid-cols-1
+md:grid-cols-3 
+md:grid-rows-2 
+`;
+
+const LeftGrid = tw.div`
+flex 
+flex-col
+row-span-2 
+z-10 
+!px-2 
+py-12 
+md:px-20 
+`;
+
+const LeftHeading1 = tw.h1`
+text-slate-700 
+text-[1.7rem] 
+font-semibold 
+font-headings
+`;
+
+const UpperDiv = tw.div`
+flex 
+flex-wrap 
+gap-8
+`;
+
+const List = tw.p`
+font-sans 
+cursor-pointer
+hover:underline 
+hover:text-teal-600 
+`;
+
+const LeftHeading2 = tw.h1`
+text-slate-700 
+font-semibold 
+font-headings
+text-[1.7rem] 
+z-10 
+mt-16 
+mb-3 
+`;
+
+const IconsDiv = tw.div`
+flex 
+flex-row 
+z-10
+`;
+
+const LinkSvg = tw.svg`
+w-14 
+h-14 
+transform 
+transition 
+hover:rotate-[-7deg] 
+hover:text-teal-500
+`;
+
+const RightGrid = tw.div`
+col-span-2 
+z-10 
+xxsm:px-2 
+md:px-0 pt-12
+`;
+
+const RightHeading = tw.h1`
+text-slate-700 
+font-headings 
+font-bold 
+text-4xl 
+mb-10
+`;
+
+const UpperInputDiv = tw.div`
+relative 
+flex 
+flex-col
+gap-8 
+space-y-0 
+my-4 
+tablet:flex-row 
+`;
+
+const UpperInput = tw.input`
+bg-[#ffffffa4] 
+border-gray-300 
+placeholder-slate-500 
+rounded-full 
+w-full 
+px-5 
+py-5 
+text-2xl 
+dark:bg-dark 
+dark:border-gray-400 
+dark:focus:ring-indigo-400 
+dark:focus:ring-offset-midnight
+focus:outline-none 
+focus:ring-2 
+focus:ring-indigo-500 
+focus:ring-offset-2 
+focus:ring-offset-[#F8FAFC] 
+`;
+
+const LowerDiv = tw.div`
+col-span-2 
+z-10 
+xxsm:px-2 
+md:px-0
+`;
+
+const TextArea = tw.textarea`
+bg-[#ffffff8c] 
+border-gray-300 
+placeholder-slate-500 
+text-2xl 
+rounded-[2rem] 
+w-full 
+px-5 
+py-14 
+mb-8 
+focus:outline-none 
+focus:ring-2 
+focus:ring-indigo-500 
+focus:ring-offset-2 
+focus:ring-offset-[#F8FAFC] 
+dark:bg-dark 
+dark:border-gray-400 
+dark:focus:ring-indigo-400 
+dark:focus:ring-offset-midnight
+md:-mt-8 
+`;
+
+const ButtonDiv = tw.div`
+flex 
+flex-row-reverse
+`;
+
+const PurpleBtn = tw.button`
+flex 
+justify-center 
+items-center 
+text-2xl 
+font-medium 
+border 
+border-transparent 
+rounded-full 
+text-white 
+bg-indigo-500 
+w-full 
+mb-4 
+px-12 
+py-3 
+hover:bg-indigo-400 
+focus:outline-none 
+focus:ring-2 
+focus:ring-white 
+focus:ring-offset-2 
+focus:ring-offset-indigo-700 
+sm:mt-0 
+sm:ml-3 
+sm:w-auto 
+sm:flex-shrink-0
+`;
+
+const Copyright = tw.p`
+flex 
+justify-center 
+[font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif]
+text-2xl 
+bg-slate-100 
+rounded-t-full
+px-4 
+pt-3 
+pb-1 
+tablet:text-[1.7rem]
+tablet:justify-start 
+md:px-20 
 `;
 
 export default Footer2;
