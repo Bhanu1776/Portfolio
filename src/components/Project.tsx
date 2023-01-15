@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import Images from "../Images/Imgindex";
-import Hr from "./Hr";
 
 const Project = () => {
   return (
@@ -292,7 +291,6 @@ const Project = () => {
           </Span1>
         </div>
       </MainGrid>
-      <Hr />
     </>
   );
 };

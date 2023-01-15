@@ -5,7 +5,9 @@ import Hr from "./Hr";
 const Work = () => {
   return (
     <>
-      <h1 className="text-5xl font-headings font-bold">Work Experience</h1>
+      <h1 className="text-5xl font-headings mt-36 font-bold">
+        Work Experience
+      </h1>
       <p className="font-sans text-3xl mb-16">
         Here's a quick rundown of my most recent experiences.
       </p>
