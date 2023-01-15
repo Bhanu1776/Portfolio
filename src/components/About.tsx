@@ -1,7 +1,6 @@
 import tw from "twin.macro";
 import Images from "../Images/Imgindex";
 import { Languages, Web, Tools, Other } from "./LangData";
-import Hr from "./Hr";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
@@ -122,7 +121,6 @@ const About = () => {
           </Card4>
         </RightGrid>
       </GridDiv>
-      <Hr />
     </>
   );
 };
