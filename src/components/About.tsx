@@ -220,7 +220,7 @@ xxsm:h-[19rem]
 xxsm:rounded-3xl 
 tablet:h-[25rem] 
 tablet:mb-0 
-tablet:rounded-xl 
+tablet:rounded-2xl 
 laptop:text-2xl 
 `;
 
@@ -264,7 +264,7 @@ xxsm:rounded-3xl
 xxsm:h-[19rem] 
 tablet:mt-14 
 tablet:h-[25rem] 
-tablet:rounded-xl 
+tablet:rounded-2xl 
 tablet:mb-0 
 `;
 
@@ -298,7 +298,7 @@ duration-700
 xxsm:rounded-3xl 
 xxsm:h-[19rem] 
 tablet:mb-0 
-tablet:rounded-xl 
+tablet:rounded-2xl 
 tablet:h-[25rem] 
 `;
 
@@ -333,7 +333,7 @@ xxsm:rounded-3xl
 tablet:mt-14 
 tablet:h-[25rem]
 tablet:mb-0 
-tablet:rounded-xl 
+tablet:rounded-2xl 
 `;
 
 const LangDiv4 = tw.div`
