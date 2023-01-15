@@ -1,0 +1,19 @@
+* Code used in project section for cards
+    <ProjectCards
+        title="Freelansters"
+        para=""
+        img={Images.Freelansters}
+        btnText="Visit Freelansters"
+        reset=""
+        color="purple"
+      />
+      <ProjectCards
+        title="Venue Booking System"
+        para=""
+        img={Images.Venue}
+        btnText="Source Code"
+        reset={TabDimen}
+        color="green"
+      />
+
+
