@@ -3,10 +3,10 @@ import tw from "twin.macro";
 import Images from "../Images/Imgindex";
 import Hr from "./Hr";
 
-const project = () => {
+const Project = () => {
   return (
     <>
-      <div className="flex flex-col items-center gap-4 mt-20 mb-16">
+      <div className="flex flex-col items-center gap-4 mt-28 mb-16">
         <h2 className="text-3xl tablet:text-4xl text-center font-headings text-indigo-500">
           PROJECTS
         </h2>
@@ -449,4 +449,4 @@ const Img = styled.img`
   `}
 `;
 
-export default project;
+export { Project, Button };
