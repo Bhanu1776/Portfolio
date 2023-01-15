@@ -2,11 +2,12 @@ import tw from "twin.macro";
 import Images from "../Images/Imgindex";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+import { Link } from "react-scroll";
 
 const Footer2 = () => {
   return (
     <>
-      <footer className="relative">
+      <footer id="Footer" className="relative">
         <hr />
         <form action="https://formspree.io/f/mvonoajk" method="POST">
           <BgImg src={Images.FooterBg} alt="" />
@@ -14,10 +15,50 @@ const Footer2 = () => {
             <LeftGrid>
               <LeftHeading1>GENERAL</LeftHeading1>
               <UpperDiv>
-                <List>Home</List>
-                <List>About</List>
-                <List>Projects</List>
-                <List>Blog</List>
+                <Link
+                  to="Home"
+                  spy={true}
+                  hashSpy={true}
+                  isDynamic={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  <List>Home</List>
+                </Link>
+                <Link
+                  to="About"
+                  spy={true}
+                  hashSpy={true}
+                  isDynamic={true}
+                  smooth={true}
+                  offset={-105}
+                  duration={400}
+                >
+                  <List>About</List>
+                </Link>
+                <Link
+                  to="Project"
+                  spy={true}
+                  hashSpy={true}
+                  isDynamic={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={300}
+                >
+                  <List>Projects</List>
+                </Link>
+                <Link
+                  to="Work"
+                  spy={true}
+                  hashSpy={true}
+                  isDynamic={true}
+                  smooth={true}
+                  offset={-240}
+                  duration={200}
+                >
+                  <List>Work</List>
+                </Link>
               </UpperDiv>
 
               <LeftHeading2>SOCIAL</LeftHeading2>
@@ -254,9 +295,15 @@ const UpperDiv = tw.div`
 flex 
 flex-wrap 
 gap-8
+mt-4
 `;
 
-const List = tw.p`
+const List = tw.a`
+[opacity: .7;]
+[font-size: 1.65rem;]
+[line-height: 1.5;]
+[margin-top: 1rem;]
+[font-weight:400;]
 font-sans 
 cursor-pointer
 hover:underline 

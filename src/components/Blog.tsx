@@ -3,7 +3,7 @@ import tw from "twin.macro";
 const Blog = () => {
   return (
     <>
-      <Div>
+      <Div id="Blog">
         <H2>Blogs</H2>
         <H1>Coming Soon</H1>
         <P>Stay Tuned!</P>

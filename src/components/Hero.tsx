@@ -2,12 +2,16 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import Images from "../Images/Imgindex";
 import Hr from "./Hr";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
     <>
       {/* //* Background Ray */}
-      <div className="absolute z-10 overflow-hidden -top-32 md:-top-72 md:right-36">
+      <div
+        id="Home"
+        className="absolute z-10 overflow-hidden -top-32 md:-top-72 md:right-36"
+      >
         <BgDiv>
           <RayBg
             alt=""
@@ -46,26 +50,36 @@ const Hero = () => {
 
         {/* //* Bottom Buttons */}
         <BtnDiv>
-          <BtnPrimary aria-label="button" type="button" className="group">
-            Hire Me
-            <svg
-              className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-white dark:stroke-midnight"
-              fill="none"
-              width="12"
-              height="12"
-              viewBox="0 0 10 10"
-              aria-hidden="true"
-            >
-              <path
-                className="transition opacity-0 group-hover:opacity-100"
-                d="M0 5h7"
-              ></path>
-              <path
-                className="transition group-hover:translate-x-[3px]"
-                d="M1 1l4 4-4 4"
-              ></path>
-            </svg>
-          </BtnPrimary>
+          <Link
+            to="Footer"
+            spy={true}
+            hashSpy={true}
+            isDynamic={true}
+            smooth={true}
+            offset={-100}
+            duration={200}
+          >
+            <BtnPrimary aria-label="button" type="button" className="group">
+              Hire Me
+              <svg
+                className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-white dark:stroke-midnight"
+                fill="none"
+                width="12"
+                height="12"
+                viewBox="0 0 10 10"
+                aria-hidden="true"
+              >
+                <path
+                  className="transition opacity-0 group-hover:opacity-100"
+                  d="M0 5h7"
+                ></path>
+                <path
+                  className="transition group-hover:translate-x-[3px]"
+                  d="M1 1l4 4-4 4"
+                ></path>
+              </svg>
+            </BtnPrimary>
+          </Link>
           <Button2 aria-label="button" type="button" className="group">
             Download Resume
             <svg

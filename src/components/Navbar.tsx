@@ -2,6 +2,7 @@ import Images from "../Images/Imgindex";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -45,31 +46,71 @@ const Navbar = () => {
           </LeftLogo>
 
           <nav className="hidden gap-x-[4rem] text-[1.9rem] md:flex">
-            <a href="/">
+            <Link
+              to="Home"
+              spy={true}
+              hashSpy={true}
+              isDynamic={true}
+              smooth={true}
+              offset={-100}
+              duration={200}
+            >
               <span className="font-bold text-teal-500 dark:text-teal-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
                 Home
               </span>
-            </a>
-            <a href="/about">
+            </Link>
+            <Link
+              to="About"
+              spy={true}
+              hashSpy={true}
+              isDynamic={true}
+              smooth={true}
+              offset={-105}
+              duration={300}
+            >
               <span className="font-normal text-gray-500 dark:text-gray-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
                 About
               </span>
-            </a>
-            <a href="/projects">
+            </Link>
+            <Link
+              to="Project"
+              spy={true}
+              hashSpy={true}
+              isDynamic={true}
+              smooth={true}
+              offset={-100}
+              duration={400}
+            >
               <span className="font-normal text-gray-500 dark:text-gray-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
                 Projects
               </span>
-            </a>
-            <a href="/skills">
+            </Link>
+            <Link
+              to="Work"
+              spy={true}
+              hashSpy={true}
+              isDynamic={true}
+              smooth={true}
+              offset={-240}
+              duration={500}
+            >
+              <span className="font-normal text-gray-500 dark:text-gray-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
+                Work
+              </span>
+            </Link>
+            <Link
+              to="Blog"
+              spy={true}
+              hashSpy={true}
+              isDynamic={true}
+              smooth={true}
+              offset={-200}
+              duration={400}
+            >
               <span className="font-normal text-gray-500 dark:text-gray-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
                 Blog
               </span>
-            </a>
-            <a href="/contact">
-              <span className="font-normal text-gray-500 dark:text-gray-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
-                Contact
-              </span>
-            </a>
+            </Link>
           </nav>
 
           <ButtonDiv>
@@ -138,39 +179,84 @@ const Navbar = () => {
             </CloseBtn>
             <ul className="space-y-9">
               <li>
-                <a href="/">
+                <Link
+                  to="Home"
+                  spy={true}
+                  hashSpy={true}
+                  isDynamic={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={200}
+                  onClick={() => setOpenMenu(false)}
+                >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
                     Home
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about">
+                <Link
+                  to="About"
+                  spy={true}
+                  hashSpy={true}
+                  isDynamic={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={300}
+                  onClick={() => setOpenMenu(false)}
+                >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
                     About
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/projects">
+                <Link
+                  to="Project"
+                  spy={true}
+                  hashSpy={true}
+                  isDynamic={true}
+                  smooth={true}
+                  offset={-80}
+                  duration={400}
+                  onClick={() => setOpenMenu(false)}
+                >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
                     Projects
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/skills">
+                <Link
+                  to="Work"
+                  spy={true}
+                  hashSpy={true}
+                  isDynamic={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  onClick={() => setOpenMenu(false)}
+                >
+                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
+                    Work
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="Blog"
+                  spy={true}
+                  hashSpy={true}
+                  isDynamic={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={400}
+                  onClick={() => setOpenMenu(false)}
+                >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
                     Blog
                   </span>
-                </a>
-              </li>
-              <li>
-                <a href="/contact">
-                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
-                    Contact
-                  </span>
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="pt-6 mt-6 border-t border-gray-200 dark:border-gray-200/10">

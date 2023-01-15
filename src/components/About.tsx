@@ -7,7 +7,7 @@ import "react-tooltip/dist/react-tooltip.css";
 const About = () => {
   return (
     <>
-      <GridDiv>
+      <GridDiv id="About">
         <LeftGrid>
           <LeftTitle>A Bit About Me & My Skills</LeftTitle>
           <TitleDivider />

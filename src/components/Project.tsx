@@ -5,7 +5,10 @@ import Images from "../Images/Imgindex";
 const Project = () => {
   return (
     <>
-      <div className="flex flex-col items-center gap-4 mt-28 mb-16">
+      <div
+        id="Project"
+        className="flex flex-col items-center gap-4 mt-28 mb-16"
+      >
         <h2 className="text-3xl tablet:text-4xl text-center font-headings text-indigo-500">
           PROJECTS
         </h2>
