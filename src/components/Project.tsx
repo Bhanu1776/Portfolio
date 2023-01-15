@@ -299,36 +299,36 @@ const project = () => {
 
 const MainGrid = styled.div`
   ${tw`
-    p-2
-    md:p-0
-    mb-20
     grid
-    md:grid-cols-2
+    grid-cols-1
     gap-2
     rounded-[2.5rem]
-    grid-cols-1
+    mb-20
+    p-2
+    md:p-0
+    md:grid-cols-2
     `}
 `;
 
 const LeftGrid = styled.div`
   ${tw`
-  self-end 
-  col-span-1 
-  md:m-8
-  md:ml-20 
-  !mb-20 
-  text-center 
-  md:text-left
   flex
   flex-col
+  self-end 
+  col-span-1 
+  text-center 
+  !mb-20 
+  md:text-left
+  md:m-8
+  md:ml-20 
 `}
 
   &>h2 {
     ${tw` 
-    mt-0 
-    ml-2 
     font-headings 
     font-bold 
+    mt-0 
+    ml-2 
     mb-10
     `}
   }
@@ -346,30 +346,30 @@ const LeftGrid = styled.div`
 
 const Button = styled.a`
   ${tw`
+    bg-midnight 
+    text-white 
     inline-flex 
     text-[1.7rem] 
     items-center 
     rounded-full 
+    font-semibold 
+    no-underline
+    transition
     px-10 
     py-3.5 
     mt-16 
-    font-semibold 
-    transition
-    bg-midnight 
-    text-white 
     dark:bg-gray-200 
     dark:text-midnight 
     hover:bg-slate-700 
-    no-underline
   `}
 
   svg {
     ${tw`
+      stroke-2 
+      stroke-white 
       mt-0.5 
       ml-4 
       -mr-3 
-      stroke-2 
-      stroke-white 
       dark:stroke-midnight
     `}
   }
@@ -379,40 +379,40 @@ const Button2 = tw.a`
   inline-flex 
   relative
   z-10
+  font-semibold 
+  transition 
+  text-midnight 
   text-[1.7rem] 
   items-center 
   rounded-full 
   px-9 
   py-4 
-  font-semibold 
-  transition 
-  text-midnight 
   dark:text-white
 `;
 
 const Span1 = styled.span`
   box-sizing: border-box;
   display: inline-block;
+  position: relative;
   overflow: hidden;
-  width: initial;
-  height: initial;
   background: none;
   opacity: 1;
   border: 0px;
+  width: initial;
+  height: initial;
   margin: 0px;
   padding: 0px;
-  position: relative;
   max-width: 100%;
 `;
 
 const Span2 = styled.span`
   box-sizing: border-box;
   display: block;
-  width: initial;
-  height: initial;
   background: none;
   opacity: 1;
   border: 0px;
+  width: initial;
+  height: initial;
   margin: 0px;
   padding: 0px;
   max-width: 100%;
@@ -420,28 +420,28 @@ const Span2 = styled.span`
 
 const Span2Img = styled.img`
   display: block;
-  max-width: 100%;
-  width: initial;
-  height: initial;
   background: none;
   opacity: 1;
   border: 0px;
+  max-width: 100%;
+  width: initial;
+  height: initial;
   margin: 0px;
   padding: 0px;
 `;
 
 const Img = styled.img`
+  display: block;
+  box-sizing: border-box;
   position: absolute;
   inset: 0px;
-  box-sizing: border-box;
-  padding: 0rem;
+  object-fit: fill;
   border: none;
+  padding: 0rem;
   margin: auto;
-  display: block;
   width: auto !important;
   min-width: 100%;
   min-height: 100%;
-  object-fit: fill;
 
   ${tw`
     md:ml-32
