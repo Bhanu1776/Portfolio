@@ -4,7 +4,8 @@ import About from "./components/About";
 import Blog from "./components/Blog";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
-import Project from "./components/Project";
+import { Project } from "./components/Project";
+import Work from "./components/Work";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Hero />
         <About />
         <Project />
+        <Work />
         <Blog />
         <Footer />
       </MainDiv>
