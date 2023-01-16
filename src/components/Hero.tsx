@@ -17,6 +17,8 @@ const Hero = () => {
             alt=""
             aria-hidden="true"
             src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27924%27%20height=%27718%27/%3e"
+            data-aos="fade-down"
+            data-aos-delay="500"
           />
           <RayHero
             alt=""
@@ -24,6 +26,8 @@ const Hero = () => {
             decoding="async"
             data-nimg="intrinsic"
             className="absolute top-0 right-0"
+            data-aos="fade-down"
+            data-aos-delay="500"
           />
         </BgDiv>
       </div>
@@ -31,10 +35,18 @@ const Hero = () => {
       {/* //* Content with Image */}
       <div>
         <div className="grid items-center grid-cols-1  text-center md:mt-24 md:text-left md:grid-cols-6">
-          <LeftH1>
+          <LeftH1
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-easing="ease"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
             Hello, I'm
-            <span className="text-teal-500 dark:text-teal-400"> Bhanu</span>.
-            I'm a student, Web developer and Enthusiastic learner.
+            <span className="text-teal-500 dark:text-teal-400">
+              &nbsp;Bhanu
+            </span>
+            . I'm a student, Web developer and Enthusiastic learner.
           </LeftH1>
 
           <div className="order-1 md:order-2">
@@ -43,13 +55,15 @@ const Hero = () => {
                 alt="Bhanu Sunka"
                 src={Images.BhanuImg}
                 className="col-span-1 rounded-full"
+                data-aos="fade-left"
+                data-aos-easing="ease-in-sine"
               />
             </ProfileImgDiv>
           </div>
         </div>
 
         {/* //* Bottom Buttons */}
-        <BtnDiv>
+        <BtnDiv data-aos="fade-right" data-aos-duration="1000">
           <Link
             to="Footer"
             spy={true}

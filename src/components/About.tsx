@@ -36,7 +36,12 @@ const About = () => {
         <RightGrid>
           <BgImg src={Images.FooterBg} alt="" />
 
-          <Card1>
+          <Card1
+            data-aos="fade-down-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-offset="200"
+            data-aos-duration="400"
+          >
             <CardHeading>Programming Languages</CardHeading>
             <LangDiv1>
               {Languages.map((val) => {
@@ -57,7 +62,12 @@ const About = () => {
             </LangDiv1>
           </Card1>
 
-          <Card2>
+          <Card2
+            data-aos="fade-down-left"
+            data-aos-easing="ease-in-sine"
+            data-aos-offset="200"
+            data-aos-duration="400"
+          >
             <CardHeading>Web Development</CardHeading>
             <LangDiv2>
               {Web.map((val) => {
@@ -78,7 +88,12 @@ const About = () => {
             </LangDiv2>
           </Card2>
 
-          <Card3>
+          <Card3
+            data-aos="fade-up-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-offset="200"
+            data-aos-duration="400"
+          >
             <CardHeading>Tools</CardHeading>
             <LangDiv3>
               {Tools.map((val) => {
@@ -99,7 +114,12 @@ const About = () => {
             </LangDiv3>
           </Card3>
 
-          <Card4>
+          <Card4
+            data-aos="fade-up-left"
+            data-aos-easing="ease-in-sine"
+            data-aos-offset="200"
+            data-aos-duration="400"
+          >
             <CardHeading>Other</CardHeading>
             <LangDiv4>
               {Other.map((val) => {

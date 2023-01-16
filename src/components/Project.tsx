@@ -93,6 +93,9 @@ const Project = () => {
               decoding="async"
               data-nimg="intrinsic"
               srcSet={Images.Freelansters}
+              data-aos="fade-left"
+              data-aos-offset="500"
+              data-aos-duration="500"
             />
           </Span1>
         </div>
@@ -151,6 +154,9 @@ const Project = () => {
               data-nimg="intrinsic"
               srcSet={Images.Venue}
               className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
+              data-aos="fade-right"
+              data-aos-offset="400"
+              data-aos-duration="500"
             />
           </Span1>
         </div>
@@ -233,6 +239,9 @@ const Project = () => {
               data-nimg="intrinsic"
               srcSet={Images.Sax}
               className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
+              data-aos="fade-left"
+              data-aos-offset="400"
+              data-aos-duration="500"
             />
           </Span1>
         </div>
@@ -290,6 +299,9 @@ const Project = () => {
               data-nimg="intrinsic"
               srcSet={Images.Hotel}
               className="!m-0 !max-w-[100%] !max-h-[100%] !p-12"
+              data-aos="fade-right"
+              data-aos-offset="400"
+              data-aos-duration="500"
             />
           </Span1>
         </div>

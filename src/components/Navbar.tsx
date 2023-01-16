@@ -41,6 +41,9 @@ const Navbar = () => {
                 className="rounded-full"
                 style={{ color: "transparent" }}
                 src={Images.BLogo}
+                data-aos="flip-left"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
               />
             </span>
           </LeftLogo>
