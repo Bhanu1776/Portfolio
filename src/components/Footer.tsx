@@ -63,7 +63,11 @@ const Footer2 = () => {
 
               <LeftHeading2>SOCIAL</LeftHeading2>
               <IconsDiv>
-                <a href="https://github.com/Bhanu1776">
+                <a
+                  href="https://github.com/Bhanu1776"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <span className="sr-only">GitHub</span>
                   <LinkSvg
                     viewBox="0 0 24 24"
@@ -85,7 +89,11 @@ const Footer2 = () => {
                   <Tooltip anchorId="Github" />
                 </a>
 
-                <a href="https://in.linkedin.com/in/bhanu-sunka-94a24a21a?original_referer=https%3A%2F%2Fwww.google.com%2F">
+                <a
+                  href="https://in.linkedin.com/in/bhanu-sunka-94a24a21a?original_referer=https%3A%2F%2Fwww.google.com%2F"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <span className="sr-only">LinkedIn</span>
                   <LinkSvg
                     className=""
@@ -135,10 +143,14 @@ const Footer2 = () => {
                   </LinkSvg>
                   <Tooltip anchorId="LinkedIn" />
                 </a>
-                <a href="https://www.instagram.com/bhanu_1776/">
+                <a
+                  href="https://www.instagram.com/bhanu_1776/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <span className="sr-only">Instagram</span>
                   <svg
-                    className="w-14 h-13 transform hover:rotate-[-7deg] fill-slate-600 transition hover:fill-teal-500"
+                    className="w-14 h-13 transform hover:rotate-[-7deg] fill-slate-900 transition hover:fill-teal-500"
                     stroke="currentColor"
                     fill="currentColor"
                     strokeWidth="0"
@@ -174,7 +186,11 @@ const Footer2 = () => {
                   </LinkSvg>
                   <Tooltip anchorId="Twitter" />
                 </a>
-                <a href="https://dev.to/bhanu1776">
+                <a
+                  href="https://dev.to/bhanu1776"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <span className="sr-only">DEV</span>
                   <svg
                     stroke="currentColor"
