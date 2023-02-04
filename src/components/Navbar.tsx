@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   // * Uncomment this to select dark mode on the preference of system
   // useEffect(() => {
@@ -151,6 +151,7 @@ const Navbar = () => {
                 height="2em"
                 width="2em"
                 xmlns="http://www.w3.org/2000/svg"
+                className="hidden"
                 id="moon"
               >
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -163,7 +164,7 @@ const Navbar = () => {
                 height="2em"
                 width="2em"
                 xmlns="http://www.w3.org/2000/svg"
-                className="hidden"
+                className=""
                 id="sun"
               >
                 <g>
