@@ -233,6 +233,8 @@ hover:bg-transparent
 hover:border-2 
 hover:border-pink-300 
 hover:border-dashed 
+hover:transition
+hover:ease-in-out
 transition 
 ease-in-out 
 duration-700
@@ -277,6 +279,8 @@ hover:bg-transparent
 hover:border-2 
 hover:border-yellow-300 
 hover:border-dashed 
+hover:transition
+hover:ease-in-out
 transition 
 ease-in-out 
 duration-700
@@ -312,6 +316,8 @@ hover:border-2
 hover:border-teal-300 
 hover:border-dashed 
 hover:drop-shadow-none 
+hover:transition
+hover:ease-in-out
 transition 
 ease-in-out 
 duration-700
@@ -345,6 +351,8 @@ hover:bg-transparent
 hover:border-2 
 hover:border-purple-400 
 hover:border-dashed 
+hover:transition
+hover:ease-in-out
 transition 
 ease-in-out 
 duration-700
