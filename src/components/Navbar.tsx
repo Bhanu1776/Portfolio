@@ -1,11 +1,33 @@
 import Images from "../Images/Imgindex";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+
+  const [theme, setTheme] = useState("");
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   const MiniDialog = styled.div`
     display: ${() => (openMenu ? "block" : "none")};
@@ -107,7 +129,7 @@ const Navbar = () => {
           </nav>
 
           <ButtonDiv>
-            <DarkModeBtn>
+            <DarkModeBtn onClick={handleThemeSwitch}>
               <svg
                 stroke="currentColor"
                 fill="none"
@@ -253,8 +275,12 @@ const Navbar = () => {
               </li>
             </ul>
             <div className="pt-6 mt-6 border-t border-gray-200 dark:border-gray-200/10">
-              <DialogDarkBtn aria-label="Toggle Dark Mode" type="button">
-                <p className="pb-2 text-2xl font-semibold">
+              <DialogDarkBtn
+                aria-label="Toggle Dark Mode"
+                type="button"
+                onClick={handleThemeSwitch}
+              >
+                <p className="pb-3 text-2xl font-semibold">
                   Change to Dark Theme
                 </p>
               </DialogDarkBtn>

@@ -17,21 +17,23 @@ const App = () => {
 
   return (
     <>
-      <MainDiv>
-        <Hero />
-        <About />
-        <Project />
-        <Work />
-        <Blog />
-        <Footer />
-      </MainDiv>
+      <div className="dark:bg-algolia">
+        <MainDiv>
+          <Hero />
+          <About />
+          <Project />
+          <Work />
+          <Blog />
+          <Footer />
+        </MainDiv>
+      </div>
     </>
   );
 };
 
 const MainDiv = styled.main`
   max-width: 115rem;
-  ${tw`relative flex flex-col min-h-screen px-6 mx-auto pt-[8rem] bg-white `};
+  ${tw`relative flex flex-col min-h-screen px-6 mx-auto pt-[8rem]`};
 `;
 
 export default App;
