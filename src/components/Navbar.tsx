@@ -32,7 +32,7 @@ const Navbar = () => {
       <NavbarDiv>
         <ActualNavbar>
           <LeftLogo>
-            <span className="sr-only">Profile Picture</span>
+            <span className="sr-only">Logo</span>
             <span className="block dark:hidden">
               <img
                 alt="Bhanu Sunka"
@@ -58,9 +58,7 @@ const Navbar = () => {
               offset={-100}
               duration={200}
             >
-              <span className="font-bold text-teal-500 dark:text-teal-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
-                Home
-              </span>
+              <NavLinks>Home</NavLinks>
             </Link>
             <Link
               to="About"
@@ -71,9 +69,7 @@ const Navbar = () => {
               offset={-105}
               duration={300}
             >
-              <span className="font-normal text-gray-500 dark:text-gray-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
-                About
-              </span>
+              <NavLinks>About</NavLinks>
             </Link>
             <Link
               to="Project"
@@ -84,9 +80,7 @@ const Navbar = () => {
               offset={-100}
               duration={400}
             >
-              <span className="font-normal text-gray-500 dark:text-gray-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
-                Projects
-              </span>
+              <NavLinks>Projects</NavLinks>
             </Link>
             <Link
               to="Work"
@@ -97,9 +91,7 @@ const Navbar = () => {
               offset={-240}
               duration={500}
             >
-              <span className="font-normal text-gray-500 dark:text-gray-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
-                Work
-              </span>
+              <NavLinks>Work</NavLinks>
             </Link>
             <Link
               to="Blog"
@@ -110,9 +102,7 @@ const Navbar = () => {
               offset={-200}
               duration={400}
             >
-              <span className="font-normal text-gray-500 dark:text-gray-400 'hidden md:inline-block rounded-full hover:text-gray-900 dark:hover:text-gray-200 transition-all">
-                Blog
-              </span>
+              <NavLinks>Blog</NavLinks>
             </Link>
           </nav>
 
@@ -303,6 +293,32 @@ sm:px-6
 md:space-x-10
 `;
 
+const NavLinks = styled.span`
+  ${tw`
+  cursor-pointer 
+  hidden 
+  md:inline-block 
+  rounded-full 
+  hover:text-gray-900 
+  dark:hover:text-gray-200 
+  transition-all
+  font-normal 
+  text-gray-500 
+  dark:text-gray-400
+  active:text-teal-500
+  active:font-bold
+  active:dark:text-teal-400
+`}
+
+  &:active {
+    font-style: italic ${tw`
+      font-bold 
+      text-teal-500 
+      dark:text-teal-400
+  `};
+  }
+`;
+
 const LeftLogo = tw.div`
 flex 
 justify-start 
@@ -325,7 +341,7 @@ const DarkModeBtn = styled.div`
   transition-duration: 0.15s;
 
   &:hover {
-    border: 2px solid black;
+    /* border: 2px solid black; */
   }
   ${tw`
     p-5 
@@ -334,6 +350,14 @@ const DarkModeBtn = styled.div`
     border-solid 
     rounded-full 
     bg-coolGray-200
+    hover:outline
+    hover:outline-[3px]
+    hover:outline-offset-2
+    hover:shadow-md
+    // hover:ring-2 
+    // focus:ring-purple-600 
+    // focus:ring-offset-2 
+    // focus:ring-offset-[#fcf8f8] 
   `}
 `;
 
