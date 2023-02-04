@@ -11,7 +11,7 @@ const Images = {
     Sax: require('./Sax.png'),
     Venue: require('./Venue.png'),
     Hotel: require('./Hotel.png'),
-
+    Resume: require('./Bhanu_Web-Developer.pdf')
 }
 
 export default Images;

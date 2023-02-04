@@ -94,7 +94,13 @@ const Hero = () => {
               </svg>
             </BtnPrimary>
           </Link>
-          <Button2 aria-label="button" type="button" className="group">
+          <Button2
+            aria-label="button"
+            type="button"
+            className="group"
+            href={Images.Resume}
+            download="Bhanu_Web-Developer"
+          >
             Download Resume
             <svg
               className="mt-0.5 ml-4 !z-50 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
@@ -252,7 +258,7 @@ dark:bg-gray-200
 dark:text-midnight 
 hover:bg-slate-700
 `;
-const Button2 = tw.button`
+const Button2 = tw.a`
 inline-flex 
 relative
 z-50
