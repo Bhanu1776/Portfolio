@@ -41,6 +41,7 @@ const About = () => {
             data-aos-easing="ease-in-sine"
             data-aos-offset="200"
             data-aos-duration="400"
+            data-aos-once="true"
           >
             <CardHeading>Programming Languages</CardHeading>
             <LangDiv1>
@@ -67,6 +68,7 @@ const About = () => {
             data-aos-easing="ease-in-sine"
             data-aos-offset="200"
             data-aos-duration="400"
+            data-aos-once="true"
           >
             <CardHeading>Web Development</CardHeading>
             <LangDiv2>
@@ -93,6 +95,7 @@ const About = () => {
             data-aos-easing="ease-in-sine"
             data-aos-offset="200"
             data-aos-duration="400"
+            data-aos-once="true"
           >
             <CardHeading>Tools</CardHeading>
             <LangDiv3>
@@ -119,6 +122,7 @@ const About = () => {
             data-aos-easing="ease-in-sine"
             data-aos-offset="200"
             data-aos-duration="400"
+            data-aos-once="true"
           >
             <CardHeading>Other</CardHeading>
             <LangDiv4>
