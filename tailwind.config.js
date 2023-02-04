@@ -37,7 +37,8 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         mono: [...defaultTheme.fontFamily.mono],
         headings: ['Manrope', ...defaultTheme.fontFamily.sans],
-        fancy: ['Sriracha']
+        fancy: ['Sriracha'],
+        fira: ['Fira Sans', 'sans-serif']
       },
       colors: {
         orange: colors.orange,
