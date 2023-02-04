@@ -8,7 +8,7 @@ const Footer2 = () => {
   return (
     <>
       <footer id="Footer" className="relative">
-        <hr className="dark:bg-midnight bg-red"></hr>
+        <hr className="dark:bg-midnight dark:h-[1px] dark:border-none"></hr>
         <form action="https://formspree.io/f/mvonoajk" method="POST">
           <BgImg src={Images.FooterBg} alt="" />
           <MainGrid>
@@ -400,6 +400,7 @@ focus:ring-2
 focus:ring-indigo-500 
 focus:ring-offset-2 
 focus:ring-offset-[#F8FAFC] 
+dark:text-slate-200
 `;
 
 const LowerDiv = tw.div`
@@ -415,6 +416,7 @@ border-gray-300
 placeholder-slate-500 
 text-2xl 
 rounded-[2rem] 
+resize-none
 w-full 
 px-5 
 py-14 
@@ -429,6 +431,7 @@ dark:border-gray-400
 dark:focus:ring-indigo-400 
 dark:focus:ring-offset-midnight
 md:-mt-8 
+dark:text-slate-200
 `;
 
 const ButtonDiv = tw.div`
