@@ -7,15 +7,16 @@ import { Link } from "react-scroll";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState("light");
 
-  useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  }, []);
+  // * Uncomment this to select dark mode on the preference of system
+  // useEffect(() => {
+  //   if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+  //     setTheme("dark");
+  //   } else {
+  //     setTheme("light");
+  //   }
+  // }, []);
 
   let moon: any = document.getElementById("moon");
   let sun: any = document.getElementById("sun");
