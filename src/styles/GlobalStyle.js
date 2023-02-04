@@ -24,18 +24,20 @@ html {
   overflow-x: hidden;
   scrollbar-color: #14B8A6;
   scrollbar-width: thin;
+  scrollbar-color: #14B8A6 transparent;
 }
 
 body {
   overflow-x: hidden;
+}
 
-}
-html::-webkit-scrollbar {
+//* Custom Scrollbar
+/* html::-webkit-scrollbar {
   width: 1.5rem;
-}
-html::-webkit-scrollbar-track {
-   background-color: white;
-}
+} */
+/* html::-webkit-scrollbar-track {
+   background-color: transparent;
+} */
 html::-webkit-scrollbar-thumb {
 
   background: #14B8A6;
