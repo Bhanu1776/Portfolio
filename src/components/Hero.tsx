@@ -229,7 +229,7 @@ const ProfileImg = styled.img`
 
 const BtnDiv = tw.div`
 relative
-z-50
+z-10
 space-y-6 
 mt-16 
 text-center 
