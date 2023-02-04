@@ -175,9 +175,9 @@ const LeftH1 = styled.h1`
     z-10 
     col-span-5 
     mt-[5.1rem] 
-    [font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif]
+    font-fira
     tracking-wide 
-    font-bold 
+    font-semibold 
     leading-tight 
     md:leading-normal 
     md:order-1 
@@ -227,6 +227,8 @@ const ProfileImg = styled.img`
 `;
 
 const BtnDiv = tw.div`
+relative
+z-50
 space-y-6 
 mt-16 
 text-center 
@@ -252,7 +254,7 @@ hover:bg-slate-700
 const Button2 = tw.button`
 inline-flex 
 relative
-z-10
+z-50
 text-3xl 
 items-center 
 rounded-full 
