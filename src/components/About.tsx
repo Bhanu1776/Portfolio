@@ -171,6 +171,7 @@ xxsm:justify-center
 xxsm:text-[2.50rem] 
 md:block
 mobile:text-5xl 
+dark:text-gray-200
 `;
 
 const TitleDivider = tw.span`
@@ -194,6 +195,7 @@ const LeftPara = tw.p`
 font-sans
 tracking-wide 
 text-justify
+dark:text-gray-200
 `;
 
 const RightGrid = tw.div`
@@ -236,7 +238,7 @@ hover:border-dashed
 hover:transition
 hover:ease-in-out
 transition 
-ease-in-out 
+ease-in-out
 duration-700
 xxsm:h-[19rem] 
 xxsm:rounded-3xl 
@@ -244,6 +246,13 @@ tablet:h-[25rem]
 tablet:mb-0 
 tablet:rounded-2xl 
 laptop:text-2xl 
+dark:from-slate-900 
+dark:to-purple-700 
+dark:border-purple-700 
+dark:border-r 
+md:dark:bg-gradient-to-br
+dark:bg-gradient-to-br
+dark:hover:bg-none
 `;
 
 const CardHeading = tw.h1`
@@ -254,6 +263,7 @@ mt-10
 text-slate-700 
 font-bold 
 text-[1.7rem]
+dark:text-slate-200 
 `;
 
 const LangDiv1 = tw.div`
@@ -290,6 +300,12 @@ tablet:mt-14
 tablet:h-[25rem] 
 tablet:rounded-2xl 
 tablet:mb-0 
+dark:from-slate-900 
+dark:to-yellow-600 
+dark:border-yellow-300 
+dark:border-b 
+dark:bg-gradient-to-bl
+dark:hover:bg-none
 `;
 
 const LangDiv2 = tw.div`
@@ -326,6 +342,13 @@ xxsm:h-[19rem]
 tablet:mb-0 
 tablet:rounded-2xl 
 tablet:h-[25rem] 
+dark:from-slate-900 
+dark:to-pink-500 
+dark:border-pink-500 
+dark:border-t 
+md:dark:bg-gradient-to-tr
+dark:bg-gradient-to-tr
+dark:hover:bg-none
 `;
 
 const LangDiv3 = tw.div`
@@ -362,6 +385,13 @@ tablet:mt-14
 tablet:h-[25rem]
 tablet:mb-0 
 tablet:rounded-2xl 
+dark:from-slate-900 
+dark:to-teal-500 
+dark:border-teal-500 
+dark:border-t 
+md:dark:bg-gradient-to-tl
+dark:bg-gradient-to-tl
+dark:hover:bg-none
 `;
 
 const LangDiv4 = tw.div`

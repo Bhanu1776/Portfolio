@@ -17,7 +17,8 @@ const App = () => {
 
   return (
     <>
-      <div className="dark:bg-algolia">
+      <div className="dark:bg-[#0b1121] transition-all duration-300 ease-in-out ">
+        {/* <div className="dark:bg-algolia"> */}
         <MainDiv>
           <Hero />
           <About />

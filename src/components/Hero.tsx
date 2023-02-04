@@ -184,6 +184,7 @@ const LeftH1 = styled.h1`
     xxsm:text-6xl
     sm:text-7xl
     md:text-[4.8rem]
+    dark:text-gray-200
     `}
 `;
 const ProfileImgDiv = styled.span`

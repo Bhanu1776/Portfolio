@@ -36,6 +36,7 @@ const H2 = tw.h2`
   mb-4 
   mt-6
   tablet:text-7xl 
+  dark:text-teal-500
 `;
 
 const H1 = tw.h1`
@@ -47,6 +48,7 @@ const H1 = tw.h1`
   opacity-50 
   tablet:text-[7.5rem] 
   tablet:mt-10
+  dark:text-slate-400 
 `;
 
 const P = tw.p`
@@ -59,6 +61,7 @@ const P = tw.p`
   tablet:text-3xl
   tablet:px-3
   tablet:mt-8
+  dark:text-violet-500
 `;
 
 export default Blog;

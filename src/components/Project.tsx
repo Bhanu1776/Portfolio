@@ -9,18 +9,18 @@ const Project = () => {
         id="Project"
         className="flex flex-col items-center gap-4 mt-28 mb-16"
       >
-        <h2 className="text-3xl tablet:text-4xl text-center font-headings text-indigo-500">
+        <h2 className="text-3xl tablet:text-4xl text-center font-headings text-indigo-500 dark:text-teal-500">
           PROJECTS
         </h2>
-        <h1 className="text-5xl tablet:text-6xl text-center font-headings">
+        <h1 className="text-5xl tablet:text-6xl text-center font-headings dark:text-gray-200">
           A collection of my favorite works.
         </h1>
       </div>
 
       {/* //* 1st Card  */}
-      <MainGrid className="bg-gradient-to-b from-indigo-50 to-indigo-300 border-indigo-100">
+      <MainGrid className="bg-gradient-to-b from-indigo-50 to-indigo-300 border-indigo-100 dark:from-slate-900 dark:to-indigo-900 dark:border-indigo-800 dark:border-t ">
         <LeftGrid className="order-2 ">
-          <h2 className="text-6xl">Freelansters</h2>
+          <h2 className="text-6xl dark:text-gray-200">Freelansters</h2>
           <p>
             Freelansters is a Freelancing Website where you can get your work
             done. The place where you can easily Find Jobs or Post Jobs!
@@ -102,9 +102,9 @@ const Project = () => {
       </MainGrid>
 
       {/* //* 2nd Card  */}
-      <MainGrid className="bg-gradient-to-b from-purple-50 to-purple-300 border-purple-100">
+      <MainGrid className="bg-gradient-to-b from-purple-50 to-purple-300 border-purple-100 dark:from-slate-900 dark:to-purple-800 dark:border-purple-800 dark:border-t ">
         <LeftGrid className="order-1">
-          <h2 className="text-5xl">Venue Booking System</h2>
+          <h2 className="text-5xl dark:text-gray-200">Venue Booking System</h2>
           <p>
             Venue booking system is a Desktop application where venue owners can
             register their venues and customers can book venues for events as
@@ -163,9 +163,9 @@ const Project = () => {
       </MainGrid>
 
       {/* //* 3rd Card  */}
-      <MainGrid className="bg-gradient-to-b from-sky-50 to-sky-300 border-sky-100">
+      <MainGrid className="bg-gradient-to-b from-sky-50 to-sky-300 border-sky-100 dark:from-slate-900 dark:to-pink-700 dark:border-pink-800 dark:border-t ">
         <LeftGrid className="order-2">
-          <h2 className="text-6xl">SaxX</h2>
+          <h2 className="text-6xl dark:text-gray-200">SaxX</h2>
           <p>
             E-commerce static prototype developed to practice my frontend
             designing skills. Build with pure html css and javascript.
@@ -248,9 +248,11 @@ const Project = () => {
       </MainGrid>
 
       {/* //* 4th Card  */}
-      <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100">
+      <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-fuchsia-700 dark:border-fuchsia-800 dark:border-t ">
         <LeftGrid className="order-1">
-          <h2 className="text-5xl">Hotel Management System</h2>
+          <h2 className="text-5xl dark:text-gray-200">
+            Hotel Management System
+          </h2>
           <p>
             It is a simple web application that allows the hotel manager to
             handle all hotel activities online. This application is built using
@@ -353,6 +355,7 @@ const LeftGrid = styled.div`
       ml-2 
       pr-4
       md:text-left
+      dark:text-gray-200
     `}
   }
 `;

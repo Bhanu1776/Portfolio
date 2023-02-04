@@ -8,7 +8,7 @@ const Footer2 = () => {
   return (
     <>
       <footer id="Footer" className="relative">
-        <hr />
+        <hr className="dark:bg-midnight bg-red"></hr>
         <form action="https://formspree.io/f/mvonoajk" method="POST">
           <BgImg src={Images.FooterBg} alt="" />
           <MainGrid>
@@ -150,7 +150,7 @@ const Footer2 = () => {
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
-                    className="w-14 h-13 transform hover:rotate-[-7deg] fill-slate-900 transition hover:fill-teal-500"
+                    className="w-14 h-13 transform hover:rotate-[-7deg] fill-slate-900 transition hover:fill-teal-500 dark:fill-slate-400 dark:hover:fill-teal-500"
                     stroke="currentColor"
                     fill="currentColor"
                     strokeWidth="0"
@@ -305,6 +305,7 @@ text-slate-700
 text-[1.7rem] 
 font-semibold 
 font-headings
+dark:text-slate-200
 `;
 
 const UpperDiv = tw.div`
@@ -324,6 +325,7 @@ font-sans
 cursor-pointer
 hover:underline 
 hover:text-teal-600 
+dark:text-slate-200
 `;
 
 const LeftHeading2 = tw.h1`
@@ -334,12 +336,15 @@ text-[1.7rem]
 z-10 
 mt-16 
 mb-3 
+dark:text-slate-200
 `;
 
 const IconsDiv = tw.div`
 flex 
 flex-row 
 z-10
+dark:text-slate-400
+
 `;
 
 const LinkSvg = tw.svg`
@@ -364,6 +369,7 @@ font-headings
 font-bold 
 text-4xl 
 mb-10
+dark:text-teal-500
 `;
 
 const UpperInputDiv = tw.div`
@@ -470,6 +476,8 @@ pb-1
 tablet:text-[1.7rem]
 tablet:justify-start 
 md:px-20 
+dark:bg-midnight
+dark:text-slate-200
 `;
 
 export default Footer2;

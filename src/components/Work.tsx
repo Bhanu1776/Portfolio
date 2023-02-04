@@ -5,10 +5,13 @@ import Hr from "./Hr";
 const Work = () => {
   return (
     <>
-      <h1 id="Work" className="text-5xl font-headings mt-36 font-bold">
+      <h1
+        id="Work"
+        className="text-5xl font-headings mt-36 font-bold dark:text-teal-500"
+      >
         Work Experience
       </h1>
-      <p className="font-sans text-3xl mb-16">
+      <p className="font-sans text-3xl mb-16 dark:text-gray-200">
         Here's a quick rundown of my most recent experiences.
       </p>
 
@@ -29,20 +32,26 @@ const Work = () => {
                   fill="currentColor"
                 ></path>
               </svg>
-              <h3 className="p-0 m-0 pt-2 text-4xl font-bold mb-4">
+              <h3 className="p-0 m-0 pt-2 text-4xl font-bold mb-4 dark:text-gray-200">
                 Android Tester
               </h3>
-              <p className="p-0 m-0 text-3xl mb-2 ">Evolution-X Organization</p>
-              <p className="p-0 m-0 text-2xl text-gray-500 before:content-['['] before:text-indigo-500 before:font-bold after:content-[']'] after:text-indigo-500 after:font-bold">
+              <p className="p-0 m-0 text-3xl mb-2 dark:text-gray-200">
+                Evolution-X Organization
+              </p>
+              <p className="p-0 m-0 text-2xl dark:text-gray-200 text-gray-500 before:content-['['] dark:before:text-teal-500 before:text-indigo-500 before:font-bold after:content-[']'] dark:after:text-teal-500 after:text-indigo-500after:font-bold">
                 &nbsp; 2021 - 2022 &nbsp;
               </p>
             </div>
           </div>
-          <p className="relative pb-4 md:border-b md:border-gray-300 md:dark:border-gray-400 md:col-span-3 text-[1.7rem] font-sans">
+          <p className="relative pb-4 md:border-b dark:text-gray-200 md:border-gray-300 md:dark:border-gray-400 md:col-span-3 text-[1.7rem] font-sans">
             An Android open source community for developing Custom Roms. <br />
-            <span className="font-semibold text-slate-800">Achievements: </span>
+            <span className="font-semibold text-slate-800 dark:text-gray-200">
+              Achievements: &nbsp;
+            </span>
             Successfully cleared Android tester phase 3. <br />
-            <span className="font-semibold text-slate-800"> Contact: </span>
+            <span className="font-semibold text-slate-800 dark:text-gray-200">
+              Contact: &nbsp;
+            </span>
             https://github.com/Evolution-X
           </p>
         </Article>

@@ -17,6 +17,9 @@ const Navbar = () => {
     }
   }, []);
 
+  let moon: any = document.getElementById("moon");
+  let sun: any = document.getElementById("sun");
+
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -27,6 +30,13 @@ const Navbar = () => {
 
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+    if (theme === "dark") {
+      sun.style.display = "none";
+      moon.style.display = "block";
+    } else {
+      moon.style.display = "none";
+      sun.style.display = "block";
+    }
   };
 
   const MiniDialog = styled.div`
@@ -55,12 +65,12 @@ const Navbar = () => {
         <ActualNavbar>
           <LeftLogo>
             <span className="sr-only">Logo</span>
-            <span className="block dark:hidden">
+            <span className="block">
               <img
                 alt="Bhanu Sunka"
                 width="40"
                 height="40"
-                className="rounded-full"
+                className="rounded-full dark:invert"
                 style={{ color: "transparent" }}
                 src={Images.BLogo}
                 data-aos="flip-left"
@@ -140,8 +150,25 @@ const Navbar = () => {
                 height="2em"
                 width="2em"
                 xmlns="http://www.w3.org/2000/svg"
+                id="moon"
               >
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                height="2em"
+                width="2em"
+                xmlns="http://www.w3.org/2000/svg"
+                className="hidden"
+                id="sun"
+              >
+                <g>
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path>
+                </g>
               </svg>
             </DarkModeBtn>
           </ButtonDiv>
@@ -204,7 +231,7 @@ const Navbar = () => {
                   duration={200}
                   onClick={() => setOpenMenu(false)}
                 >
-                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
+                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Home
                   </span>
                 </Link>
@@ -220,7 +247,7 @@ const Navbar = () => {
                   duration={300}
                   onClick={() => setOpenMenu(false)}
                 >
-                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
+                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     About
                   </span>
                 </Link>
@@ -236,7 +263,7 @@ const Navbar = () => {
                   duration={400}
                   onClick={() => setOpenMenu(false)}
                 >
-                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
+                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Projects
                   </span>
                 </Link>
@@ -252,7 +279,7 @@ const Navbar = () => {
                   duration={500}
                   onClick={() => setOpenMenu(false)}
                 >
-                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
+                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Work
                   </span>
                 </Link>
@@ -268,7 +295,7 @@ const Navbar = () => {
                   duration={400}
                   onClick={() => setOpenMenu(false)}
                 >
-                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500">
+                  <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Blog
                   </span>
                 </Link>
@@ -280,7 +307,7 @@ const Navbar = () => {
                 type="button"
                 onClick={handleThemeSwitch}
               >
-                <p className="pb-3 text-2xl font-semibold">
+                <p className="pb-3 text-2xl font-semibold dark:text-slate-200">
                   Change to Dark Theme
                 </p>
               </DialogDarkBtn>
@@ -305,6 +332,9 @@ dark:text-gray-100
 backdrop-filter 
 backdrop-blur-md 
 dark:bg-opacity-50
+transition-all
+duration-300 
+ease-in-out
 `;
 
 const ActualNavbar = tw.div`
@@ -326,7 +356,7 @@ const NavLinks = styled.span`
   md:inline-block 
   rounded-full 
   hover:text-gray-900 
-  dark:hover:text-gray-200 
+  // dark:hover:text-gray-200 
   transition-all
   font-normal 
   text-gray-500 
@@ -334,6 +364,7 @@ const NavLinks = styled.span`
   active:text-teal-500
   active:font-bold
   active:dark:text-teal-400
+  dark:hover:text-teal-400
 `}
 
   &:active {
@@ -380,10 +411,8 @@ const DarkModeBtn = styled.div`
     hover:outline-[3px]
     hover:outline-offset-2
     hover:shadow-md
-    // hover:ring-2 
-    // focus:ring-purple-600 
-    // focus:ring-offset-2 
-    // focus:ring-offset-[#fcf8f8] 
+    dark:bg-midnight
+    dark:border-midnight
   `}
 `;
 
