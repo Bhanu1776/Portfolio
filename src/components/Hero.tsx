@@ -71,7 +71,7 @@ const Hero = () => {
             isDynamic={true}
             smooth={true}
             offset={-100}
-            duration={200}
+            duration={500}
           >
             <BtnPrimary aria-label="button" type="button" className="group">
               Hire Me
