@@ -403,6 +403,7 @@ const Button2 = tw.a`
   rounded-full 
   px-9 
   py-4 
+  bg-transparent
   dark:text-white
 `;
 

@@ -269,6 +269,7 @@ px-9
 py-4 
 font-semibold 
 transition 
+bg-transparent
 text-midnight 
 dark:text-white
 `;
