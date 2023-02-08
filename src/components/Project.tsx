@@ -51,32 +51,32 @@ const Project = () => {
                 ></path>
               </svg>
             </Button>
-            <Button2
-              aria-label="button"
-              type="button"
-              className="group"
+            <a
               href="https://github.com/Bhanu1776/Freelansters"
               target="_blank"
+              rel="noreferrer"
             >
-              Source Code
-              <svg
-                className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
-                fill="none"
-                width="12"
-                height="12"
-                viewBox="0 0 10 10"
-                aria-hidden="true"
-              >
-                <path
-                  className="transition opacity-0 group-hover:opacity-100"
-                  d="M0 5h7"
-                ></path>
-                <path
-                  className="transition group-hover:translate-x-[3px]"
-                  d="M1 1l4 4-4 4"
-                ></path>
-              </svg>
-            </Button2>
+              <Button2 aria-label="button" className="group">
+                Source Code
+                <svg
+                  className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
+                  fill="none"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 10 10"
+                  aria-hidden="true"
+                >
+                  <path
+                    className="transition opacity-0 group-hover:opacity-100"
+                    d="M0 5h7"
+                  ></path>
+                  <path
+                    className="transition group-hover:translate-x-[3px]"
+                    d="M1 1l4 4-4 4"
+                  ></path>
+                </svg>
+              </Button2>
+            </a>
           </div>
         </LeftGrid>
         <div className="md:order-2">
@@ -196,32 +196,32 @@ const Project = () => {
                 ></path>
               </svg>
             </Button>
-            <Button2
-              aria-label="button"
-              type="button"
-              className="group"
+            <a
               href="https://github.com/Bhanu1776/Full_Stack_Dev/tree/master/Ecommerce"
               target="_blank"
+              rel="noreferrer"
             >
-              Source Code
-              <svg
-                className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
-                fill="none"
-                width="12"
-                height="12"
-                viewBox="0 0 10 10"
-                aria-hidden="true"
-              >
-                <path
-                  className="transition opacity-0 group-hover:opacity-100"
-                  d="M0 5h7"
-                ></path>
-                <path
-                  className="transition group-hover:translate-x-[3px]"
-                  d="M1 1l4 4-4 4"
-                ></path>
-              </svg>
-            </Button2>
+              <Button2 aria-label="button" className="group">
+                Source Code
+                <svg
+                  className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
+                  fill="none"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 10 10"
+                  aria-hidden="true"
+                >
+                  <path
+                    className="transition opacity-0 group-hover:opacity-100"
+                    d="M0 5h7"
+                  ></path>
+                  <path
+                    className="transition group-hover:translate-x-[3px]"
+                    d="M1 1l4 4-4 4"
+                  ></path>
+                </svg>
+              </Button2>
+            </a>
           </div>
         </LeftGrid>
         <div className="md:order-2">
@@ -391,7 +391,7 @@ const Button = styled.a`
   }
 `;
 
-const Button2 = tw.a`
+const Button2 = tw.button`
   inline-flex 
   relative
   z-10

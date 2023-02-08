@@ -94,32 +94,28 @@ const Hero = () => {
               </svg>
             </BtnPrimary>
           </Link>
-          <Button2
-            aria-label="button"
-            type="button"
-            className="group"
-            href={Images.Resume}
-            download="Bhanu_Web-Developer"
-          >
-            Download Resume
-            <svg
-              className="mt-0.5 ml-4 !z-50 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
-              fill="none"
-              width="12"
-              height="12"
-              viewBox="0 0 10 10"
-              aria-hidden="true"
-            >
-              <path
-                className="transition opacity-0 group-hover:opacity-100"
-                d="M0 5h7"
-              ></path>
-              <path
-                className="transition group-hover:translate-x-[3px]"
-                d="M1 1l4 4-4 4"
-              ></path>
-            </svg>
-          </Button2>
+          <a href={Images.Resume} download="Bhanu_Web-Developer">
+            <Button2 aria-label="button" className="group">
+              Download Resume
+              <svg
+                className="mt-0.5 ml-4 !z-50 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
+                fill="none"
+                width="12"
+                height="12"
+                viewBox="0 0 10 10"
+                aria-hidden="true"
+              >
+                <path
+                  className="transition opacity-0 group-hover:opacity-100"
+                  d="M0 5h7"
+                ></path>
+                <path
+                  className="transition group-hover:translate-x-[3px]"
+                  d="M1 1l4 4-4 4"
+                ></path>
+              </svg>
+            </Button2>
+          </a>
         </BtnDiv>
       </div>
 
@@ -258,7 +254,7 @@ dark:bg-gray-200
 dark:text-midnight 
 hover:bg-slate-700
 `;
-const Button2 = tw.a`
+const Button2 = tw.button`
 inline-flex 
 relative
 z-50
