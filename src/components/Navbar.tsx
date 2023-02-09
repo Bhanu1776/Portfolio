@@ -310,7 +310,7 @@ const Navbar = () => {
                 onClick={handleThemeSwitch}
               >
                 <p className="pb-3 text-2xl font-semibold dark:text-slate-200">
-                  Change to Dark Theme
+                  Change to {theme === "dark" ? "Light" : "Dark"} Theme
                 </p>
               </DialogDarkBtn>
             </div>
