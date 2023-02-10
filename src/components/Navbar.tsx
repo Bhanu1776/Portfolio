@@ -71,7 +71,7 @@ const Navbar = () => {
                 alt="Bhanu Sunka"
                 width="40"
                 height="40"
-                className="rounded-full dark:invert"
+                className="rounded-full invert dark:invert-0"
                 style={{ color: "transparent" }}
                 src={Images.BLogo}
                 data-aos="flip-left"
@@ -381,7 +381,8 @@ const NavLinks = styled.span`
 const LeftLogo = tw.div`
 flex 
 justify-start 
-lg:w-0 
+mt-1
+lg:w-0
 lg:flex-1
 `;
 
