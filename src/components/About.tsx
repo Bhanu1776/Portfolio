@@ -194,12 +194,12 @@ bg-gradient-to-r
 from-teal-500 
 to-teal-300
 // min-w-20 
-
 mobile:w-[22rem] 
-md:w-[18rem] 
+md:w-[23rem] 
 xxsm:w-[16rem] 
 xxsm:h-[0.40rem]
 xxsm:mx-auto
+md:mt-7
 md:mx-0
 `;
 
