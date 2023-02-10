@@ -176,7 +176,8 @@ const LeftH1 = styled.h1`
     order-2 
     z-10 
     col-span-5 
-    mt-[5.1rem] 
+    mt-[6.5rem] 
+    tablet:mt-[5.1rem] 
     font-fira
     tracking-wide 
     font-semibold 
@@ -261,6 +262,8 @@ z-50
 text-3xl 
 items-center 
 rounded-full 
+mt-4
+sm:mt-0
 px-9 
 py-4 
 font-semibold 

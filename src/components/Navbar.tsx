@@ -382,6 +382,8 @@ const LeftLogo = tw.div`
 flex 
 justify-start 
 mt-1
+pl-2
+tablet:pl-0
 lg:w-0
 lg:flex-1
 `;
