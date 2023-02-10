@@ -1,6 +1,7 @@
 import tw from "twin.macro";
 import Images from "../Images/Imgindex";
 import { Languages, Web, Tools, Other } from "./LangData";
+import Tilt from "react-parallax-tilt";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
@@ -35,114 +36,121 @@ const About = () => {
 
         <RightGrid>
           <BgImg src={Images.FooterBg} alt="" />
+          <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} perspective={1000}>
+            <Card1
+              data-aos="fade-down-right"
+              data-aos-easing="ease-in-sine"
+              data-aos-offset="200"
+              data-aos-duration="400"
+              data-aos-once="true"
+            >
+              <CardHeading>Programming Languages</CardHeading>
+              <LangDiv1>
+                {Languages.map((val) => {
+                  return [
+                    <img
+                      src={val.src}
+                      alt={val.alt}
+                      width={val.width}
+                      key={val.index}
+                      id={val.alt}
+                      data-tooltip-content={val.alt}
+                      data-tooltip-place="top"
+                      data-tooltip-delay-show={300}
+                    />,
+                    <Tooltip anchorId={val.alt} />,
+                  ];
+                })}
+              </LangDiv1>
+            </Card1>
+          </Tilt>
 
-          <Card1
-            data-aos="fade-down-right"
-            data-aos-easing="ease-in-sine"
-            data-aos-offset="200"
-            data-aos-duration="400"
-            data-aos-once="true"
-          >
-            <CardHeading>Programming Languages</CardHeading>
-            <LangDiv1>
-              {Languages.map((val) => {
-                return [
-                  <img
-                    src={val.src}
-                    alt={val.alt}
-                    width={val.width}
-                    key={val.index}
-                    id={val.alt}
-                    data-tooltip-content={val.alt}
-                    data-tooltip-place="top"
-                    data-tooltip-delay-show={300}
-                  />,
-                  <Tooltip anchorId={val.alt} />,
-                ];
-              })}
-            </LangDiv1>
-          </Card1>
+          <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} perspective={1000}>
+            <Card2
+              data-aos="fade-down-left"
+              data-aos-easing="ease-in-sine"
+              data-aos-offset="200"
+              data-aos-duration="400"
+              data-aos-once="true"
+            >
+              <CardHeading>Web Development</CardHeading>
+              <LangDiv2>
+                {Web.map((val) => {
+                  return [
+                    <img
+                      src={val.src}
+                      alt={val.alt}
+                      width={val.width}
+                      key={val.alt}
+                      id={val.alt}
+                      data-tooltip-content={val.alt}
+                      data-tooltip-place="top"
+                      data-tooltip-delay-show={300}
+                    />,
+                    <Tooltip anchorId={val.alt} />,
+                  ];
+                })}
+              </LangDiv2>
+            </Card2>
+          </Tilt>
 
-          <Card2
-            data-aos="fade-down-left"
-            data-aos-easing="ease-in-sine"
-            data-aos-offset="200"
-            data-aos-duration="400"
-            data-aos-once="true"
-          >
-            <CardHeading>Web Development</CardHeading>
-            <LangDiv2>
-              {Web.map((val) => {
-                return [
-                  <img
-                    src={val.src}
-                    alt={val.alt}
-                    width={val.width}
-                    key={val.alt}
-                    id={val.alt}
-                    data-tooltip-content={val.alt}
-                    data-tooltip-place="top"
-                    data-tooltip-delay-show={300}
-                  />,
-                  <Tooltip anchorId={val.alt} />,
-                ];
-              })}
-            </LangDiv2>
-          </Card2>
+          <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} perspective={1000}>
+            <Card3
+              data-aos="fade-up-right"
+              data-aos-easing="ease-in-sine"
+              data-aos-offset="200"
+              data-aos-duration="400"
+              data-aos-once="true"
+            >
+              <CardHeading>Tools</CardHeading>
+              <LangDiv3>
+                {Tools.map((val) => {
+                  return [
+                    <img
+                      src={val.src}
+                      alt={val.alt}
+                      width={val.width}
+                      key={val.alt}
+                      id={val.alt}
+                      data-tooltip-content={val.alt}
+                      data-tooltip-place="top"
+                      data-tooltip-delay-show={300}
+                    />,
+                    <Tooltip anchorId={val.alt} />,
+                  ];
+                })}
+              </LangDiv3>
+            </Card3>
+          </Tilt>
 
-          <Card3
-            data-aos="fade-up-right"
-            data-aos-easing="ease-in-sine"
-            data-aos-offset="200"
-            data-aos-duration="400"
-            data-aos-once="true"
-          >
-            <CardHeading>Tools</CardHeading>
-            <LangDiv3>
-              {Tools.map((val) => {
-                return [
-                  <img
-                    src={val.src}
-                    alt={val.alt}
-                    width={val.width}
-                    key={val.alt}
-                    id={val.alt}
-                    data-tooltip-content={val.alt}
-                    data-tooltip-place="top"
-                    data-tooltip-delay-show={300}
-                  />,
-                  <Tooltip anchorId={val.alt} />,
-                ];
-              })}
-            </LangDiv3>
-          </Card3>
-
-          <Card4
-            data-aos="fade-up-left"
-            data-aos-easing="ease-in-sine"
-            data-aos-offset="200"
-            data-aos-duration="400"
-            data-aos-once="true"
-          >
-            <CardHeading>Other</CardHeading>
-            <LangDiv4>
-              {Other.map((val) => {
-                return [
-                  <img
-                    src={val.src}
-                    alt={val.alt}
-                    width={val.width}
-                    key={val.alt}
-                    id={val.alt}
-                    data-tooltip-content={val.alt}
-                    data-tooltip-place="top"
-                    data-tooltip-delay-show={100}
-                  />,
-                  <Tooltip anchorId={val.alt} />,
-                ];
-              })}
-            </LangDiv4>
-          </Card4>
+          <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} perspective={1000}>
+            <Card4
+              data-aos="fade-up-left"
+              data-aos-easing="ease-in-sine"
+              data-aos-offset="200"
+              data-aos-duration="400"
+              data-aos-once="true"
+            >
+              <CardHeading>Other</CardHeading>
+              <LangDiv4>
+                {Other.map((val) => {
+                  return [
+                    <img
+                      src={val.src}
+                      alt={val.alt}
+                      width={val.width}
+                      key={val.alt}
+                      id={val.alt}
+                      data-tooltip-content={val.alt}
+                      data-tooltip-place="top"
+                      data-tooltip-delay-show={100}
+                    />,
+                    <Tooltip anchorId={val.alt} />,
+                  ];
+                })}
+              </LangDiv4>
+            </Card4>
+          </Tilt>
         </RightGrid>
       </GridDiv>
     </>
@@ -241,6 +249,7 @@ hover:border-pink-300
 hover:border-dashed 
 hover:transition
 hover:ease-in-out
+dark:hover:border-none
 transition 
 ease-in-out
 duration-700
@@ -256,7 +265,6 @@ dark:border-purple-700
 dark:border-r 
 md:dark:bg-gradient-to-br
 dark:bg-gradient-to-br
-dark:hover:bg-none
 `;
 
 const CardHeading = tw.h1`
@@ -295,6 +303,7 @@ hover:border-yellow-300
 hover:border-dashed 
 hover:transition
 hover:ease-in-out
+dark:hover:border-none
 transition 
 ease-in-out 
 duration-700
@@ -309,7 +318,6 @@ dark:to-yellow-600
 dark:border-yellow-300 
 dark:border-b 
 dark:bg-gradient-to-bl
-dark:hover:bg-none
 `;
 
 const LangDiv2 = tw.div`
@@ -338,6 +346,7 @@ hover:border-dashed
 hover:drop-shadow-none 
 hover:transition
 hover:ease-in-out
+dark:hover:border-none
 transition 
 ease-in-out 
 duration-700
@@ -352,7 +361,6 @@ dark:border-pink-500
 dark:border-t 
 md:dark:bg-gradient-to-tr
 dark:bg-gradient-to-tr
-dark:hover:bg-none
 `;
 
 const LangDiv3 = tw.div`
@@ -380,6 +388,7 @@ hover:border-purple-400
 hover:border-dashed 
 hover:transition
 hover:ease-in-out
+dark:hover:border-none
 transition 
 ease-in-out 
 duration-700
@@ -395,7 +404,6 @@ dark:border-teal-500
 dark:border-t 
 md:dark:bg-gradient-to-tl
 dark:bg-gradient-to-tl
-dark:hover:bg-none
 `;
 
 const LangDiv4 = tw.div`
