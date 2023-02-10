@@ -36,7 +36,12 @@ const About = () => {
 
         <RightGrid>
           <BgImg src={Images.FooterBg} alt="" />
-          <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} perspective={1000}>
+          <Tilt
+            tiltMaxAngleX={15}
+            tiltMaxAngleY={15}
+            perspective={1000}
+            gyroscope={true}
+          >
             <Card1
               data-aos="fade-down-right"
               data-aos-easing="ease-in-sine"
@@ -65,7 +70,12 @@ const About = () => {
             </Card1>
           </Tilt>
 
-          <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} perspective={1000}>
+          <Tilt
+            tiltMaxAngleX={15}
+            tiltMaxAngleY={15}
+            perspective={1000}
+            gyroscope={true}
+          >
             <Card2
               data-aos="fade-down-left"
               data-aos-easing="ease-in-sine"
@@ -94,7 +104,12 @@ const About = () => {
             </Card2>
           </Tilt>
 
-          <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} perspective={1000}>
+          <Tilt
+            tiltMaxAngleX={15}
+            tiltMaxAngleY={15}
+            perspective={1000}
+            gyroscope={true}
+          >
             <Card3
               data-aos="fade-up-right"
               data-aos-easing="ease-in-sine"
@@ -123,7 +138,12 @@ const About = () => {
             </Card3>
           </Tilt>
 
-          <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} perspective={1000}>
+          <Tilt
+            tiltMaxAngleX={15}
+            tiltMaxAngleY={15}
+            perspective={1000}
+            gyroscope={true}
+          >
             <Card4
               data-aos="fade-up-left"
               data-aos-easing="ease-in-sine"
