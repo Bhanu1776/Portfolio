@@ -69,8 +69,8 @@ const Navbar = () => {
             <span className="block">
               <img
                 alt="Bhanu Sunka"
-                width="40"
-                height="40"
+                width="38"
+                height="38"
                 className="rounded-full invert dark:invert-0"
                 style={{ color: "transparent" }}
                 src={Images.BLogo}
