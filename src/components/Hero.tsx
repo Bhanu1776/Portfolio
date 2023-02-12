@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <>
       {/* //* Background Ray */}
-      <div
+      <figure
         id="Home"
         className="absolute z-10 overflow-hidden -top-32 md:-top-72 md:right-36"
       >
@@ -30,11 +30,11 @@ const Hero = () => {
             data-aos-delay="500"
           />
         </BgDiv>
-      </div>
+      </figure>
 
       {/* //* Content with Image */}
-      <div>
-        <div className="grid items-center grid-cols-1  text-center md:mt-24 md:text-left md:grid-cols-6">
+      <main>
+        <header className="grid items-center grid-cols-1  text-center md:mt-24 md:text-left md:grid-cols-6">
           <LeftH1
             data-aos="fade-right"
             data-aos-duration="1000"
@@ -60,7 +60,7 @@ const Hero = () => {
               />
             </ProfileImgDiv>
           </div>
-        </div>
+        </header>
 
         {/* //* Bottom Buttons */}
         <BtnDiv data-aos="fade-right" data-aos-duration="1000">
@@ -117,7 +117,7 @@ const Hero = () => {
             </Button2>
           </a>
         </BtnDiv>
-      </div>
+      </main>
 
       <Hr />
     </>
@@ -230,7 +230,7 @@ const ProfileImg = styled.img`
   max-height: 100%;
 `;
 
-const BtnDiv = tw.div`
+const BtnDiv = tw.section`
 relative
 z-10
 space-y-6 

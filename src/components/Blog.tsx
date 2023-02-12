@@ -12,7 +12,7 @@ const Blog = () => {
   );
 };
 
-const Div = tw.div`
+const Div = tw.main`
   bg-[#F8FAFC] 
   border-slate-200 
   px-6 

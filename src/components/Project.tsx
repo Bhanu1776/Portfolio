@@ -5,7 +5,7 @@ import Images from "../Images/Imgindex";
 const Project = () => {
   return (
     <>
-      <div
+      <header
         id="Project"
         className="flex flex-col items-center gap-4 mt-28 mb-16"
       >
@@ -15,7 +15,7 @@ const Project = () => {
         <h1 className="text-5xl tablet:text-6xl text-center font-headings dark:text-gray-200">
           A collection of my favorite works.
         </h1>
-      </div>
+      </header>
 
       {/* //* 1st Card  */}
       <MainGrid className="bg-gradient-to-b from-indigo-50 to-indigo-300 border-indigo-100 dark:from-slate-900 dark:to-indigo-900 dark:border-indigo-800 dark:border-t ">
@@ -79,7 +79,7 @@ const Project = () => {
             </a>
           </div>
         </LeftGrid>
-        <div className="md:order-2">
+        <main className="md:order-2">
           <Span1>
             <Span2>
               <Span2Img
@@ -98,7 +98,7 @@ const Project = () => {
               data-aos-duration="500"
             />
           </Span1>
-        </div>
+        </main>
       </MainGrid>
 
       {/* //* 2nd Card  */}
@@ -139,7 +139,7 @@ const Project = () => {
             </Button>
           </div>
         </LeftGrid>
-        <div>
+        <main>
           <Span1>
             <Span2>
               <Span2Img
@@ -159,7 +159,7 @@ const Project = () => {
               data-aos-duration="500"
             />
           </Span1>
-        </div>
+        </main>
       </MainGrid>
 
       {/* //* 3rd Card  */}
@@ -224,7 +224,7 @@ const Project = () => {
             </a>
           </div>
         </LeftGrid>
-        <div className="md:order-2">
+        <main className="md:order-2">
           <Span1>
             <Span2>
               <Span2Img
@@ -244,7 +244,7 @@ const Project = () => {
               data-aos-duration="500"
             />
           </Span1>
-        </div>
+        </main>
       </MainGrid>
 
       {/* //* 4th Card  */}
@@ -286,7 +286,7 @@ const Project = () => {
             </Button>
           </div>
         </LeftGrid>
-        <div>
+        <main>
           <Span1>
             <Span2>
               <Span2Img
@@ -306,13 +306,13 @@ const Project = () => {
               data-aos-duration="500"
             />
           </Span1>
-        </div>
+        </main>
       </MainGrid>
     </>
   );
 };
 
-const MainGrid = styled.div`
+const MainGrid = styled.section`
   ${tw`
     grid
     grid-cols-1
@@ -325,7 +325,7 @@ const MainGrid = styled.div`
     `}
 `;
 
-const LeftGrid = styled.div`
+const LeftGrid = styled.article`
   ${tw`
   flex
   flex-col

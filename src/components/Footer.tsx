@@ -247,6 +247,7 @@ const Footer2 = () => {
                   placeholder="Enter Your Email"
                   type="email"
                   required
+                  autoComplete="no"
                 />
               </UpperInputDiv>
             </RightGrid>
@@ -282,7 +283,7 @@ tablet:w-[80rem]
 tablet:opacity-80 
 `;
 
-const MainGrid = tw.div`
+const MainGrid = tw.main`
 grid 
 gap-2 
 xxsm:grid-cols-1
@@ -290,7 +291,7 @@ md:grid-cols-3
 md:grid-rows-2 
 `;
 
-const LeftGrid = tw.div`
+const LeftGrid = tw.section`
 flex 
 flex-col
 row-span-2 
@@ -308,7 +309,7 @@ font-headings
 dark:text-slate-200
 `;
 
-const UpperDiv = tw.div`
+const UpperDiv = tw.section`
 flex 
 flex-wrap 
 gap-8
@@ -339,7 +340,7 @@ mb-3
 dark:text-slate-200
 `;
 
-const IconsDiv = tw.div`
+const IconsDiv = tw.section`
 flex 
 flex-row 
 z-10
@@ -356,7 +357,7 @@ hover:rotate-[-7deg]
 hover:text-teal-500
 `;
 
-const RightGrid = tw.div`
+const RightGrid = tw.section`
 col-span-2 
 z-10 
 xxsm:px-2 
@@ -403,7 +404,7 @@ focus:ring-offset-[#F8FAFC]
 dark:text-slate-200
 `;
 
-const LowerDiv = tw.div`
+const LowerDiv = tw.section`
 col-span-2 
 z-10 
 xxsm:px-2 
@@ -434,7 +435,7 @@ md:-mt-8
 dark:text-slate-200
 `;
 
-const ButtonDiv = tw.div`
+const ButtonDiv = tw.section`
 flex 
 flex-row-reverse
 `;

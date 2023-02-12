@@ -5,17 +5,19 @@ import Hr from "./Hr";
 const Work = () => {
   return (
     <>
-      <h1
-        id="Work"
-        className="text-5xl font-headings mt-36 font-bold dark:text-teal-500"
-      >
-        Work Experience
-      </h1>
-      <p className="font-sans text-3xl mb-16 dark:text-gray-200">
-        Here's a quick rundown of my most recent experiences.
-      </p>
+      <main>
+        <h1
+          id="Work"
+          className="text-5xl font-headings mt-36 font-bold dark:text-teal-500"
+        >
+          Work Experience
+        </h1>
+        <p className="font-sans text-3xl mb-16 dark:text-gray-200">
+          Here's a quick rundown of my most recent experiences.
+        </p>
+      </main>
 
-      <div>
+      <section>
         <Article>
           <div className="relative pb-12 md:col-span-2">
             <div className="sticky top-28">
@@ -79,7 +81,7 @@ const Work = () => {
             ></path>
           </svg>
         </Button>
-      </div>
+      </section>
       <Hr />
     </>
   );

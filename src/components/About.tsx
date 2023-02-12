@@ -10,9 +10,12 @@ const About = () => {
     <>
       <GridDiv id="About">
         <LeftGrid>
-          <LeftTitle>A Bit About Me & My Skills</LeftTitle>
+          <header>
+            <LeftTitle>A Bit About Me & My Skills</LeftTitle>
+          </header>
           <TitleDivider />
-          <div className="mt-8">
+
+          <article className="mt-8">
             <LeftPara>
               Hello! My name is Bhanu Sunka. I am a hard-working engineering
               student specializing in Information Technology from Xavier
@@ -31,7 +34,7 @@ const About = () => {
               Experience. I constantly strive for the best outcome on any
               project I take on.
             </LeftPara>
-          </div>
+          </article>
         </LeftGrid>
 
         <RightGrid>
@@ -177,7 +180,7 @@ const About = () => {
   );
 };
 
-const GridDiv = tw.div`
+const GridDiv = tw.main`
 grid 
 gap-2 
 md:grid-cols-2 
@@ -230,7 +233,7 @@ text-justify
 dark:text-gray-200
 `;
 
-const RightGrid = tw.div`
+const RightGrid = tw.section`
 grid 
 gap-1 
 gap-x-14 
