@@ -79,7 +79,7 @@ const Project = () => {
             </a>
           </div>
         </LeftGrid>
-        <main className="md:order-2">
+        <main className="md:order-2 select-none">
           <Span1>
             <Span2>
               <Span2Img
@@ -139,7 +139,7 @@ const Project = () => {
             </Button>
           </div>
         </LeftGrid>
-        <main>
+        <main className="select-none">
           <Span1>
             <Span2>
               <Span2Img
@@ -224,7 +224,7 @@ const Project = () => {
             </a>
           </div>
         </LeftGrid>
-        <main className="md:order-2">
+        <main className="md:order-2 select-none">
           <Span1>
             <Span2>
               <Span2Img
@@ -286,7 +286,7 @@ const Project = () => {
             </Button>
           </div>
         </LeftGrid>
-        <main>
+        <main className="select-none">
           <Span1>
             <Span2>
               <Span2Img
@@ -377,6 +377,7 @@ const Button = styled.a`
     dark:bg-gray-200 
     dark:text-midnight 
     hover:bg-slate-700 
+    select-none
   `}
 
   svg {
@@ -405,6 +406,7 @@ const Button2 = tw.button`
   py-4 
   bg-transparent
   dark:text-white
+  select-none
 `;
 
 const Span1 = styled.span`

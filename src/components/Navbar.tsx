@@ -386,6 +386,7 @@ pl-2
 tablet:pl-0
 lg:w-0
 lg:flex-1
+select-none
 `;
 
 const ButtonDiv = tw.div`

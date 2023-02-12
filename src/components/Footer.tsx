@@ -281,6 +281,7 @@ tablet:ml-0
 tablet:h-[40rem] 
 tablet:w-[80rem]
 tablet:opacity-80 
+select-none
 `;
 
 const MainGrid = tw.main`
@@ -402,6 +403,7 @@ focus:ring-indigo-500
 focus:ring-offset-2 
 focus:ring-offset-[#F8FAFC] 
 dark:text-slate-200
+select-none
 `;
 
 const LowerDiv = tw.section`
@@ -422,6 +424,7 @@ w-full
 px-5 
 py-14 
 mb-8 
+select-none
 focus:outline-none 
 focus:ring-2 
 focus:ring-indigo-500 
@@ -465,6 +468,7 @@ sm:mt-0
 sm:ml-3 
 sm:w-auto 
 sm:flex-shrink-0
+select-none
 `;
 
 const Copyright = tw.p`

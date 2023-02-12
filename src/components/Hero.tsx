@@ -228,6 +228,7 @@ const ProfileImg = styled.img`
   max-width: 100%;
   min-height: 100%;
   max-height: 100%;
+  user-select: none;
 `;
 
 const BtnDiv = tw.section`
@@ -254,6 +255,7 @@ text-white
 dark:bg-gray-200 
 dark:text-midnight 
 hover:bg-slate-700
+select-none
 `;
 const Button2 = tw.button`
 inline-flex 
@@ -271,6 +273,7 @@ transition
 bg-transparent
 text-midnight 
 dark:text-white
+select-none
 `;
 
 export default Hero;

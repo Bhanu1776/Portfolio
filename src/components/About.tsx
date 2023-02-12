@@ -242,6 +242,7 @@ xsm:grid-cols-1
 sm:grid-cols-2 
 sm:grid-rows-2 
 md:mt-0 
+select-none
 `;
 
 const BgImg = tw.img`

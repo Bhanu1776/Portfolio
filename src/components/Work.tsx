@@ -40,7 +40,7 @@ const Work = () => {
               <p className="p-0 m-0 text-3xl mb-2 dark:text-gray-200">
                 Evolution-X Organization
               </p>
-              <p className="p-0 m-0 text-2xl dark:text-gray-200 text-gray-500 before:content-['['] dark:before:text-teal-500 before:text-indigo-500 before:font-bold after:content-[']'] dark:after:text-teal-500 after:text-indigo-500after:font-bold">
+              <p className="p-0 m-0 text-2xl dark:text-gray-200 text-gray-500 before:content-['['] dark:before:text-teal-500 before:text-indigo-500 after:text-indigo-500 after:font-bold before:font-bold after:content-[']'] dark:after:text-teal-500 after:text-indigo-500after:font-bold">
                 &nbsp; 2021 - 2022 &nbsp;
               </p>
             </div>
