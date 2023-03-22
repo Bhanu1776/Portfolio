@@ -3,6 +3,7 @@ import tw from "twin.macro";
 import Images from "../Images/Imgindex";
 import Hr from "./Hr";
 import { Link } from "react-scroll";
+import ReactGa from "react-ga"
 
 const Hero = () => {
   return (
@@ -94,7 +95,7 @@ const Hero = () => {
               </svg>
             </BtnPrimary>
           </Link>
-          <a href={Images.Resume} download="Bhanu_Web-Developer">
+          <a href={Images.Resume} download="Bhanu_Web-Developer" onClick={ ()=>{ ReactGa.event({category: "Resume", action:"Test action", label:"Test Label"})}}>
             <Button2 aria-label="button" className="group">
               Download Resume
               <svg
