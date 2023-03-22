@@ -165,6 +165,152 @@ const Project = () => {
       {/* //* 3rd Card  */}
       <MainGrid className="bg-gradient-to-b from-sky-50 to-sky-300 border-sky-100 dark:from-slate-900 dark:to-pink-700 dark:border-pink-800 dark:border-t ">
         <LeftGrid className="order-2">
+          <h2 className="text-6xl dark:text-gray-200">JellyFish-x-Retro</h2>
+          <p>
+            Vscode Retro theme injects modern aesthetic looks and wild 80's animations into your VS code 🚀💥💣
+          </p>
+          <div>
+            <Button
+              href="https://marketplace.visualstudio.com/items?itemName=Bhanu1776.jellyfish-retro"
+              target="_blank"
+              rel="noreferrer"
+              className="group"
+            >
+              Visit Marketplace
+              <svg
+                fill="none"
+                width="12"
+                height="12"
+                viewBox="0 0 10 10"
+                aria-hidden="true"
+                className="group"
+              >
+                <path
+                  className="transition opacity-0 group-hover:opacity-100"
+                  d="M0 5h7"
+                ></path>
+                <path
+                  className="transition group-hover:translate-x-[3px]"
+                  d="M1 1l4 4-4 4"
+                ></path>
+              </svg>
+            </Button>
+            <a
+              href="https://github.com/Bhanu1776/vscode-Jellyfish-x-Retro"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button2 aria-label="button" className="group">
+                Source Code
+                <svg
+                  className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
+                  fill="none"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 10 10"
+                  aria-hidden="true"
+                >
+                  <path
+                    className="transition opacity-0 group-hover:opacity-100"
+                    d="M0 5h7"
+                  ></path>
+                  <path
+                    className="transition group-hover:translate-x-[3px]"
+                    d="M1 1l4 4-4 4"
+                  ></path>
+                </svg>
+              </Button2>
+            </a>
+          </div>
+        </LeftGrid>
+        <main className="md:order-2 select-none">
+          <Span1>
+            <Span2>
+              <Span2Img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27924%27%20height=%27718%27/%3e"
+              />
+            </Span2>
+            <Img
+              alt="CSS Art Challenge on a Macbook Pro"
+              decoding="async"
+              data-nimg="intrinsic"
+              srcSet={Images.JellyfishRetro}
+              className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
+              data-aos="fade-left"
+              data-aos-offset="400"
+              data-aos-duration="500"
+            />
+          </Span1>
+        </main>
+      </MainGrid>
+
+      {/* //* 4th Card  */}
+      <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-fuchsia-700 dark:border-fuchsia-800 dark:border-t ">
+        <LeftGrid className="order-1">
+          <h2 className="text-5xl dark:text-gray-200">
+            Hotel Management System
+          </h2>
+          <p>
+            It is a simple web application that allows the hotel manager to
+            handle all hotel activities online. This application is built using
+            Python Flask.
+          </p>
+          <div>
+            <Button
+              href="https://github.com/Bhanu1776/Python-Project"
+              target="_blank"
+              rel="noreferrer"
+              className="group"
+            >
+              View Source Code
+              <svg
+                fill="none"
+                width="12"
+                height="12"
+                viewBox="0 0 10 10"
+                aria-hidden="true"
+                className="group"
+              >
+                <path
+                  className="transition opacity-0 group-hover:opacity-100"
+                  d="M0 5h7"
+                ></path>
+                <path
+                  className="transition group-hover:translate-x-[3px]"
+                  d="M1 1l4 4-4 4"
+                ></path>
+              </svg>
+            </Button>
+          </div>
+        </LeftGrid>
+        <main className="select-none">
+          <Span1>
+            <Span2>
+              <Span2Img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27924%27%20height=%27718%27/%3e"
+              />
+            </Span2>
+            <Img
+              alt="CSS Art Challenge on a Macbook Pro"
+              decoding="async"
+              data-nimg="intrinsic"
+              srcSet={Images.Hotel}
+              className="!m-0 !max-w-[100%] !max-h-[100%] !p-12"
+              data-aos="fade-right"
+              data-aos-offset="400"
+              data-aos-duration="500"
+            />
+          </Span1>
+        </main>
+      </MainGrid>
+
+            {/* //* 5th Card  */}
+      <MainGrid className="bg-gradient-to-b from-sky-50 to-amber-300 border-amber-100 dark:from-slate-900 dark:to-rose-700 dark:border-rose-800 dark:border-t ">
+        <LeftGrid className="order-2">
           <h2 className="text-6xl dark:text-gray-200">SaxX</h2>
           <p>
             E-commerce static prototype developed to practice my frontend
@@ -240,68 +386,6 @@ const Project = () => {
               srcSet={Images.Sax}
               className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
               data-aos="fade-left"
-              data-aos-offset="400"
-              data-aos-duration="500"
-            />
-          </Span1>
-        </main>
-      </MainGrid>
-
-      {/* //* 4th Card  */}
-      <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-fuchsia-700 dark:border-fuchsia-800 dark:border-t ">
-        <LeftGrid className="order-1">
-          <h2 className="text-5xl dark:text-gray-200">
-            Hotel Management System
-          </h2>
-          <p>
-            It is a simple web application that allows the hotel manager to
-            handle all hotel activities online. This application is built using
-            Python Flask.
-          </p>
-          <div>
-            <Button
-              href="https://github.com/Bhanu1776/Python-Project"
-              target="_blank"
-              rel="noreferrer"
-              className="group"
-            >
-              View Source Code
-              <svg
-                fill="none"
-                width="12"
-                height="12"
-                viewBox="0 0 10 10"
-                aria-hidden="true"
-                className="group"
-              >
-                <path
-                  className="transition opacity-0 group-hover:opacity-100"
-                  d="M0 5h7"
-                ></path>
-                <path
-                  className="transition group-hover:translate-x-[3px]"
-                  d="M1 1l4 4-4 4"
-                ></path>
-              </svg>
-            </Button>
-          </div>
-        </LeftGrid>
-        <main className="select-none">
-          <Span1>
-            <Span2>
-              <Span2Img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27924%27%20height=%27718%27/%3e"
-              />
-            </Span2>
-            <Img
-              alt="CSS Art Challenge on a Macbook Pro"
-              decoding="async"
-              data-nimg="intrinsic"
-              srcSet={Images.Hotel}
-              className="!m-0 !max-w-[100%] !max-h-[100%] !p-12"
-              data-aos="fade-right"
               data-aos-offset="400"
               data-aos-duration="500"
             />

@@ -8,9 +8,10 @@ const Images = {
     Ray3: require('./ray3.png'),
     BhanuImg: require('./Primary.png'),
     Freelansters: require('./Freelansters.png'),
-    Sax: require('./Sax.png'),
+    JellyfishRetro: require('./Jellyfish-x-retro.png'),
     Venue: require('./Venue.png'),
     Hotel: require('./Hotel.png'),
+    Sax: require('./Sax.png'),
     Resume: require('./Bhanu_Web-Developer.pdf')
 }
 
