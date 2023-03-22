@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import Images from "../Images/Imgindex";
+import ReactGa from "react-ga"
 
 const Project = () => {
   return (
@@ -31,6 +32,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
+              onClick={ ()=>{ ReactGa.event({category: "Freelansters", action:"Visited Freelansters"})}}
             >
               Visit Freelansters
               <svg
@@ -117,6 +119,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
+              onClick={ ()=>{ ReactGa.event({category: "Venue Booking System", action:"Source code"})}}
             >
               Source Code
               <svg
@@ -175,6 +178,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
+              onClick={ ()=>{ ReactGa.event({category: "JellyFish Marketplace", action:"Marketplace"})}}
             >
               Visit Marketplace
               <svg
@@ -263,6 +267,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
+              onClick={ ()=>{ ReactGa.event({category: "Hotel Management", action:"Source code"})}}
             >
               View Source Code
               <svg
@@ -322,6 +327,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
+              onClick={ ()=>{ ReactGa.event({category: "SaxX", action:"Website"})}}
             >
               Visit SaxX
               <svg

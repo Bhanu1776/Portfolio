@@ -3,6 +3,7 @@ import Images from "../Images/Imgindex";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import { Link } from "react-scroll";
+import ReactGa from "react-ga"
 
 const Footer2 = () => {
   return (
@@ -93,6 +94,7 @@ const Footer2 = () => {
                   href="https://in.linkedin.com/in/bhanu-sunka-94a24a21a?original_referer=https%3A%2F%2Fwww.google.com%2F"
                   rel="noreferrer"
                   target="_blank"
+                  onClick={ ()=>{ ReactGa.event({category: "LinkedIn", action:"LinkedIn"})}}
                 >
                   <span className="sr-only">LinkedIn</span>
                   <LinkSvg
@@ -147,6 +149,7 @@ const Footer2 = () => {
                   href="https://www.instagram.com/bhanu_1776/"
                   rel="noreferrer"
                   target="_blank"
+                  onClick={ ()=>{ ReactGa.event({category: "Instagram", action:"Instagram"})}}
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
@@ -208,7 +211,7 @@ const Footer2 = () => {
                   </svg>
                   <Tooltip anchorId="DEV" />
                 </a>
-                <a href="https://www.buymeacoffee.com/Bhanu1776">
+                <a href="https://www.buymeacoffee.com/Bhanu1776" onClick={ ()=>{ ReactGa.event({category: "Buymecoffee", action:"Donation"})}}>
                   <span className="sr-only">Support</span>
                   <svg
                     className="w-14 h-11 mt-2 transform hover:rotate-[-7deg] transition hover:text-teal-500"

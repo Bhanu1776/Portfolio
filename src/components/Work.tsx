@@ -1,6 +1,7 @@
 import tw from "twin.macro";
 import { Button } from "./Project";
 import Hr from "./Hr";
+import ReactGa from "react-ga"
 
 const Work = () => {
   return (
@@ -61,6 +62,7 @@ const Work = () => {
           className="group cursor-pointer"
           href="https://github.com/Bhanu1776"
           target="_blank"
+          onClick={ ()=>{ ReactGa.event({category: "Github from work", action:"Github"})}}
         >
           Checkout GitHub
           <svg

@@ -74,7 +74,7 @@ const Hero = () => {
             offset={-100}
             duration={500}
           >
-            <BtnPrimary aria-label="button" type="button" className="group">
+            <BtnPrimary aria-label="button" type="button" className="group" onClick={ ()=>{ ReactGa.event({category: "Hire Me", action:"Hiring"})}}>
               Hire Me
               <svg
                 className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-white dark:stroke-midnight"
@@ -95,7 +95,7 @@ const Hero = () => {
               </svg>
             </BtnPrimary>
           </Link>
-          <a href={Images.Resume} download="Bhanu_Web-Developer" onClick={ ()=>{ ReactGa.event({category: "Resume", action:"Test action", label:"Test Label"})}}>
+          <a href={Images.Resume} download="Bhanu_Web-Developer" onClick={ ()=>{ ReactGa.event({category: "Resume", action:"Downloaded Resume", label:"Test Label"})}}>
             <Button2 aria-label="button" className="group">
               Download Resume
               <svg
