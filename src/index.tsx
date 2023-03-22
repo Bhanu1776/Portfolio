@@ -6,6 +6,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import Navbar from "./components/Navbar";
 import reportWebVitals from "./reportWebVitals";
+import {Analytics} from '@vercel/analytics/react'
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -27,6 +28,7 @@ root.render(
       <Navbar />
       <App />
     </ThemeProvider>
+    <Analytics />
   </React.StrictMode>
 );
 
