@@ -23,12 +23,13 @@ const Hero = () => {
           />
           <RayHero
             alt=""
-            src={Images.HeroBg}
+            src="https://ik.imagekit.io/bhanu1776/Portfolio/Hero-bg.png?updatedAt=1679832384667"
             decoding="async"
             data-nimg="intrinsic"
             className="absolute top-0 right-0"
             data-aos="fade-down"
             data-aos-delay="500"
+            
           />
         </BgDiv>
       </figure>
@@ -54,11 +55,12 @@ const Hero = () => {
             <ProfileImgDiv>
               <ProfileImg
                 alt="Bhanu Sunka"
-                src={Images.BhanuImg}
+                src="https://ik.imagekit.io/bhanu1776/Portfolio/Primary.png?updatedAt=1679832378821"
                 className="col-span-1 rounded-full"
                 data-aos="fade-left"
                 data-aos-easing="ease-in-sine"
-              />
+                loading="lazy"
+                />
             </ProfileImgDiv>
           </div>
         </header>

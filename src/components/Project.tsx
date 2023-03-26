@@ -91,10 +91,10 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="CSS Art Challenge on a Macbook Pro"
+              alt="Freelancing"
               decoding="async"
               data-nimg="intrinsic"
-              srcSet={Images.Freelansters}
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Freelansters.png?updatedAt=1679832380833"
               data-aos="fade-left"
               data-aos-offset="500"
               data-aos-duration="500"
@@ -152,10 +152,10 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="CSS Art Challenge on a Macbook Pro"
+              alt="Venue Booking"
               decoding="async"
               data-nimg="intrinsic"
-              srcSet={Images.Venue}
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Venue.png?updatedAt=1679832379601"
               className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
               data-aos="fade-right"
               data-aos-offset="400"
@@ -237,10 +237,10 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="CSS Art Challenge on a Macbook Pro"
+              alt="Vscode theme"
               decoding="async"
               data-nimg="intrinsic"
-              srcSet={Images.JellyfishRetro}
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Jellyfish-x-retro.png?updatedAt=1679832380911"
               className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
               data-aos="fade-left"
               data-aos-offset="400"
@@ -300,10 +300,10 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="CSS Art Challenge on a Macbook Pro"
+              alt="Hotel Management"
               decoding="async"
               data-nimg="intrinsic"
-              srcSet={Images.Hotel}
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Hotel.png?updatedAt=1679832380233"
               className="!m-0 !max-w-[100%] !max-h-[100%] !p-12"
               data-aos="fade-right"
               data-aos-offset="400"
@@ -386,10 +386,10 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="CSS Art Challenge on a Macbook Pro"
+              alt="Ecommerce website"
               decoding="async"
               data-nimg="intrinsic"
-              srcSet={Images.Sax}
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Sax.png?updatedAt=1679832379829"
               className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
               data-aos="fade-left"
               data-aos-offset="400"
