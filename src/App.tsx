@@ -10,6 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import ReactGa from "react-ga"
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const App = () => {
           <Blog />
           <Footer />
         </MainDiv>
+      <Analytics />
       </div>
     </>
   );
