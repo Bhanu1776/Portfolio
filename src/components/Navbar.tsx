@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
+const Blur: any = document.getElementById('Blur')
+
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -41,7 +43,7 @@ const Navbar = () => {
   };
 
   const MiniDialog = styled.div`
-    display: ${() => (openMenu ? "block" : "none")};
+    display: ${() => (openMenu ? "block" : "none") };
     ${tw`
     fixed 
     w-full 
@@ -51,7 +53,7 @@ const Navbar = () => {
     font-semibold
     text-gray-900 
     bg-white 
-    shadow-lg 
+    shadow-2xl
     rounded-3xl 
     top-4 
     right-4 
@@ -176,7 +178,7 @@ const Navbar = () => {
           </ButtonDiv>
 
           <div className="-my-2 -mr-2 md:hidden">
-            <Hamburger onClick={() => setOpenMenu(true)}>
+            <Hamburger onClick={() => {setOpenMenu(true); Blur.style.filter = 'blur(50px)'}}>
               <span className="sr-only">Open menu</span>
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path
@@ -205,7 +207,7 @@ const Navbar = () => {
           </div>
 
           <MiniDialog>
-            <CloseBtn onClick={() => setOpenMenu(false)}>
+            <CloseBtn onClick={() => {setOpenMenu(false); Blur.style.filter = 'blur(0px)'}}>
               <span className="sr-only">Close navigation</span>
               <svg
                 viewBox="0 0 10 10"
@@ -231,7 +233,7 @@ const Navbar = () => {
                   smooth={true}
                   offset={-100}
                   duration={200}
-                  onClick={() => setOpenMenu(false)}
+                  onClick={() => {setOpenMenu(false); Blur.style.filter = 'blur(0px)'}}
                 >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Home
@@ -247,7 +249,7 @@ const Navbar = () => {
                   smooth={true}
                   offset={-70}
                   duration={300}
-                  onClick={() => setOpenMenu(false)}
+                  onClick={() => {setOpenMenu(false); Blur.style.filter = 'blur(0px)'}}
                 >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     About
@@ -263,7 +265,7 @@ const Navbar = () => {
                   smooth={true}
                   offset={-80}
                   duration={400}
-                  onClick={() => setOpenMenu(false)}
+                  onClick={() => {setOpenMenu(false); Blur.style.filter = 'blur(0px)'}}
                 >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Projects
@@ -279,7 +281,7 @@ const Navbar = () => {
                   smooth={true}
                   offset={-100}
                   duration={500}
-                  onClick={() => setOpenMenu(false)}
+                  onClick={() => {setOpenMenu(false); Blur.style.filter = 'blur(0px)'}}
                 >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Work
@@ -295,7 +297,7 @@ const Navbar = () => {
                   smooth={true}
                   offset={-200}
                   duration={400}
-                  onClick={() => setOpenMenu(false)}
+                  onClick={() => {setOpenMenu(false); Blur.style.filter = 'blur(0px)'}}
                 >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Blog
