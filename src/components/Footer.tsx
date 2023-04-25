@@ -262,7 +262,7 @@ const Footer2 = () => {
                 required
               />
               <ButtonDiv>
-                <PurpleBtn type="submit">Contact Me!</PurpleBtn>
+                <PurpleBtn type="submit" onClick={()=>{navigator.vibrate(2000)}}>Contact Me!</PurpleBtn>
               </ButtonDiv>
             </LowerDiv>
           </MainGrid>

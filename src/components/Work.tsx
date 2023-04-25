@@ -62,7 +62,7 @@ const Work = () => {
           className="group cursor-pointer"
           href="https://github.com/Bhanu1776"
           target="_blank"
-          onClick={ ()=>{ ReactGa.event({category: "Github from work", action:"Github"})}}
+          onClick={ ()=>{ ReactGa.event({category: "Github from work", action:"Github"}); navigator.vibrate(1500)}}
         >
           Checkout GitHub
           <svg
