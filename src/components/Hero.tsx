@@ -76,7 +76,7 @@ const Hero = () => {
             offset={-100}
             duration={500}
           >
-            <BtnPrimary aria-label="button" type="button" className="group" onClick={ ()=>{ ReactGa.event({category: "Hire Me", action:"Hiring"}); navigator.vibrate(1000)}}>
+            <BtnPrimary aria-label="button" type="button" className="group" onClick={ ()=>{ ReactGa.event({category: "Hire Me", action:"Hiring"}); navigator.vibrate(500)}}>
               Hire Me
               <svg
                 className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-white dark:stroke-midnight"
@@ -98,7 +98,7 @@ const Hero = () => {
             </BtnPrimary>
           </Link>
           <a href={Images.Resume} download="Bhanu_Web-Developer" onClick={ ()=>{ ReactGa.event({category: "Resume", action:"Downloaded Resume", label:"Test Label"})}}>
-            <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(2000)}}>
+            <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(1000)}}>
               Download Resume
               <svg
                 className="mt-0.5 ml-4 !z-50 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
