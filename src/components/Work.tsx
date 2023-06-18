@@ -1,7 +1,7 @@
 import tw from "twin.macro";
 import { Button } from "./Project";
 import Hr from "./Hr";
-import ReactGa from "react-ga"
+import ReactGa from "react-ga4"
 
 const Work = () => {
   return (

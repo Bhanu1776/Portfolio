@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
-import ReactGa from "react-ga"
+import ReactGa from "react-ga4"
 
 const Project = () => {
   return (
@@ -31,7 +31,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
-              onClick={ ()=>{ ReactGa.event({category: "Freelansters", action:"Visited Freelansters"}); navigator.vibrate(1000)}}
+              onClick={ ()=>{ ReactGa.event({category: "Freelansters", action:"Visited Freelansters"}); navigator.vibrate(900)}}
             >
               Visit Freelansters
               <svg
@@ -57,7 +57,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(500)}}>
+              <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(400)}}>
                 Source Code
                 <svg
                   className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
@@ -118,7 +118,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
-              onClick={ ()=>{ ReactGa.event({category: "Venue Booking System", action:"Source code"}); navigator.vibrate(1000)}}
+              onClick={ ()=>{ ReactGa.event({category: "Venue Booking System", action:"Source code"}); navigator.vibrate(900)}}
             >
               Source Code
               <svg
@@ -177,7 +177,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
-              onClick={ ()=>{ ReactGa.event({category: "JellyFish Marketplace", action:"Marketplace"}); navigator.vibrate(1000)}}
+              onClick={ ()=>{ ReactGa.event({category: "JellyFish Marketplace", action:"Marketplace"}); navigator.vibrate(900)}}
             >
               Visit Marketplace
               <svg
@@ -203,7 +203,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(500)}}>
+              <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(400)}}>
                 Source Code
                 <svg
                   className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
@@ -266,7 +266,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
-              onClick={ ()=>{ ReactGa.event({category: "Hotel Management", action:"Source code"}); navigator.vibrate(1000)}}
+              onClick={ ()=>{ ReactGa.event({category: "Hotel Management", action:"Source code"}); navigator.vibrate(900)}}
             >
               View Source Code
               <svg
@@ -326,7 +326,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
-              onClick={ ()=>{ ReactGa.event({category: "SaxX", action:"Website"}); navigator.vibrate(1000)}}
+              onClick={ ()=>{ ReactGa.event({category: "SaxX", action:"Website"}); navigator.vibrate(900)}}
             >
               Visit SaxX
               <svg
@@ -352,7 +352,7 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(500)}}>
+              <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(400)}}>
                 Source Code
                 <svg
                   className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"

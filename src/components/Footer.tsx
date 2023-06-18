@@ -2,7 +2,7 @@ import tw from "twin.macro";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import { Link } from "react-scroll";
-import ReactGa from "react-ga"
+import ReactGa from "react-ga4"
 
 const Footer2 = () => {
   return (
