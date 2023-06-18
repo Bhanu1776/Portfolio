@@ -97,6 +97,7 @@ const Project = () => {
               data-aos="fade-left"
               data-aos-offset="500"
               data-aos-duration="500"
+              loading="lazy"
             />
           </Span1>
         </main>
@@ -159,6 +160,7 @@ const Project = () => {
               data-aos="fade-right"
               data-aos-offset="400"
               data-aos-duration="500"
+              loading="lazy"
             />
           </Span1>
         </main>
@@ -244,6 +246,7 @@ const Project = () => {
               data-aos="fade-left"
               data-aos-offset="400"
               data-aos-duration="500"
+              loading="lazy"
             />
           </Span1>
         </main>
@@ -307,6 +310,7 @@ const Project = () => {
               data-aos="fade-right"
               data-aos-offset="400"
               data-aos-duration="500"
+              loading="lazy"
             />
           </Span1>
         </main>
@@ -393,6 +397,7 @@ const Project = () => {
               data-aos="fade-left"
               data-aos-offset="400"
               data-aos-duration="500"
+              loading="lazy"
             />
           </Span1>
         </main>

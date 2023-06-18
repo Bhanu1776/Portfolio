@@ -65,6 +65,7 @@ const About = () => {
                       data-tooltip-content={val.alt}
                       data-tooltip-place="top"
                       data-tooltip-delay-show={300}
+                      loading="lazy"
                     />,
                     <Tooltip anchorId={val.alt} />,
                   ];
@@ -99,6 +100,7 @@ const About = () => {
                       data-tooltip-content={val.alt}
                       data-tooltip-place="top"
                       data-tooltip-delay-show={300}
+                      loading="lazy"
                     />,
                     <Tooltip anchorId={val.alt} />,
                   ];
@@ -133,6 +135,7 @@ const About = () => {
                       data-tooltip-content={val.alt}
                       data-tooltip-place="top"
                       data-tooltip-delay-show={300}
+                      loading="lazy"
                     />,
                     <Tooltip anchorId={val.alt} />,
                   ];
@@ -167,6 +170,7 @@ const About = () => {
                       data-tooltip-content={val.alt}
                       data-tooltip-place="top"
                       data-tooltip-delay-show={100}
+                      loading="lazy"
                     />,
                     <Tooltip anchorId={val.alt} />,
                   ];

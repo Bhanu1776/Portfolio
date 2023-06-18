@@ -20,6 +20,7 @@ const Hero = () => {
             src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27924%27%20height=%27718%27/%3e"
             data-aos="fade-down"
             data-aos-delay="500"
+            loading="lazy"
           />
           <RayHero
             alt=""
@@ -29,7 +30,7 @@ const Hero = () => {
             className="absolute top-0 right-0"
             data-aos="fade-down"
             data-aos-delay="500"
-            
+            loading="lazy"
           />
         </BgDiv>
       </figure>

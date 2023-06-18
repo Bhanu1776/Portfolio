@@ -10,7 +10,7 @@ const Footer2 = () => {
       <footer id="Footer" className="relative">
         <hr className="dark:bg-midnight dark:h-[1px] dark:border-none"></hr>
         <form action="https://formspree.io/f/mvonoajk" method="POST">
-          <BgImg src="https://ik.imagekit.io/bhanu1776/Portfolio/Footer-bg.png?updatedAt=1679832383622" alt="" />
+          <BgImg src="https://ik.imagekit.io/bhanu1776/Portfolio/Footer-bg.png?updatedAt=1679832383622" alt="rays" loading="lazy"/>
           <MainGrid>
             <LeftGrid>
               <LeftHeading1>GENERAL</LeftHeading1>
