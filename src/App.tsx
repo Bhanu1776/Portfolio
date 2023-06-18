@@ -9,18 +9,11 @@ import Footer from "./components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import ReactGa from "react-ga"
-import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-
-  useEffect(() => {
-    ReactGa.pageview(window.location.pathname);
-  }, [])
-  
 
   return (
     <>
@@ -34,7 +27,6 @@ const App = () => {
           <Blog />
           <Footer />
         </MainDiv>
-      <Analytics />
       </div>
     </>
   );
