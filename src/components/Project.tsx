@@ -319,20 +319,19 @@ const Project = () => {
             {/* //* 5th Card  */}
       <MainGrid className="bg-gradient-to-b from-sky-50 to-amber-300 border-amber-100 dark:from-slate-900 dark:to-rose-700 dark:border-rose-800 dark:border-t ">
         <LeftGrid className="order-2">
-          <h2 className="text-6xl dark:text-gray-200">SaxX</h2>
+          <h2 className="text-6xl dark:text-gray-200">NextJs-Starter</h2>
           <p>
-            E-commerce static prototype developed to practice my frontend
-            designing skills. Build with pure html css and javascript.
+            Npm package comes with latest and greatest Nextjs13, Typescript, Tailwind, Eslint, Prettier, Husky, etc which makes development process easier.
           </p>
           <div>
             <Button
-              href="https://bhanu1776.github.io/Ecommerce.github.io/"
+              href="https://starter-website-sigma.vercel.app/"
               target="_blank"
               rel="noreferrer"
               className="group"
-              onClick={ ()=>{ ReactGa.event({category: "SaxX", action:"Website"}); navigator.vibrate(900)}}
+              onClick={ ()=>{ ReactGa.event({category: "Npm_NextJs", action:"Website"}); navigator.vibrate(900)}}
             >
-              Visit SaxX
+              Visit Npm
               <svg
                 fill="none"
                 width="12"
@@ -352,7 +351,7 @@ const Project = () => {
               </svg>
             </Button>
             <a
-              href="https://github.com/Bhanu1776/Full_Stack_Dev/tree/master/Ecommerce"
+              href="https://www.npmjs.com/package/@bhanu17/nextjs-starter"
               target="_blank"
               rel="noreferrer"
             >
@@ -389,10 +388,10 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="Ecommerce website"
+              alt="Npm package"
               decoding="async"
               data-nimg="intrinsic"
-              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Sax.png?updatedAt=1679832379829"
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/NextNpm.png?updatedAt=1687549768580"
               className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
               data-aos="fade-left"
               data-aos-offset="400"
