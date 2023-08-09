@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import tw from "twin.macro";
-import Images from "../Images/Imgindex";
 import Hr from "./Hr";
 import { Link } from "react-scroll";
 import ReactGa from "react-ga4"
