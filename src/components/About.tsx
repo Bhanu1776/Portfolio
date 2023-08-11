@@ -1,5 +1,4 @@
 import tw from "twin.macro";
-import Images from "../Images/Imgindex";
 import { Languages, Web, Tools, Other } from "./LangData";
 import Tilt from "react-parallax-tilt";
 import { Tooltip } from "react-tooltip";
@@ -38,7 +37,7 @@ const About = () => {
         </LeftGrid>
 
         <RightGrid>
-          <BgImg src={Images.FooterBg} alt="" />
+          <BgImg src="https://ik.imagekit.io/bhanu1776/Portfolio/Footer-bg.png?updatedAt=1679832383622" alt="" />
           <Tilt
             tiltMaxAngleX={15}
             tiltMaxAngleY={15}

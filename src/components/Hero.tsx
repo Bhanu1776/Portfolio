@@ -97,8 +97,7 @@ const Hero = () => {
               </svg>
             </BtnPrimary>
           </Link>
-           {/* <object aria-label="Resume" data={Images.Resume} type="application/pdf" width="100%" height="500px"/> */}
-          <a href="https://drive.google.com/file/d/10lVLU7A3sFZEZb1RSx2xC1iak5kK7SIn/view?usp=sharing" target="_blank" onClick={ ()=>{ ReactGa.event({category: "Resume", action:"Downloaded Resume", label:"Test Label"})}} rel="noreferrer">
+          <a href="https://drive.google.com/file/d/1s3p1OBylZsK--fKqszLUpt_VUDp1ysYg/view?usp=sharing" target="_blank" onClick={ ()=>{ ReactGa.event({category: "Resume", action:"Downloaded Resume", label:"Test Label"})}} rel="noreferrer">
             <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(1000)}}>
               View Resume
               <svg
