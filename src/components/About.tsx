@@ -24,7 +24,7 @@ const About = () => {
               I love to explore new technologies and leverage them to solve
               real-life problems. I'm a passionate learner who's always willing
               to learn and work across various technologies and domains. In my
-              spare time, I love contributing to open-source projects.
+              spare time, I love to explore open-source projects.
             </LeftPara>
             <LeftPara>
               I am highly proficient in web development. I love to build
@@ -37,7 +37,10 @@ const About = () => {
         </LeftGrid>
 
         <RightGrid>
-          <BgImg src="https://ik.imagekit.io/bhanu1776/Portfolio/Footer-bg.png?updatedAt=1679832383622" alt="" />
+          <BgImg
+            src="https://ik.imagekit.io/bhanu1776/Portfolio/Footer-bg.png?updatedAt=1679832383622"
+            alt=""
+          />
           <Tilt
             tiltMaxAngleX={15}
             tiltMaxAngleY={15}

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
-import ReactGa from "react-ga4"
+import ReactGa from "react-ga4";
 
 const Project = () => {
   return (
@@ -22,8 +22,9 @@ const Project = () => {
         <LeftGrid className="order-2 ">
           <h2 className="text-6xl dark:text-gray-200">Freelansters</h2>
           <p>
-            Freelansters is a Freelancing Website where you can get your work
-            done. The place where you can easily Find Jobs or Post Jobs!
+            Freelansters is a MERN stack Freelancing Webapp where you can get
+            your work done. The place where you can easily Find Jobs or Post
+            Jobs!
           </p>
           <div>
             <Button
@@ -31,7 +32,13 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
-              onClick={ ()=>{ ReactGa.event({category: "Freelansters", action:"Visited Freelansters"}); navigator.vibrate(900)}}
+              onClick={() => {
+                ReactGa.event({
+                  category: "Freelansters",
+                  action: "Visited Freelansters",
+                });
+                navigator.vibrate(900);
+              }}
             >
               Visit Freelansters
               <svg
@@ -57,7 +64,13 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(400)}}>
+              <Button2
+                aria-label="button"
+                className="group"
+                onClick={() => {
+                  navigator.vibrate(400);
+                }}
+              >
                 Source Code
                 <svg
                   className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
@@ -108,7 +121,9 @@ const Project = () => {
         <LeftGrid className="order-1">
           <h2 className="text-6xl dark:text-gray-200">NextJs-Starter</h2>
           <p>
-            Npm package comes with latest and greatest Nextjs13, Typescript, Tailwind, Eslint, Prettier, Husky, etc which makes development process easier.
+            Npm package comes with latest and greatest Nextjs13, Typescript,
+            Tailwind, Eslint, Prettier, Husky, etc which makes development
+            process easier.
           </p>
           <div>
             <Button
@@ -116,7 +131,10 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
-              onClick={ ()=>{ ReactGa.event({category: "Npm_NextJs", action:"Website"}); navigator.vibrate(900)}}
+              onClick={() => {
+                ReactGa.event({ category: "Npm_NextJs", action: "Website" });
+                navigator.vibrate(900);
+              }}
             >
               Visit Npm
               <svg
@@ -142,7 +160,13 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(400)}}>
+              <Button2
+                aria-label="button"
+                className="group"
+                onClick={() => {
+                  navigator.vibrate(400);
+                }}
+              >
                 Source Code
                 <svg
                   className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
@@ -194,7 +218,8 @@ const Project = () => {
         <LeftGrid className="order-2">
           <h2 className="text-6xl dark:text-gray-200">JellyFish-x-Retro</h2>
           <p>
-            Vscode Retro theme injects modern aesthetic looks and wild 80's animations into your VS code 🚀💥💣
+            Vscode Retro theme injects modern aesthetic looks and wild 80's
+            animations into your VS code 🚀💥💣
           </p>
           <div>
             <Button
@@ -202,7 +227,13 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
-              onClick={ ()=>{ ReactGa.event({category: "JellyFish Marketplace", action:"Marketplace"}); navigator.vibrate(900)}}
+              onClick={() => {
+                ReactGa.event({
+                  category: "JellyFish Marketplace",
+                  action: "Marketplace",
+                });
+                navigator.vibrate(900);
+              }}
             >
               Visit Marketplace
               <svg
@@ -228,7 +259,13 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(400)}}>
+              <Button2
+                aria-label="button"
+                className="group"
+                onClick={() => {
+                  navigator.vibrate(400);
+                }}
+              >
                 Source Code
                 <svg
                   className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
@@ -291,7 +328,13 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
-              onClick={ ()=>{ ReactGa.event({category: "Venue Booking System", action:"Source code"}); navigator.vibrate(900)}}
+              onClick={() => {
+                ReactGa.event({
+                  category: "Venue Booking System",
+                  action: "Source code",
+                });
+                navigator.vibrate(900);
+              }}
             >
               Source Code
               <svg
@@ -355,7 +398,13 @@ const Project = () => {
               target="_blank"
               rel="noreferrer"
               className="group"
-              onClick={ ()=>{ ReactGa.event({category: "Hotel Management", action:"Source code"}); navigator.vibrate(900)}}
+              onClick={() => {
+                ReactGa.event({
+                  category: "Hotel Management",
+                  action: "Source code",
+                });
+                navigator.vibrate(900);
+              }}
             >
               View Source Code
               <svg

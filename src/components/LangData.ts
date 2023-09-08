@@ -84,7 +84,7 @@ const Web: Obj[] = [
   {
     index: 7,
     src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
-    alt: "React",
+    alt: "ReactJs",
     width: "40",
   },
   {
@@ -95,9 +95,21 @@ const Web: Obj[] = [
   },
   {
     index: 9,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    alt: "Redux-toolkit",
+    width: "32",
+  },
+  {
+    index: 10,
     src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
     alt: "Express",
     width: "45",
+  },
+  {
+    index: 11,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    alt: "Next.js",
+    width: "32",
   },
 ];
 
@@ -125,6 +137,24 @@ const Tools: Obj[] = [
     src: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
     alt: "Postman",
     width: "40",
+  },
+  {
+    index: 5,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg",
+    alt: "Eslint",
+    width: "36",
+  },
+  {
+    index: 6,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg",
+    alt: "Prettier",
+    width: "36",
+  },
+  {
+    index: 7,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hugo/hugo-plain.svg",
+    alt: "Husky",
+    width: "36",
   },
 ];
 
