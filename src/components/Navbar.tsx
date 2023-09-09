@@ -18,9 +18,6 @@ const Navbar = () => {
   //   }
   // }, []);
 
-  let moon: any = document.getElementById("moon");
-  let sun: any = document.getElementById("sun");
-
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -31,17 +28,10 @@ const Navbar = () => {
 
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
-    if (theme === "dark") {
-      sun.style.display = "none";
-      moon.style.display = "block";
-    } else {
-      moon.style.display = "none";
-      sun.style.display = "block";
-    }
   };
 
   const MiniDialog = styled.div`
-    display: ${() => (openMenu ? "block" : "none") };
+    display: ${() => (openMenu ? "block" : "none")};
     ${tw`
     fixed 
     w-full 
@@ -141,42 +131,47 @@ const Navbar = () => {
 
           <ButtonDiv>
             <DarkModeBtn onClick={handleThemeSwitch}>
-              <svg
-                stroke="currentColor"
-                fill="none"
-                strokeWidth="2.5"
-                viewBox="0 0 24 24"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                height="2em"
-                width="2em"
-                xmlns="http://www.w3.org/2000/svg"
-                className="hidden"
-                id="moon"
-              >
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-              </svg>
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth="0"
-                viewBox="0 0 24 24"
-                height="2em"
-                width="2em"
-                xmlns="http://www.w3.org/2000/svg"
-                className=""
-                id="sun"
-              >
-                <g>
-                  <path fill="none" d="M0 0h24v24H0z"></path>
-                  <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path>
-                </g>
-              </svg>
+              {theme === "dark" ? (
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth="0"
+                  viewBox="0 0 24 24"
+                  height="2em"
+                  width="2em"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="sun"
+                >
+                  <g>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path>
+                  </g>
+                </svg>
+              ) : (
+                <svg
+                  stroke="currentColor"
+                  fill="none"
+                  strokeWidth="2.5"
+                  viewBox="0 0 24 24"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  height="2em"
+                  width="2em"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="moon"
+                >
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              )}
             </DarkModeBtn>
           </ButtonDiv>
 
           <div className="-my-2 -mr-2 md:hidden">
-            <Hamburger onClick={() => {setOpenMenu(true)}}>
+            <Hamburger
+              onClick={() => {
+                setOpenMenu(true);
+              }}
+            >
               <span className="sr-only">Open menu</span>
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path
@@ -205,7 +200,11 @@ const Navbar = () => {
           </div>
 
           <MiniDialog>
-            <CloseBtn onClick={() => {setOpenMenu(false) }}>
+            <CloseBtn
+              onClick={() => {
+                setOpenMenu(false);
+              }}
+            >
               <span className="sr-only">Close navigation</span>
               <svg
                 viewBox="0 0 10 10"
@@ -231,7 +230,9 @@ const Navbar = () => {
                   smooth={true}
                   offset={-100}
                   duration={200}
-                  onClick={() => {setOpenMenu(false) }}
+                  onClick={() => {
+                    setOpenMenu(false);
+                  }}
                 >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Home
@@ -247,7 +248,9 @@ const Navbar = () => {
                   smooth={true}
                   offset={-70}
                   duration={300}
-                  onClick={() => {setOpenMenu(false) }}
+                  onClick={() => {
+                    setOpenMenu(false);
+                  }}
                 >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     About
@@ -263,7 +266,9 @@ const Navbar = () => {
                   smooth={true}
                   offset={-80}
                   duration={400}
-                  onClick={() => {setOpenMenu(false) }}
+                  onClick={() => {
+                    setOpenMenu(false);
+                  }}
                 >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Projects
@@ -279,7 +284,9 @@ const Navbar = () => {
                   smooth={true}
                   offset={-100}
                   duration={500}
-                  onClick={() => {setOpenMenu(false) }}
+                  onClick={() => {
+                    setOpenMenu(false);
+                  }}
                 >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Work
@@ -295,7 +302,9 @@ const Navbar = () => {
                   smooth={true}
                   offset={-200}
                   duration={400}
-                  onClick={() => {setOpenMenu(false) }}
+                  onClick={() => {
+                    setOpenMenu(false);
+                  }}
                 >
                   <span className="text-2xl hover:text-teal-400 dark:hover:text-teal-500 cursor-pointer">
                     Blog
