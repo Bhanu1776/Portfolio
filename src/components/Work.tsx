@@ -1,7 +1,7 @@
 import tw from "twin.macro";
 import { Button } from "./Project";
 import Hr from "./Hr";
-import ReactGa from "react-ga4"
+import ReactGa from "react-ga4";
 
 const Work = () => {
   return (
@@ -35,34 +35,52 @@ const Work = () => {
                   fill="currentColor"
                 ></path>
               </svg>
-              <h3 className="p-0 m-0 pt-2 text-4xl font-bold mb-4 dark:text-gray-200">
-                Android Tester
-              </h3>
+              <a
+                href="https://github.com/Bhanu1776/IT-Dept-Website"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => {
+                  ReactGa.event({
+                    category: "Internships",
+                    action: "Checking Internship repository",
+                  });
+                }}
+              >
+                <h3 className="p-0 m-0 pt-2 text-4xl font-bold mb-4 dark:text-gray-200">
+                  Full Stack Developer
+                </h3>
+              </a>
               <p className="p-0 m-0 text-3xl mb-2 dark:text-gray-200">
-                Evolution-X Organization
+                Xavier Institute of Engineering
               </p>
               <p className="p-0 m-0 text-2xl dark:text-gray-200 text-gray-500 before:content-['['] dark:before:text-teal-500 before:text-indigo-500 after:text-indigo-500 after:font-bold before:font-bold after:content-[']'] dark:after:text-teal-500 after:text-indigo-500after:font-bold">
-                &nbsp; 2021 - 2022 &nbsp;
+                &nbsp; April 2023 &nbsp;
               </p>
             </div>
           </div>
           <p className="relative pb-4 md:border-b dark:text-gray-200 md:border-gray-300 md:dark:border-gray-400 md:col-span-3 text-[1.7rem] font-sans">
-            An Android open source community for developing Custom Roms. <br />
-            <span className="font-semibold text-slate-800 dark:text-gray-200">
+            Developed a full-fledged college web app for the IT Department.
+            <br />
+            {/* <span className="font-semibold text-slate-800 dark:text-gray-200">
               Achievements: &nbsp;
-            </span>
-            Successfully cleared Android tester phase 3. <br />
-            <span className="font-semibold text-slate-800 dark:text-gray-200">
+            </span> */}
+            Build with Nextjs13, Firebase for backend, and Ant-design as UI
+            component Library. <br />
+            {/* <span className="font-semibold text-slate-800 dark:text-gray-200">
               Contact: &nbsp;
-            </span>
-            https://github.com/Evolution-X
+            </span> */}
+            Led the technical part of the project from design, and management to
+            deployment.
           </p>
         </Article>
         <Button
           className="group cursor-pointer"
           href="https://github.com/Bhanu1776"
           target="_blank"
-          onClick={ ()=>{ ReactGa.event({category: "Github from work", action:"Github"}); navigator.vibrate(1500)}}
+          onClick={() => {
+            ReactGa.event({ category: "Github from work", action: "Github" });
+            navigator.vibrate(1500);
+          }}
         >
           Checkout GitHub
           <svg
