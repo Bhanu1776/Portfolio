@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import Hr from "./Hr";
 import { Link } from "react-scroll";
-import ReactGa from "react-ga4"
+import ReactGa from "react-ga4";
 
 const Hero = () => {
   return (
@@ -43,12 +43,22 @@ const Hero = () => {
             data-aos-easing="ease"
             data-aos-mirror="true"
             data-aos-once="false"
+            className="hero-gradient"
           >
-            Hello, I'm
-            <span className="text-teal-500 dark:text-teal-400">
+            <span className="hero-gradient">Hello, </span>
+            <span className="hero-gradient">I'm</span>
+            <span className="text-teal-500 dark:text-teal-400 dark:!text-transparent dark:bg-clip-text dark:bg-gradient-to-b dark:from-teal-400 dark:via-teal-400 dark:to-teal-900">
               &nbsp;Bhanu
             </span>
-            . I'm a student, Web developer and Enthusiastic learner.
+            <span className="hero-gradient">. </span>
+            <span className="hero-gradient">I'm </span>
+            <span className="hero-gradient">a </span>
+            <span className="hero-gradient">student, </span>
+            <span className="hero-gradient">Web </span>
+            <span className="hero-gradient">developer </span>
+            <span className="hero-gradient">and </span>
+            <span className="hero-gradient">Enthusiastic </span>
+            <span className="hero-gradient">learner </span>
           </LeftH1>
 
           <div className="order-1 md:order-2">
@@ -60,7 +70,7 @@ const Hero = () => {
                 data-aos="fade-left"
                 data-aos-easing="ease-in-sine"
                 loading="lazy"
-                />
+              />
             </ProfileImgDiv>
           </div>
         </header>
@@ -76,7 +86,15 @@ const Hero = () => {
             offset={-100}
             duration={500}
           >
-            <BtnPrimary aria-label="button" type="button" className="group" onClick={ ()=>{ ReactGa.event({category: "Hire Me", action:"Hiring"}); navigator.vibrate(500)}}>
+            <BtnPrimary
+              aria-label="button"
+              type="button"
+              className="group"
+              onClick={() => {
+                ReactGa.event({ category: "Hire Me", action: "Hiring" });
+                navigator.vibrate(500);
+              }}
+            >
               Hire Me
               <svg
                 className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-white dark:stroke-midnight"
@@ -97,8 +115,25 @@ const Hero = () => {
               </svg>
             </BtnPrimary>
           </Link>
-          <a href="https://drive.google.com/file/d/1j2yvUpt6AdcpoOx73x1QxcqLMFZpP8g9/view?usp=sharing" target="_blank" onClick={ ()=>{ ReactGa.event({category: "Resume", action:"Downloaded Resume", label:"Test Label"})}} rel="noreferrer">
-            <Button2 aria-label="button" className="group" onClick={()=>{navigator.vibrate(1000)}}>
+          <a
+            href="https://drive.google.com/file/d/1I75ZP4JI1x2oHmLf7y674KI2KVmylCAj/view?usp=sharing"
+            target="_blank"
+            onClick={() => {
+              ReactGa.event({
+                category: "Resume",
+                action: "Downloaded Resume",
+                label: "Test Label",
+              });
+            }}
+            rel="noreferrer"
+          >
+            <Button2
+              aria-label="button"
+              className="group"
+              onClick={() => {
+                navigator.vibrate(1000);
+              }}
+            >
               View Resume
               <svg
                 className="mt-0.5 ml-4 !z-50 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
