@@ -1,8 +1,8 @@
+import ReactGa from "react-ga4";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import tw from "twin.macro";
 import Hr from "./Hr";
-import { Link } from "react-scroll";
-import ReactGa from "react-ga4";
 
 const Hero = () => {
   return (
@@ -116,7 +116,7 @@ const Hero = () => {
             </BtnPrimary>
           </Link>
           <a
-            href="https://drive.google.com/file/d/1I75ZP4JI1x2oHmLf7y674KI2KVmylCAj/view?usp=sharing"
+            href="https://drive.google.com/file/d/1vsyHZprwcUDPY9i8jln9wLo1eioyH2Ff/view?usp=sharing"
             target="_blank"
             onClick={() => {
               ReactGa.event({
