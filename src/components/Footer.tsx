@@ -1,8 +1,8 @@
-import tw from "twin.macro";
+import ReactGa from "react-ga4";
+import { Link } from "react-scroll";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
-import { Link } from "react-scroll";
-import ReactGa from "react-ga4"
+import tw from "twin.macro";
 
 const Footer2 = () => {
   return (
@@ -266,7 +266,10 @@ const Footer2 = () => {
               </ButtonDiv>
             </LowerDiv>
           </MainGrid>
-          <Copyright>©{new Date().getFullYear()} Bhanu Sunka</Copyright>
+          <Copyright>
+            <span style={{"textAlign": "center", "margin": "auto"}}>
+              ©{new Date().getFullYear()} Bhanu Sunka 
+            </span></Copyright>
         </form>
       </footer>
     </>
