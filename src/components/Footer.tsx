@@ -480,17 +480,18 @@ const Copyright = tw.p`
 flex 
 justify-center 
 [font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif]
-text-2xl 
+text-xl 
 bg-slate-100 
 rounded-t-full
 px-4 
 pt-3 
 pb-1 
-tablet:text-[1.7rem]
+tablet:text-[1.6rem]
 tablet:justify-start 
 md:px-20 
 dark:bg-midnight
 dark:text-slate-200
+tracking-widest
 `;
 
 export default Footer2;
