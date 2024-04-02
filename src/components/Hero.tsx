@@ -116,7 +116,7 @@ const Hero = () => {
             </BtnPrimary>
           </Link>
           <a
-            href="https://drive.google.com/file/d/1vsyHZprwcUDPY9i8jln9wLo1eioyH2Ff/view?usp=sharing"
+            href="https://drive.google.com/file/d/1ZJUC8ifZ7PHJkGPrehd9CWldC38hJ2_n/view?usp=sharing"
             target="_blank"
             onClick={() => {
               ReactGa.event({
