@@ -1,6 +1,6 @@
+import ReactGa from "react-ga4";
 import styled from "styled-components";
 import tw from "twin.macro";
-import ReactGa from "react-ga4";
 
 const Project = () => {
   return (
@@ -20,27 +20,25 @@ const Project = () => {
       {/* //* 1st Card  */}
       <MainGrid className="bg-gradient-to-b from-indigo-50 to-indigo-300 border-indigo-100 dark:from-slate-900 dark:to-indigo-900 dark:border-indigo-800 dark:border-t ">
         <LeftGrid className="order-2 ">
-          <h2 className="text-6xl dark:text-gray-200">Freelansters</h2>
+          <h2 className="text-6xl dark:text-gray-200">Communisafe</h2>
           <p>
-            Freelansters is a MERN stack Freelancing Webapp where you can get
-            your work done. The place where you can easily Find Jobs or Post
-            Jobs!
+            Communisafe is a CRN webapp developed using MERN stack, featuring automated alerts, directories of local resources, and instant incident reporting capabilities..
           </p>
           <div>
             <Button
-              href="https://freelansters-git-master-bhanu1776.vercel.app/"
+              href="https://communisafe.vercel.app/"
               target="_blank"
               rel="noreferrer"
               className="group"
               onClick={() => {
                 ReactGa.event({
-                  category: "Freelansters",
-                  action: "Visited Freelansters",
+                  category: "Communisafe",
+                  action: "Visited Communisafe",
                 });
                 navigator.vibrate(900);
               }}
             >
-              Visit Freelansters
+              Visit Communisafe
               <svg
                 fill="none"
                 width="12"
@@ -60,7 +58,7 @@ const Project = () => {
               </svg>
             </Button>
             <a
-              href="https://github.com/Bhanu1776/Freelansters"
+              href="https://github.com/Bhanu1776/Community-Resilience-Network"
               target="_blank"
               rel="noreferrer"
             >
@@ -103,12 +101,13 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="Freelancing"
+              alt="Npm package"
               decoding="async"
               data-nimg="intrinsic"
-              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Freelansters.png?updatedAt=1679832380833"
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Communisafe.png?updatedAt=1712046890905"
+              className="!-ml-16 !max-w-[110%] !max-h-[110%] !p-12"
               data-aos="fade-left"
-              data-aos-offset="500"
+              data-aos-offset="400"
               data-aos-duration="500"
               loading="lazy"
             />
@@ -121,7 +120,7 @@ const Project = () => {
         <LeftGrid className="order-1">
           <h2 className="text-6xl dark:text-gray-200">NextJs-Starter</h2>
           <p>
-            Npm package comes with latest and greatest Nextjs13, Typescript,
+            Starter template ships with latest and greatest Nextjs13, Typescript,
             Tailwind, Eslint, Prettier, Husky, etc which makes development
             process easier.
           </p>
@@ -212,7 +211,7 @@ const Project = () => {
           </Span1>
         </main>
       </MainGrid>
-
+      
       {/* //* 3rd Card  */}
       <MainGrid className="bg-gradient-to-b from-sky-50 to-sky-300 border-sky-100 dark:from-slate-900 dark:to-pink-700 dark:border-pink-800 dark:border-t ">
         <LeftGrid className="order-2">
@@ -313,6 +312,204 @@ const Project = () => {
       </MainGrid>
 
       {/* //* 4th Card  */}
+      <MainGrid className="bg-gradient-to-b from-indigo-50 to-indigo-300 border-indigo-100 dark:from-slate-900 dark:to-sky-900 dark:border-sky-700 dark:border-t ">
+        <LeftGrid className="order-1">
+          <h2 className="text-6xl dark:text-gray-200">Freelansters</h2>
+          <p>
+            Freelansters is a MERN stack Freelancing Webapp where you can get
+            your work done. The place where you can easily Find Jobs or Post
+            Jobs!
+          </p>
+          <div>
+            <Button
+              href="https://freelansters-git-master-bhanu1776.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="group"
+              onClick={() => {
+                ReactGa.event({
+                  category: "Freelansters",
+                  action: "Visited Freelansters",
+                });
+                navigator.vibrate(900);
+              }}
+            >
+              Visit Freelansters
+              <svg
+                fill="none"
+                width="12"
+                height="12"
+                viewBox="0 0 10 10"
+                aria-hidden="true"
+                className="group"
+              >
+                <path
+                  className="transition opacity-0 group-hover:opacity-100"
+                  d="M0 5h7"
+                ></path>
+                <path
+                  className="transition group-hover:translate-x-[3px]"
+                  d="M1 1l4 4-4 4"
+                ></path>
+              </svg>
+            </Button>
+            <a
+              href="https://github.com/Bhanu1776/Freelansters"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button2
+                aria-label="button"
+                className="group"
+                onClick={() => {
+                  navigator.vibrate(400);
+                }}
+              >
+                Source Code
+                <svg
+                  className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
+                  fill="none"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 10 10"
+                  aria-hidden="true"
+                >
+                  <path
+                    className="transition opacity-0 group-hover:opacity-100"
+                    d="M0 5h7"
+                  ></path>
+                  <path
+                    className="transition group-hover:translate-x-[3px]"
+                    d="M1 1l4 4-4 4"
+                  ></path>
+                </svg>
+              </Button2>
+            </a>
+          </div>
+        </LeftGrid>
+        <main className="select-none">
+          <Span1>
+            <Span2>
+              <Span2Img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27924%27%20height=%27718%27/%3e"
+              />
+            </Span2>
+            <Img
+              alt="Npm package"
+              decoding="async"
+              data-nimg="intrinsic"
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Freelansters.png?updatedAt=1712079780389"
+              className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
+              data-aos="fade-right"
+              data-aos-offset="400"
+              data-aos-duration="500"
+              loading="lazy"
+            />
+          </Span1>
+        </main>
+      </MainGrid>
+
+      {/* //* 5th Card  */}
+      <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-fuchsia-700 dark:border-fuchsia-800 dark:border-t ">
+        <LeftGrid className="order-2 ">
+          <h2 className="text-6xl dark:text-gray-200">Youtube Extended</h2>
+          <p>
+            Created Youtube Extended as a groundbreaking alternative to YouTube, boasting a sophisticated user interface based on Config Driven UI, meticulously crafted using Next.js 13.
+          </p>
+          <div>
+            <Button
+              href="https://youtube-bhanu.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="group"
+              onClick={() => {
+                ReactGa.event({
+                  category: "Youtube Extended",
+                  action: "Visited Youtube Extended",
+                });
+                navigator.vibrate(900);
+              }}
+            >
+              Visit Youtube Extended
+              <svg
+                fill="none"
+                width="12"
+                height="12"
+                viewBox="0 0 10 10"
+                aria-hidden="true"
+                className="group"
+              >
+                <path
+                  className="transition opacity-0 group-hover:opacity-100"
+                  d="M0 5h7"
+                ></path>
+                <path
+                  className="transition group-hover:translate-x-[3px]"
+                  d="M1 1l4 4-4 4"
+                ></path>
+              </svg>
+            </Button>
+            <a
+              href="https://github.com/Bhanu1776/YouTube-Extended"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button2
+                aria-label="button"
+                className="group"
+                onClick={() => {
+                  navigator.vibrate(400);
+                }}
+              >
+                Source Code
+                <svg
+                  className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
+                  fill="none"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 10 10"
+                  aria-hidden="true"
+                >
+                  <path
+                    className="transition opacity-0 group-hover:opacity-100"
+                    d="M0 5h7"
+                  ></path>
+                  <path
+                    className="transition group-hover:translate-x-[3px]"
+                    d="M1 1l4 4-4 4"
+                  ></path>
+                </svg>
+              </Button2>
+            </a>
+          </div>
+        </LeftGrid>
+        <main className="md:order-2 select-none">
+          <Span1>
+            <Span2>
+              <Span2Img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27924%27%20height=%27718%27/%3e"
+              />
+            </Span2>
+            <Img
+              alt="Npm package"
+              decoding="async"
+              data-nimg="intrinsic"
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/YoutubeExtended.png?updatedAt=1712046917376"
+              className="!-ml-14 !max-w-[110%] !max-h-[110%] !p-12"
+              data-aos="fade-left"
+              data-aos-offset="400"
+              data-aos-duration="500"
+              loading="lazy"
+            />
+          </Span1>
+        </main>
+      </MainGrid>
+
+      {/* //* 6th Card  */}
       <MainGrid className="bg-gradient-to-b from-purple-50 to-purple-300 border-purple-100 dark:from-slate-900 dark:to-purple-800 dark:border-purple-800 dark:border-t ">
         <LeftGrid className="order-1">
           <h2 className="text-5xl dark:text-gray-200">Gatherable</h2>
@@ -381,8 +578,8 @@ const Project = () => {
         </main>
       </MainGrid>
 
-      {/* //* 5th Card  */}
-      <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-fuchsia-700 dark:border-fuchsia-800 dark:border-t ">
+      {/* //* 7th Card  */}
+      {/* <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-fuchsia-700 dark:border-fuchsia-800 dark:border-t ">
         <LeftGrid className="order-2">
           <h2 className="text-5xl dark:text-gray-200">
             Hotel Management System
@@ -449,7 +646,8 @@ const Project = () => {
             />
           </Span1>
         </main>
-      </MainGrid>
+      </MainGrid> */}
+
     </>
   );
 };
@@ -610,4 +808,5 @@ const Img = styled.img`
   `}
 `;
 
-export { Project, Button };
+export { Button, Project };
+
