@@ -213,7 +213,7 @@ const Project = () => {
       </MainGrid>
       
       {/* //* 3rd Card  */}
-      <MainGrid className="bg-gradient-to-b from-sky-50 to-sky-300 border-sky-100 dark:from-slate-900 dark:to-pink-700 dark:border-pink-800 dark:border-t ">
+      <MainGrid className="bg-gradient-to-b from-indigo-50 to-indigo-300 border-indigo-100 dark:from-slate-900 dark:to-pink-700 dark:border-pink-800 dark:border-t ">
         <LeftGrid className="order-2">
           <h2 className="text-6xl dark:text-gray-200">JellyFish-x-Retro</h2>
           <p>
@@ -312,7 +312,7 @@ const Project = () => {
       </MainGrid>
 
       {/* //* 4th Card  */}
-      <MainGrid className="bg-gradient-to-b from-indigo-50 to-indigo-300 border-indigo-100 dark:from-slate-900 dark:to-sky-900 dark:border-sky-700 dark:border-t ">
+      <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-sky-900 dark:border-sky-700 dark:border-t ">
         <LeftGrid className="order-1">
           <h2 className="text-6xl dark:text-gray-200">Freelansters</h2>
           <p>
@@ -412,7 +412,7 @@ const Project = () => {
       </MainGrid>
 
       {/* //* 5th Card  */}
-      <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-fuchsia-700 dark:border-fuchsia-800 dark:border-t ">
+      <MainGrid className="bg-gradient-to-b  from-sky-50 to-sky-300 border-sky-100 dark:from-slate-900 dark:to-fuchsia-700 dark:border-fuchsia-800 dark:border-t ">
         <LeftGrid className="order-2 ">
           <h2 className="text-6xl dark:text-gray-200">Youtube Extended</h2>
           <p>
