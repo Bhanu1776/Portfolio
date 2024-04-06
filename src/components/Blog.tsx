@@ -12,12 +12,6 @@ const Blog = () => {
               <p className="dark:text-neutral-300 tracking-wider text-[1.4rem]">#twin #styled-components #tailwindcss #css</p>
             </div>
           </a>
-          <a href="https://dev.to/bhanu1776/the-best-vscode-snippets-for-react-typescript-nextjs-redux-toolkit-5gmm" target="_blank" rel="noreferrer">
-            <div className="border-2 max-w-3xl p-10 border-slate-500 text-left ease-in-out transition-all duration-200 rounded-2xl justify-between w-full hover:border-purple-800 dark:hover:border-teal-500">
-              <h1 className="dark:text-slate-200">The Best Vscode Snippets for React Typescript + Nextjs + Redux Toolkit</h1>
-              <p className="dark:text-neutral-300 tracking-wider text-[1.4rem]">#vscode #reactjs #nextjs #redux</p>
-            </div>
-          </a>
           <a href="https://medium.com/p/b090485026d4" target="_blank" rel="noreferrer">
             <div className="border-2 max-w-3xl p-10 border-slate-500 text-left ease-in-out transition-all duration-200 rounded-2xl justify-between w-full hover:border-purple-800 dark:hover:border-teal-500">
               <h1 className="dark:text-slate-200">10 UNIQUE Mac Apps You Can't Live Without!</h1>
@@ -34,6 +28,12 @@ const Blog = () => {
             <div className="border-2 max-w-3xl p-10 border-slate-500 text-left ease-in-out transition-all duration-200 rounded-2xl justify-between w-full hover:border-purple-800 dark:hover:border-teal-500">
               <h1 className="dark:text-slate-200">Top Free Utility Mac Apps You Aren't Using</h1>
               <p className="dark:text-neutral-300 tracking-wider text-[1.4rem]">#macos #macapps #productivity #free</p>
+            </div>
+          </a>
+          <a href="https://dev.to/bhanu1776/the-best-vscode-snippets-for-react-typescript-nextjs-redux-toolkit-5gmm" target="_blank" rel="noreferrer">
+            <div className="border-2 max-w-3xl p-10 border-slate-500 text-left ease-in-out transition-all duration-200 rounded-2xl justify-between w-full hover:border-purple-800 dark:hover:border-teal-500">
+              <h1 className="dark:text-slate-200">The Best Vscode Snippets for React Typescript + Nextjs + Redux Toolkit</h1>
+              <p className="dark:text-neutral-300 tracking-wider text-[1.4rem]">#vscode #reactjs #nextjs #redux</p>
             </div>
           </a>
           
