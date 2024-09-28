@@ -17,8 +17,106 @@ const Project = () => {
         </h1>
       </header>
 
+      {/* //* 0th Card  */}
+      <MainGrid className="bg-gradient-to-b from-indigo-50 to-indigo-300 border-indigo-100 dark:from-slate-900 dark:to-indigo-900 dark:border-indigo-800 dark:border-t">
+        <LeftGrid className="order-1">
+          <h2 className="text-5xl dark:text-gray-200">Case Canvas</h2>
+          <p>
+            Case Canvas is a fullstack Next.js application designed for creating custom high-quality phone cases. Users can upload their photos to personalize their case.
+          </p>
+          <div>
+            <Button
+              href="https://www.casecanvas.online/"
+              target="_blank"
+              rel="noreferrer"
+              className="group"
+              onClick={() => {
+                ReactGa.event({
+                  category: "Communisafe",
+                  action: "Visited Communisafe",
+                });
+                navigator.vibrate(900);
+              }}
+            >
+              Visit CaseCanvas
+              <svg
+                fill="none"
+                width="12"
+                height="12"
+                viewBox="0 0 10 10"
+                aria-hidden="true"
+                className="group"
+              >
+                <path
+                  className="transition opacity-0 group-hover:opacity-100"
+                  d="M0 5h7"
+                ></path>
+                <path
+                  className="transition group-hover:translate-x-[3px]"
+                  d="M1 1l4 4-4 4"
+                ></path>
+              </svg>
+            </Button>
+            <a
+              href="https://github.com/Bhanu1776/CaseCanvas"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button2
+                aria-label="button"
+                className="group"
+                onClick={() => {
+                  navigator.vibrate(400);
+                }}
+              >
+                Source Code
+                <svg
+                  className="mt-0.5 ml-4 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
+                  fill="none"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 10 10"
+                  aria-hidden="true"
+                >
+                  <path
+                    className="transition opacity-0 group-hover:opacity-100"
+                    d="M0 5h7"
+                  ></path>
+                  <path
+                    className="transition group-hover:translate-x-[3px]"
+                    d="M1 1l4 4-4 4"
+                  ></path>
+                </svg>
+              </Button2>
+            </a>
+          </div>
+        </LeftGrid>
+        <main className="select-none">
+          <Span1>
+            <Span2>
+              <Span2Img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27924%27%20height=%27718%27/%3e"
+              />
+            </Span2>
+            <Img
+              alt="Venue Booking"
+              decoding="async"
+              data-nimg="intrinsic"
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Venue.png?updatedAt=1679832379601"
+              className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
+              data-aos="fade-right"
+              data-aos-offset="400"
+              data-aos-duration="500"
+              loading="lazy"
+            />
+          </Span1>
+        </main>
+      </MainGrid>
+
       {/* //* 1st Card  */}
-      <MainGrid className="bg-gradient-to-b from-indigo-50 to-indigo-300 border-indigo-100 dark:from-slate-900 dark:to-indigo-900 dark:border-indigo-800 dark:border-t ">
+      <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-purple-900 dark:border-purple-900 dark:border-t ">
         <LeftGrid className="order-2 ">
           <h2 className="text-6xl dark:text-gray-200">Communisafe</h2>
           <p>
@@ -105,7 +203,7 @@ const Project = () => {
               decoding="async"
               data-nimg="intrinsic"
               srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Communisafe.png?updatedAt=1712046890905"
-              className="!-ml-16 !max-w-[110%] !max-h-[110%] !p-12"
+              className="!-ml-4 md:!-ml-16 !max-w-[110%] !max-h-[110%] !p-12"
               data-aos="fade-left"
               data-aos-offset="400"
               data-aos-duration="500"
@@ -312,7 +410,7 @@ const Project = () => {
       </MainGrid>
 
       {/* //* 4th Card  */}
-      <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-sky-900 dark:border-sky-700 dark:border-t ">
+      {/* <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-sky-900 dark:border-sky-700 dark:border-t ">
         <LeftGrid className="order-1">
           <h2 className="text-6xl dark:text-gray-200">Freelansters</h2>
           <p>
@@ -409,11 +507,33 @@ const Project = () => {
             />
           </Span1>
         </main>
-      </MainGrid>
+      </MainGrid> */}
 
       {/* //* 5th Card  */}
       <MainGrid className="bg-gradient-to-b  from-sky-50 to-sky-300 border-sky-100 dark:from-slate-900 dark:to-fuchsia-700 dark:border-fuchsia-800 dark:border-t ">
-        <LeftGrid className="order-2 ">
+        <main className="select-none">
+          <Span1>
+            <Span2>
+              <Span2Img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27924%27%20height=%27718%27/%3e"
+              />
+            </Span2>
+            <Img
+              alt="Npm package"
+              decoding="async"
+              data-nimg="intrinsic"
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/YoutubeExtended.png?updatedAt=1712046917376"
+              className="!-ml-4 md:!-ml-16 !max-w-[110%] !max-h-[110%] !p-12"
+              data-aos="fade-right"
+              data-aos-offset="400"
+              data-aos-duration="500"
+              loading="lazy"
+            />
+          </Span1>
+        </main>
+        <LeftGrid className="">
           <h2 className="text-6xl dark:text-gray-200">Youtube Extended</h2>
           <p>
             Created Youtube Extended as a groundbreaking alternative to YouTube, boasting a sophisticated user interface based on Config Driven UI, meticulously crafted using Next.js 13.
@@ -485,33 +605,12 @@ const Project = () => {
             </a>
           </div>
         </LeftGrid>
-        <main className="md:order-2 select-none">
-          <Span1>
-            <Span2>
-              <Span2Img
-                alt=""
-                aria-hidden="true"
-                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27924%27%20height=%27718%27/%3e"
-              />
-            </Span2>
-            <Img
-              alt="Npm package"
-              decoding="async"
-              data-nimg="intrinsic"
-              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/YoutubeExtended.png?updatedAt=1712046917376"
-              className="!-ml-14 !max-w-[110%] !max-h-[110%] !p-12"
-              data-aos="fade-left"
-              data-aos-offset="400"
-              data-aos-duration="500"
-              loading="lazy"
-            />
-          </Span1>
-        </main>
+
       </MainGrid>
 
       {/* //* 6th Card  */}
-      <MainGrid className="bg-gradient-to-b from-purple-50 to-purple-300 border-purple-100 dark:from-slate-900 dark:to-purple-800 dark:border-purple-800 dark:border-t ">
-        <LeftGrid className="order-1">
+      <MainGrid className="bg-gradient-to-b from-purple-50 to-purple-300 border-purple-100 dark:from-slate-900  dark:to-sky-900 dark:border-sky-700 dark:border-t ">
+        <LeftGrid className="order-1 ">
           <h2 className="text-5xl dark:text-gray-200">Gatherable</h2>
           <p>
             Venue booking system is a Desktop application where venue owners can
@@ -554,7 +653,7 @@ const Project = () => {
             </Button>
           </div>
         </LeftGrid>
-        <main className="select-none">
+        <main className="md:order-1 select-none">
           <Span1>
             <Span2>
               <Span2Img
@@ -569,7 +668,7 @@ const Project = () => {
               data-nimg="intrinsic"
               srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Venue.png?updatedAt=1679832379601"
               className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
-              data-aos="fade-right"
+              data-aos="fade-left"
               data-aos-offset="400"
               data-aos-duration="500"
               loading="lazy"
