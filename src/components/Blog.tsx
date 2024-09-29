@@ -5,7 +5,7 @@ const Blog = () => {
     <>
       <Div id="Blog">
         <H2>Blogs</H2>
-        <div className="dark:text-white mt-16 gap-10 text-3xl grid grid-cols-2">
+        <div className="dark:text-white mt-16 gap-10 text-3xl grid grid-cols-1 md:grid-cols-2">
           <a href="https://dev.to/bhanu1776/tailwind-in-styled-components-29j" target="_blank" rel="noreferrer">
             <div className="border-2 max-w-3xl p-10 border-slate-500 text-left ease-in-out transition-all duration-200 rounded-2xl justify-between w-full hover:border-purple-800 dark:hover:border-teal-500">
               <h1 className="dark:text-slate-200 font-semibold">Tailwindcss in Styled-Components</h1>
@@ -47,12 +47,14 @@ const Blog = () => {
 const Div = tw.main`
   bg-[#F8FAFC] 
   border-slate-200 
-  !px-20
+  px-6
+  md:!px-20
   !py-16
   rounded-[1.9rem]
   mb-24
   drop-shadow-md
-  mx-4
+  mx-2
+  md:mx-4
   dark:bg-midnight 
   dark:border-slate-700
   sm:py-16 
@@ -62,7 +64,9 @@ const Div = tw.main`
 const H2 = tw.h2`
   [font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif]
   text-slate-800
-  text-5xl 
+  text-6xl 
+  ml-4
+  md:ml-0
   tracking-wider 
   font-bold
   mb-4 
