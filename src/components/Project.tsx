@@ -104,7 +104,7 @@ const Project = () => {
               alt="Venue Booking"
               decoding="async"
               data-nimg="intrinsic"
-              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Venue.png?updatedAt=1679832379601"
+              srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/CaseCanvas.png"
               className="!ml-0 !max-w-[100%] !max-h-[100%] !p-12"
               data-aos="fade-right"
               data-aos-offset="400"
@@ -218,7 +218,7 @@ const Project = () => {
         <LeftGrid className="order-1">
           <h2 className="text-6xl dark:text-gray-200">NextJs-Starter</h2>
           <p>
-            Starter template ships with latest and greatest Nextjs13, Typescript,
+            Starter template ships with latest and greatest Nextjs14, Typescript,
             Tailwind, Eslint, Prettier, Husky, etc which makes development
             process easier.
           </p>
