@@ -218,13 +218,13 @@ const Project = () => {
         <LeftGrid className="order-1">
           <h2 className="text-6xl dark:text-gray-200">NextJs-Starter</h2>
           <p>
-            Starter template ships with latest and greatest Nextjs14, Typescript,
+            Starter template ships with latest and greatest Nextjs15, Typescript,
             Tailwind, Eslint, Prettier, Husky, etc which makes development
             process easier.
           </p>
           <div>
             <Button
-              href="https://starter-website-sigma.vercel.app/"
+              href="https://www.npmjs.com/package/@bhanu17/nextjs-starter"
               target="_blank"
               rel="noreferrer"
               className="group"
@@ -253,7 +253,7 @@ const Project = () => {
               </svg>
             </Button>
             <a
-              href="https://www.npmjs.com/package/@bhanu17/nextjs-starter"
+              href="https://starter-website-sigma.vercel.app/"
               target="_blank"
               rel="noreferrer"
             >
