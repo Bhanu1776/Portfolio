@@ -1,37 +1,26 @@
-import tw from "twin.macro";
-import { Languages, Web, Tools, Other } from "./LangData";
 import Tilt from "react-parallax-tilt";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+import tw from "twin.macro";
+import { Languages, Other, Tools, Web } from "./LangData";
 
 const About = () => {
   return (
     <>
       <GridDiv id="About">
         <LeftGrid>
-          <header>
+          <header className="flex items-center gap-4">
+            <div className="md:h-12 h-24 w-1.5 bg-gradient-to-b from-teal-500 to-teal-300" />
             <LeftTitle>A Bit About Me & My Skills</LeftTitle>
           </header>
-          <TitleDivider />
+          {/* <TitleDivider /> */}
 
           <article className="mt-8">
             <LeftPara>
-              Hello! My name is Bhanu Sunka. I am a hard-working engineering
-              student specializing in Information Technology from Xavier
-              Institute of engineering, Mumbai University.
+              I transform complex challenges into elegant solutions through code, specializing in crafting exceptional web experiences. My expertise lies in building responsive, user-centric websites that seamlessly blend aesthetic appeal with intuitive functionality. Each project showcases fluid interactions and meticulous attention to user experience design
             </LeftPara>
             <LeftPara>
-              I love to explore new technologies and leverage them to solve
-              real-life problems. I'm a passionate learner who's always willing
-              to learn and work across various technologies and domains. In my
-              spare time, I love to explore open-source projects.
-            </LeftPara>
-            <LeftPara>
-              I am highly proficient in web development. I love to build
-              responsive user-friendly websites that look visually appealing,
-              with nice and fluid interactions, and close attention to User
-              Experience. I constantly strive for the best outcome on any
-              project I take on.
+              What sets me apart is my ability to quickly adapt to emerging technologies and leverage them to solve real-world problems. Whether optimizing performance or implementing complex features, I consistently deliver results that exceed expectations. My drive for innovation extends to exploring and contributing to open-source projects.
             </LeftPara>
           </article>
         </LeftGrid>
@@ -201,16 +190,27 @@ xxsm:px-2
 tablet:pr-14 
 `;
 
+// const LeftTitle = tw.h1`
+// font-headings 
+// tracking-wide 
+// font-extrabold
+// leading-tight 
+// text-slate-900
+// xxsm:flex
+// xxsm:justify-center
+// xxsm:text-[2.50rem] 
+// md:block
+// mobile:text-5xl 
+// dark:text-gray-200
+// `;
+
 const LeftTitle = tw.h1`
 font-headings 
 tracking-wide 
 font-extrabold
 leading-tight 
 text-slate-900
-xxsm:flex
-xxsm:justify-center
 xxsm:text-[2.50rem] 
-md:block
 mobile:text-5xl 
 dark:text-gray-200
 `;

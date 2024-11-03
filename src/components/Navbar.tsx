@@ -1,8 +1,8 @@
-import Images from "../Images/Imgindex";
-import tw from "twin.macro";
-import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import styled from "styled-components";
+import tw from "twin.macro";
+import Images from "../Images/Imgindex";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -54,7 +54,7 @@ const Navbar = () => {
     <>
       <NavbarDiv>
         <ActualNavbar>
-          <LeftLogo>
+          <LeftLogo href="#Home">
             <span className="sr-only">Logo</span>
             <span className="block">
               <img
@@ -387,7 +387,7 @@ const NavLinks = styled.span`
   }
 `;
 
-const LeftLogo = tw.div`
+const LeftLogo = tw.a`
 flex 
 justify-start 
 mt-1
@@ -428,6 +428,7 @@ const DarkModeBtn = styled.div`
     hover:shadow-md
     dark:bg-midnight
     dark:border-midnight
+    cursor-pointer
   `}
 `;
 

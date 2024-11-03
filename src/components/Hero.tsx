@@ -45,20 +45,23 @@ const Hero = () => {
             data-aos-once="false"
             className="hero-gradient"
           >
-            <span className="hero-gradient">Hello, </span>
-            <span className="hero-gradient">I'm</span>
-            <span className="text-teal-500 dark:text-teal-400 dark:!text-transparent dark:bg-clip-text dark:bg-gradient-to-b dark:from-teal-400 dark:via-teal-400 dark:to-teal-900">
-              &nbsp;Bhanu
-            </span>
-            <span className="hero-gradient">. </span>
+            <span className="hero-gradient">Hello! </span>
             <span className="hero-gradient">I'm </span>
+            <span className="text-teal-500 dark:text-teal-400 dark:!text-transparent dark:bg-clip-text dark:bg-gradient-to-b dark:from-teal-400 dark:via-teal-400 dark:to-teal-900">
+              Bhanu
+            </span>
+            <span className="hero-gradient">, </span>
             <span className="hero-gradient">a </span>
-            <span className="hero-gradient">student, </span>
-            <span className="hero-gradient">Web </span>
+            <span className="hero-gradient">web </span>
             <span className="hero-gradient">developer </span>
-            <span className="hero-gradient">and </span>
-            <span className="hero-gradient">Enthusiastic </span>
-            <span className="hero-gradient">learner </span>
+            <span className="hero-gradient">with </span>
+            <span className="hero-gradient">an </span>
+            <span className="hero-gradient">insatiable </span>
+            <span className="hero-gradient">drive </span>
+            <span className="hero-gradient">for </span>
+            {/* <span className="hero-gradient">learning </span>
+            <span className="hero-gradient">and </span> */}
+            <span className="hero-gradient">innovation.</span>
           </LeftH1>
 
           <div className="order-1 md:order-2">
