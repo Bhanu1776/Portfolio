@@ -54,14 +54,9 @@ const Hero = () => {
             <span className="hero-gradient">a </span>
             <span className="hero-gradient">web </span>
             <span className="hero-gradient">developer </span>
-            <span className="hero-gradient">with </span>
-            <span className="hero-gradient">an </span>
-            <span className="hero-gradient">insatiable </span>
-            <span className="hero-gradient">drive </span>
-            <span className="hero-gradient">for </span>
-            {/* <span className="hero-gradient">learning </span>
-            <span className="hero-gradient">and </span> */}
-            <span className="hero-gradient">innovation.</span>
+            <span className="hero-gradient">passionate </span>
+            <span className="hero-gradient">about </span>
+            <span className="hero-gradient">innovation </span>
           </LeftH1>
 
           <div className="order-1 md:order-2">
