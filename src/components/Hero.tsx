@@ -63,7 +63,7 @@ const Hero = () => {
             <ProfileImgDiv>
               <ProfileImg
                 alt="Bhanu Sunka"
-                src="https://ik.imagekit.io/bhanu1776/Portfolio/Primary.png?updatedAt=1679832378821"
+                src="https://ik.imagekit.io/bhanu1776/Portfolio/hero.jpg?updatedAt=1747211436589"
                 className="col-span-1 rounded-full"
                 data-aos="fade-left"
                 data-aos-easing="ease-in-sine"
