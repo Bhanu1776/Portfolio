@@ -26,7 +26,7 @@ const Project = () => {
           </p>
           <div>
             <Button
-              href="https://www.casecanvas.itsbhanu.com/"
+              href="https://casecanvas.itsbhanu.com/"
               target="_blank"
               rel="noreferrer"
               className="group"
