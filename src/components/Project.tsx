@@ -26,14 +26,14 @@ const Project = () => {
           </p>
           <div>
             <Button
-              href="https://www.casecanvas.online/"
+              href="https://www.casecanvas.itsbhanu.com/"
               target="_blank"
               rel="noreferrer"
               className="group"
               onClick={() => {
                 ReactGa.event({
-                  category: "Communisafe",
-                  action: "Visited Communisafe",
+                  category: "CaseCanvas",
+                  action: "Visited CaseCanvas",
                 });
                 navigator.vibrate(900);
               }}
