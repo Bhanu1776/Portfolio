@@ -205,7 +205,7 @@ const Other: Obj[] = [
   {
     index: 9,
     src: "https://www.clipartmax.com/png/full/421-4213226_keyboarding-practice-touch-typing-club-logo.png",
-    alt: "Touch-Typing @70wpm",
+    alt: "Touch-Typing @100wpm",
     width: "40",
   },
 ];
