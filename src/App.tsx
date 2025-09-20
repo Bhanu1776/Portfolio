@@ -10,7 +10,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { useAnalytics } from "./hooks/useAnalytics";
-import "./utils/analytics-test";
 
 const App = () => {
   // Initialize analytics for the main app
