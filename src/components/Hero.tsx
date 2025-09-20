@@ -70,12 +70,14 @@ const Hero = () => {
           <div className="order-1 md:order-2">
             <ProfileImgDiv>
               <ProfileImg
-                alt="Bhanu Sunka"
+                alt="Bhanu Sunka - Full Stack Developer and Startup MVP Architect professional headshot"
                 src="https://ik.imagekit.io/bhanu1776/Portfolio/hero.jpg?updatedAt=1747211436589"
                 className="col-span-1 rounded-full"
                 data-aos="fade-left"
                 data-aos-easing="ease-in-sine"
                 loading="lazy"
+                width="160"
+                height="160"
               />
             </ProfileImgDiv>
           </div>

@@ -280,7 +280,7 @@ const Footer2 = () => {
           </MainGrid>
           <Copyright>
             <span style={{"textAlign": "center", "margin": "auto"}}>
-              ©{new Date().getFullYear()} Bhanu Sunka 
+              ©{new Date().getFullYear()} Bhanu Sunka, All rights reserved.
             </span></Copyright>
         </form>
       </footer>
@@ -496,8 +496,8 @@ text-xl
 bg-slate-100 
 rounded-t-full
 px-4 
-pt-3 
-pb-1 
+pt-4
+pb-4
 tablet:text-[1.6rem]
 tablet:justify-start 
 md:px-20 

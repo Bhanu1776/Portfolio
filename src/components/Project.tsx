@@ -105,7 +105,7 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="Venue Booking"
+              alt="Case Canvas - Custom phone case creation application interface showcasing modern UI design and user experience"
               decoding="async"
               data-nimg="intrinsic"
               srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/CaseCanvas.png"
@@ -200,7 +200,7 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="Npm package"
+              alt="Communisafe - Community resilience network application dashboard with automated alerts and incident reporting interface"
               decoding="async"
               data-nimg="intrinsic"
               srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Communisafe.png?updatedAt=1712046890905"
@@ -297,7 +297,7 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="Npm package"
+              alt="NextJS Starter Template - Modern web development boilerplate with TypeScript, Tailwind CSS, and development tools"
               decoding="async"
               data-nimg="intrinsic"
               srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/NextNpm.png?updatedAt=1687549768580"
@@ -396,7 +396,7 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="Vscode theme"
+              alt="JellyFish Retro - VS Code theme with 80s aesthetic design featuring neon colors and retro animations"
               decoding="async"
               data-nimg="intrinsic"
               srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Jellyfish-x-retro.png?updatedAt=1679832380911"
@@ -522,7 +522,7 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="Npm package"
+              alt="YouTube Extended - Alternative YouTube interface with modern UI design and config-driven architecture"
               decoding="async"
               data-nimg="intrinsic"
               srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/YoutubeExtended.png?updatedAt=1712046917376"
@@ -664,7 +664,7 @@ const Project = () => {
               />
             </Span2>
             <Img
-              alt="Venue Booking"
+              alt="Gatherable - Venue booking system desktop application interface built with Java Swing and MySQL"
               decoding="async"
               data-nimg="intrinsic"
               srcSet="https://ik.imagekit.io/bhanu1776/Portfolio/Venue.png?updatedAt=1679832379601"

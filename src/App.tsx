@@ -6,10 +6,14 @@ import { Project } from "./components/Project";
 import Work from "./components/Work";
 import Blog from "./components/Blog";
 import Footer from "./components/Footer";
+import SEO from "./components/SEO";
+import PerformanceMonitor from "./components/PerformanceMonitor";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { useAnalytics } from "./hooks/useAnalytics";
+import { defaultSEO } from "./utils/seo";
+import { HelmetProvider } from "react-helmet-async";
 
 const App = () => {
   // Initialize analytics for the main app
@@ -31,7 +35,9 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <HelmetProvider>
+      <SEO seoData={defaultSEO} />
+      <PerformanceMonitor />
       <div className="dark:bg-[#0b1121] transition-all duration-300 ease-in-out ">
         {/* <div className="dark:bg-algolia"> */}
         <MainDiv id="Blur">
@@ -43,8 +49,7 @@ const App = () => {
           <Footer />
         </MainDiv>
       </div>
-
-    </>
+    </HelmetProvider>
   );
 };
 
