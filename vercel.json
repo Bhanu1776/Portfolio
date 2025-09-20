@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "src/**/*.js": {
+      "runtime": "nodejs22.x"
+    }
+  },
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "framework": "create-react-app"
+}

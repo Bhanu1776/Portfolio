@@ -17,10 +17,10 @@ const About = () => {
 
           <article className="mt-8">
             <LeftPara>
-              I transform complex challenges into elegant solutions through code, specializing in crafting exceptional web experiences. My expertise lies in building responsive, user-centric websites that seamlessly blend aesthetic appeal with intuitive functionality. Each project showcases fluid interactions and meticulous attention to user experience design
+              I architect scalable solutions that transform startup ideas into market-ready MVPs. My expertise spans full-stack development, where I craft robust systems that can handle rapid growth while maintaining exceptional user experiences. Each project is designed with scalability in mind, ensuring your startup can scale seamlessly from launch to success.
             </LeftPara>
             <LeftPara>
-              What sets me apart is my ability to quickly adapt to emerging technologies and leverage them to solve real-world problems. Whether optimizing performance or implementing complex features, I consistently deliver results that exceed expectations. My drive for innovation extends to exploring and contributing to open-source projects.
+              What sets me apart is my deep understanding of startup challenges and my ability to deliver production-ready code at startup speed. I specialize in rapid prototyping, performance optimization, and building systems that can handle explosive growth. My approach combines technical excellence with business acumen to deliver MVPs that investors and users love.
             </LeftPara>
           </article>
         </LeftGrid>
@@ -235,7 +235,8 @@ md:mx-0
 const LeftPara = tw.p`
 font-sans
 tracking-wide 
-text-justify
+text-left
+leading-relaxed
 dark:text-gray-200
 `;
 
