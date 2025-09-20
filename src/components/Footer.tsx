@@ -1,15 +1,27 @@
-import ReactGa from "react-ga4";
 import { Link } from "react-scroll";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import tw from "twin.macro";
+import { useAnalytics } from "../hooks/useAnalytics";
 
 const Footer2 = () => {
+  const analytics = useAnalytics({
+    sectionName: 'footer',
+    sectionCategory: 'contact'
+  });
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    analytics.trackFormStart('contact');
+    // Form submission will be handled by Formspree
+    // We'll track success/error based on form response
+    analytics.trackFormSubmit('contact', true);
+  };
+
   return (
     <>
       <footer id="Footer" className="relative">
         <hr className="dark:bg-midnight dark:h-[1px] dark:border-none"></hr>
-        <form action="https://formspree.io/f/mvonoajk" method="POST">
+        <form action="https://formspree.io/f/mvonoajk" method="POST" onSubmit={handleFormSubmit}>
           <BgImg src="https://ik.imagekit.io/bhanu1776/Portfolio/Footer-bg.png?updatedAt=1679832383622" alt="rays" loading="lazy"/>
           <MainGrid>
             <LeftGrid>
@@ -93,7 +105,7 @@ const Footer2 = () => {
                   href="https://in.linkedin.com/in/bhanu-sunka-94a24a21a?original_referer=https%3A%2F%2Fwww.google.com%2F"
                   rel="noreferrer"
                   target="_blank"
-                  onClick={ ()=>{ ReactGa.event({category: "LinkedIn", action:"LinkedIn"})}}
+                  onClick={() => analytics.trackSocialClick('LinkedIn')}
                 >
                   <span className="sr-only">LinkedIn</span>
                   <LinkSvg
@@ -148,7 +160,7 @@ const Footer2 = () => {
                   href="https://www.instagram.com/bhanu_1776/"
                   rel="noreferrer"
                   target="_blank"
-                  onClick={ ()=>{ ReactGa.event({category: "Instagram", action:"Instagram"})}}
+                  onClick={() => analytics.trackSocialClick('Instagram')}
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
@@ -210,7 +222,7 @@ const Footer2 = () => {
                   </svg>
                   <Tooltip anchorId="DEV" />
                 </a>
-                <a href="https://www.buymeacoffee.com/Bhanu1776" onClick={ ()=>{ ReactGa.event({category: "Buymecoffee", action:"Donation"})}}>
+                <a href="https://www.buymeacoffee.com/Bhanu1776" onClick={() => analytics.trackBuyMeCoffeeClick()}>
                   <span className="sr-only">Support</span>
                   <svg
                     className="w-14 h-11 mt-2 transform hover:rotate-[-7deg] transition hover:text-teal-500"

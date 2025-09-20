@@ -1,8 +1,14 @@
 import ReactGa from "react-ga4";
 import styled from "styled-components";
 import tw from "twin.macro";
+import { useAnalytics } from "../hooks/useAnalytics";
 
 const Project = () => {
+  const analytics = useAnalytics({
+    sectionName: 'projects',
+    sectionCategory: 'portfolio'
+  });
+
   return (
     <>
       <header
@@ -31,10 +37,7 @@ const Project = () => {
               rel="noreferrer"
               className="group"
               onClick={() => {
-                ReactGa.event({
-                  category: "CaseCanvas",
-                  action: "Visited CaseCanvas",
-                });
+                analytics.trackProjectClick('Case Canvas', 'visit', 'https://casecanvas.itsbhanu.com/');
                 navigator.vibrate(900);
               }}
             >
@@ -66,6 +69,7 @@ const Project = () => {
                 aria-label="button"
                 className="group"
                 onClick={() => {
+                  analytics.trackProjectClick('Case Canvas', 'source_code', 'https://github.com/Bhanu1776/CaseCanvas');
                   navigator.vibrate(400);
                 }}
               >
@@ -129,10 +133,7 @@ const Project = () => {
               rel="noreferrer"
               className="group"
               onClick={() => {
-                ReactGa.event({
-                  category: "Communisafe",
-                  action: "Visited Communisafe",
-                });
+                analytics.trackProjectClick('Communisafe', 'visit', 'https://communisafe.vercel.app/');
                 navigator.vibrate(900);
               }}
             >

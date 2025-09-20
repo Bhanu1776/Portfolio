@@ -9,10 +9,26 @@ import Footer from "./components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { useAnalytics } from "./hooks/useAnalytics";
+import "./utils/analytics-test";
 
 const App = () => {
+  // Initialize analytics for the main app
+  useAnalytics({
+    trackPageView: true,
+    trackScrollDepth: true,
+    trackUserEngagement: true,
+    sectionName: 'main_app',
+    sectionCategory: 'portfolio'
+  });
+
   useEffect(() => {
     AOS.init();
+    
+    // Set page load time for analytics
+    if (typeof window !== 'undefined') {
+      (window as any).pageLoadTime = Date.now();
+    }
   }, []);
 
   return (
@@ -28,6 +44,7 @@ const App = () => {
           <Footer />
         </MainDiv>
       </div>
+
     </>
   );
 };

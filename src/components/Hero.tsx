@@ -3,8 +3,14 @@ import { Link } from "react-scroll";
 import styled from "styled-components";
 import tw from "twin.macro";
 import Hr from "./Hr";
+import { useAnalytics } from "../hooks/useAnalytics";
 
 const Hero = () => {
+  const analytics = useAnalytics({
+    sectionName: 'hero',
+    sectionCategory: 'introduction'
+  });
+
   return (
     <>
       {/* //* Background Ray */}
@@ -89,7 +95,7 @@ const Hero = () => {
               type="button"
               className="group"
               onClick={() => {
-                ReactGa.event({ category: "Hire Me", action: "Hiring" });
+                analytics.trackHireMeClick();
                 navigator.vibrate(500);
               }}
             >
@@ -117,11 +123,7 @@ const Hero = () => {
             href="https://resume.itsbhanu.com/"
             target="_blank"
             onClick={() => {
-              ReactGa.event({
-                category: "Resume",
-                action: "Downloaded Resume",
-                label: "Test Label",
-              });
+              analytics.trackViewResumeClick();
             }}
             rel="noreferrer"
           >
