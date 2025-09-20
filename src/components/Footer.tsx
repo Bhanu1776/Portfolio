@@ -25,7 +25,7 @@ const Footer2 = () => {
           <BgImg src="https://ik.imagekit.io/bhanu1776/Portfolio/Footer-bg.png?updatedAt=1679832383622" alt="rays" loading="lazy"/>
           <MainGrid>
             <LeftGrid>
-              <LeftHeading1>GENERAL</LeftHeading1>
+              <LeftHeading1>NAVIGATION</LeftHeading1>
               <UpperDiv>
                 <Link
                   to="Home"
@@ -71,6 +71,44 @@ const Footer2 = () => {
                 >
                   <List>Work</List>
                 </Link>
+                <Link
+                  to="Blog"
+                  spy={true}
+                  hashSpy={true}
+                  isDynamic={true}
+                  smooth={true}
+                  offset={-200}
+                  duration={400}
+                >
+                  <List>Blog</List>
+                </Link>
+                <Link
+                  to="Footer"
+                  spy={true}
+                  hashSpy={true}
+                  isDynamic={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  <List>Contact</List>
+                </Link>
+              </UpperDiv>
+
+              <LeftHeading2>QUICK LINKS</LeftHeading2>
+              <UpperDiv>
+                <a href="https://resume.itsbhanu.com/" target="_blank" rel="noreferrer">
+                  <List>Resume</List>
+                </a>
+                <a href="https://github.com/Bhanu1776" target="_blank" rel="noreferrer">
+                  <List>GitHub</List>
+                </a>
+                <a href="https://www.linkedin.com/in/bhanu-sunka/" target="_blank" rel="noreferrer">
+                  <List>LinkedIn</List>
+                </a>
+                <a href="mailto:contact@itsbhanu.com">
+                  <List>Email</List>
+                </a>
               </UpperDiv>
 
               <LeftHeading2>SOCIAL</LeftHeading2>

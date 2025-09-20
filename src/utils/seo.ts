@@ -15,7 +15,7 @@ export interface SEOData {
 }
 
 export const defaultSEO: SEOData = {
-  title: "Bhanu Sunka | Software Engineer",
+  title: "Bhanu Sunka | Software Engineer & Full Stack Developer | React, Next.js, Node.js Expert",
   description: "Hi 👋, I'm Bhanu Sunka, an experienced Full Stack Developer proficient in ReactJS, Next.js for cutting-edge front-end solutions, and Node.js for robust back-end architecture. Passionate about test-driven development, continuous learning, and delivering high-performance, data-driven web applications.",
   keywords: [
     "Bhanu Sunka",
@@ -35,7 +35,7 @@ export const defaultSEO: SEOData = {
     "Startup Solutions"
   ],
   canonicalUrl: "https://www.itsbhanu.com",
-  ogTitle: "Bhanu Sunka | Software Engineer",
+  ogTitle: "Bhanu Sunka | Software Engineer & Full Stack Developer | React, Next.js, Node.js Expert",
   ogDescription: "Hi 👋, I'm Bhanu Sunka, an experienced Full Stack Developer proficient in ReactJS, Next.js for cutting-edge front-end solutions, and Node.js for robust back-end architecture. Passionate about test-driven development, continuous learning, and delivering high-performance, data-driven web applications.",
   ogImage: "https://ik.imagekit.io/bhanu1776/Portfolio/pp.jpg?updatedAt=1712083772144",
   ogType: "website",

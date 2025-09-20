@@ -18,17 +18,17 @@ const Project = () => {
         <h2 className="text-3xl tablet:text-4xl text-center font-headings text-indigo-500 dark:text-teal-500">
           PROJECTS
         </h2>
-        <h1 className="text-5xl tablet:text-6xl text-center font-headings dark:text-gray-200">
+        <h2 className="text-5xl tablet:text-6xl text-center font-headings dark:text-gray-200">
           A collection of my favorite works.
-        </h1>
+        </h2>
       </header>
 
       {/* //* 0th Card  */}
       <MainGrid className="bg-gradient-to-b from-indigo-50 to-indigo-300 border-indigo-100 dark:from-slate-900 dark:to-indigo-900 dark:border-indigo-800 dark:border-t">
         <LeftGrid className="order-1">
-          <h2 className="text-5xl dark:text-gray-200">Case Canvas</h2>
+          <h3 className="text-5xl dark:text-gray-200">Case Canvas</h3>
           <p>
-            Case Canvas is a fullstack Next.js application designed for creating custom high-quality phone cases. Users can upload their photos to personalize their case.
+            Case Canvas is a fullstack Next.js application designed for creating custom high-quality phone cases. Users can upload their photos to personalize their case. This project showcases my expertise in <a href="#About" className="text-indigo-600 hover:text-indigo-500 underline">full-stack development</a> and modern web technologies.
           </p>
           <div>
             <Button
@@ -122,9 +122,9 @@ const Project = () => {
       {/* //* 1st Card  */}
       <MainGrid className="bg-gradient-to-b from-violet-50 to-violet-300  border-violet-100 dark:from-slate-900 dark:to-purple-900 dark:border-purple-900 dark:border-t ">
         <LeftGrid className="order-2 ">
-          <h2 className="text-6xl dark:text-gray-200">Communisafe</h2>
+          <h3 className="text-6xl dark:text-gray-200">Communisafe</h3>
           <p>
-            Communisafe is a CRN webapp developed using MERN stack, featuring automated alerts, directories of local resources, and instant incident reporting capabilities..
+            Communisafe is a CRN webapp developed using MERN stack, featuring automated alerts, directories of local resources, and instant incident reporting capabilities. This project demonstrates my skills in <a href="#About" className="text-violet-600 hover:text-violet-500 underline">MERN stack development</a> and community-focused applications.
           </p>
           <div>
             <Button
@@ -217,7 +217,7 @@ const Project = () => {
       {/* //* 2nd Card  */}
       <MainGrid className="bg-gradient-to-b from-sky-50 to-amber-300 border-amber-100 dark:from-slate-900 dark:to-rose-700 dark:border-rose-800 dark:border-t ">
         <LeftGrid className="order-1">
-          <h2 className="text-6xl dark:text-gray-200">NextJs-Starter</h2>
+          <h3 className="text-6xl dark:text-gray-200">NextJs-Starter</h3>
           <p>
             Starter template ships with latest and greatest Nextjs15, Typescript,
             Tailwind, Eslint, Prettier, Husky, etc which makes development
@@ -314,7 +314,7 @@ const Project = () => {
       {/* //* 3rd Card  */}
       <MainGrid className="bg-gradient-to-b from-indigo-50 to-indigo-300 border-indigo-100 dark:from-slate-900 dark:to-pink-700 dark:border-pink-800 dark:border-t ">
         <LeftGrid className="order-2">
-          <h2 className="text-6xl dark:text-gray-200">JellyFish-x-Retro</h2>
+          <h3 className="text-6xl dark:text-gray-200">JellyFish-x-Retro</h3>
           <p>
             Vscode Retro theme injects modern aesthetic looks and wild 80's
             animations into your VS code 🚀💥💣
@@ -535,7 +535,7 @@ const Project = () => {
           </Span1>
         </main>
         <LeftGrid className="">
-          <h2 className="text-6xl dark:text-gray-200">Youtube Extended</h2>
+          <h3 className="text-6xl dark:text-gray-200">Youtube Extended</h3>
           <p>
             Created Youtube Extended as a groundbreaking alternative to YouTube, boasting a sophisticated user interface based on Config Driven UI, meticulously crafted using Next.js 13.
           </p>
@@ -612,7 +612,7 @@ const Project = () => {
       {/* //* 6th Card  */}
       <MainGrid className="bg-gradient-to-b from-purple-50 to-purple-300 border-purple-100 dark:from-slate-900  dark:to-sky-900 dark:border-sky-700 dark:border-t ">
         <LeftGrid className="order-1 ">
-          <h2 className="text-5xl dark:text-gray-200">Gatherable</h2>
+          <h3 className="text-5xl dark:text-gray-200">Gatherable</h3>
           <p>
             Venue booking system is a Desktop application where venue owners can
             register their venues and customers can book venues for events as
