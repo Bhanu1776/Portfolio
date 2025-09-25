@@ -28,7 +28,7 @@ const Project = () => {
         <LeftGrid className="order-1">
           <h3 className="text-5xl dark:text-gray-200">Case Canvas</h3>
           <p>
-            Case Canvas is a fullstack Next.js application designed for creating custom high-quality phone cases. Users can upload their photos to personalize their case. This project showcases my expertise in <a href="#About" className="text-indigo-600 hover:text-indigo-500 underline">full-stack development</a> and modern web technologies.
+            Case Canvas is a fullstack Next.js application designed for creating custom high-quality phone cases. Users can upload their photos to personalize their case. This project showcases my expertise in full-stack development and modern web technologies.
           </p>
           <div>
             <Button
@@ -124,7 +124,7 @@ const Project = () => {
         <LeftGrid className="order-2 ">
           <h3 className="text-6xl dark:text-gray-200">Communisafe</h3>
           <p>
-            Communisafe is a CRN webapp developed using MERN stack, featuring automated alerts, directories of local resources, and instant incident reporting capabilities. This project demonstrates my skills in <a href="#About" className="text-violet-600 hover:text-violet-500 underline">MERN stack development</a> and community-focused applications.
+            Communisafe is a CRN webapp developed using MERN stack, featuring automated alerts, directories of local resources, and instant incident reporting capabilities. This project demonstrates my skills in MERN stack development and community-focused applications.
           </p>
           <div>
             <Button

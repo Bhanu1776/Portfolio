@@ -11,7 +11,7 @@ const About = () => {
         <LeftGrid>
           <header className="flex items-center gap-4">
             <div className="md:h-12 h-24 w-1.5 bg-gradient-to-b from-teal-500 to-teal-300" />
-            <LeftTitle as="h2">A Bit About Me & My Skills</LeftTitle>
+            <LeftTitle>A Bit About Me & My Skills</LeftTitle>
           </header>
           {/* <TitleDivider /> */}
 
@@ -20,7 +20,7 @@ const About = () => {
               I architect scalable solutions that transform startup ideas into market-ready MVPs. My expertise spans full-stack development, where I craft robust systems that can handle rapid growth while maintaining exceptional user experiences. Each project is designed with scalability in mind, ensuring your startup can scale seamlessly from launch to success.
             </LeftPara>
             <LeftPara>
-              What sets me apart is my deep understanding of startup challenges and my ability to deliver production-ready code at startup speed. I specialize in rapid prototyping, performance optimization, and building systems that can handle explosive growth. My approach combines technical excellence with business acumen to deliver MVPs that investors and users love. Check out my <a href="#Project" className="text-teal-500 hover:text-teal-400 underline">recent projects</a> to see examples of my work.
+              What sets me apart is my deep understanding of startup challenges and my ability to deliver production-ready code at startup speed. I specialize in rapid prototyping, performance optimization, and building systems that can handle explosive growth. My approach combines technical excellence with business acumen to deliver MVPs that investors and users love. Check out my recent projects to see examples of my work.
             </LeftPara>
           </article>
         </LeftGrid>
@@ -215,22 +215,22 @@ mobile:text-5xl
 dark:text-gray-200
 `;
 
-const TitleDivider = tw.span`
-bg-teal-500 
-mt-4 
-h-2 
-bg-gradient-to-r 
-from-teal-500 
-to-teal-300
-// min-w-20 
-mobile:w-[22rem] 
-md:w-[23rem] 
-xxsm:w-[16rem] 
-xxsm:h-[0.40rem]
-xxsm:mx-auto
-md:mt-7
-md:mx-0
-`;
+// const TitleDivider = tw.span`
+// bg-teal-500 
+// mt-4 
+// h-2 
+// bg-gradient-to-r 
+// from-teal-500 
+// to-teal-300
+// // min-w-20 
+// mobile:w-[22rem] 
+// md:w-[23rem] 
+// xxsm:w-[16rem] 
+// xxsm:h-[0.40rem]
+// xxsm:mx-auto
+// md:mt-7
+// md:mx-0
+// `;
 
 const LeftPara = tw.p`
 font-sans
