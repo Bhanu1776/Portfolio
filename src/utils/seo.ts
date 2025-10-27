@@ -37,7 +37,7 @@ export const defaultSEO: SEOData = {
   canonicalUrl: "https://www.itsbhanu.com",
   ogTitle: "Bhanu Sunka | Software Engineer & Full Stack Developer | React, Next.js, Node.js Expert",
   ogDescription: "Hi 👋, I'm Bhanu Sunka, an experienced Full Stack Developer proficient in ReactJS, Next.js for cutting-edge front-end solutions, and Node.js for robust back-end architecture. Passionate about test-driven development, continuous learning, and delivering high-performance, data-driven web applications.",
-  ogImage: "https://ik.imagekit.io/bhanu1776/Portfolio/pp.jpg?updatedAt=1712083772144",
+  ogImage: "https://ik.imagekit.io/bhanu1776/Portfolio/Poster.png?updatedAt=1727799741081",
   ogType: "website",
   twitterCard: "summary_large_image",
   twitterSite: "@SunkaBhanu",
@@ -49,7 +49,7 @@ export const defaultSEO: SEOData = {
     "jobTitle": "Software Engineer",
     "description": "Experienced Full Stack Developer specializing in ReactJS, Next.js, and Node.js for startup MVPs",
     "url": "https://www.itsbhanu.com",
-    "image": "https://ik.imagekit.io/bhanu1776/Portfolio/pp.jpg?updatedAt=1712083772144",
+    "image": "https://ik.imagekit.io/bhanu1776/Portfolio/Poster.png?updatedAt=1727799741081",
     "sameAs": [
       "https://github.com/Bhanu1776",
       "https://www.linkedin.com/in/bhanu-sunka/",
