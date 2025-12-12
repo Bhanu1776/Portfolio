@@ -1,4 +1,4 @@
-import ReactGa from "react-ga4";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 import tw from "twin.macro";
@@ -6,10 +6,23 @@ import Hr from "./Hr";
 import { useAnalytics } from "../hooks/useAnalytics";
 
 const Hero = () => {
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const analytics = useAnalytics({
     sectionName: 'hero',
     sectionCategory: 'introduction'
   });
+
+  useEffect(() => {
+    if (isResumeOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isResumeOpen]);
 
   return (
     <>
@@ -123,43 +136,59 @@ const Hero = () => {
               </svg>
             </BtnPrimary>
           </Link>
-          <a
-            href="https://resume.itsbhanu.com/"
-            target="_blank"
+          <Button2
+            aria-label="button"
+            className="group"
             onClick={() => {
               analytics.trackViewResumeClick();
+              navigator.vibrate(1000);
+              setIsResumeOpen(true);
             }}
-            rel="noreferrer"
           >
-            <Button2
-              aria-label="button"
-              className="group"
-              onClick={() => {
-                navigator.vibrate(1000);
-              }}
+            View Resume
+            <svg
+              className="mt-0.5 ml-4 !z-50 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
+              fill="none"
+              width="12"
+              height="12"
+              viewBox="0 0 10 10"
+              aria-hidden="true"
             >
-              View Resume
-              <svg
-                className="mt-0.5 ml-4 !z-50 -mr-3 stroke-2 stroke-midnight dark:stroke-white"
-                fill="none"
-                width="12"
-                height="12"
-                viewBox="0 0 10 10"
-                aria-hidden="true"
-              >
-                <path
-                  className="transition opacity-0 group-hover:opacity-100"
-                  d="M0 5h7"
-                ></path>
-                <path
-                  className="transition group-hover:translate-x-[3px]"
-                  d="M1 1l4 4-4 4"
-                ></path>
-              </svg>
-            </Button2>
-          </a>
+              <path
+                className="transition opacity-0 group-hover:opacity-100"
+                d="M0 5h7"
+              ></path>
+              <path
+                className="transition group-hover:translate-x-[3px]"
+                d="M1 1l4 4-4 4"
+              ></path>
+            </svg>
+          </Button2>
         </BtnDiv>
       </main>
+
+      {isResumeOpen && (
+        <ModalOverlay
+          role="dialog"
+          aria-modal="true"
+          aria-label="Resume preview modal"
+        >
+          <ModalContent>
+            <CloseButton
+              type="button"
+              aria-label="Close resume preview"
+              onClick={() => setIsResumeOpen(false)}
+            >
+              ×
+            </CloseButton>
+            <ResumeIframe
+              src="https://resume.itsbhanu.com/"
+              title="Bhanu Sunka resume"
+              loading="lazy"
+            />
+          </ModalContent>
+        </ModalOverlay>
+      )}
 
       <Hr />
     </>
@@ -316,6 +345,61 @@ bg-transparent
 text-midnight 
 dark:text-white
 select-none
+`;
+
+const ModalOverlay = tw.div`
+fixed
+inset-0
+z-[100]
+flex
+items-center
+justify-center
+bg-black/70
+backdrop-blur-sm
+p-4
+`;
+
+const ModalContent = tw.div`
+relative
+w-full
+max-w-6xl
+h-[90vh]
+bg-white
+dark:bg-midnight
+rounded-3xl
+shadow-2xl
+overflow-hidden
+`;
+
+const CloseButton = tw.button`
+absolute
+top-3
+right-3
+flex
+h-10
+w-10
+items-center
+justify-center
+rounded-full
+bg-black/10
+dark:bg-white/10
+text-3xl
+font-semibold
+text-midnight
+dark:text-white
+transition
+hover:bg-black/20
+dark:hover:bg-white/20
+focus:outline-none
+focus:ring-2
+focus:ring-teal-400
+`;
+
+const ResumeIframe = styled.iframe`
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #0f172a;
 `;
 
 export default Hero;
