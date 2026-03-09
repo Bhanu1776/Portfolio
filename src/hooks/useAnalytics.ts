@@ -3,8 +3,6 @@ import analytics from '../services/analytics';
 
 interface UseAnalyticsOptions {
   trackPageView?: boolean;
-  trackScrollDepth?: boolean;
-  trackUserEngagement?: boolean;
   sectionName?: string;
   sectionCategory?: string;
 }
@@ -12,8 +10,6 @@ interface UseAnalyticsOptions {
 export const useAnalytics = (options: UseAnalyticsOptions = {}) => {
   const {
     trackPageView = true,
-    trackScrollDepth = true,
-    trackUserEngagement = true,
     sectionName,
     sectionCategory
   } = options;

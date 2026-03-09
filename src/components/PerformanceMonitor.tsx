@@ -1,14 +1,6 @@
 import { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-interface PerformanceMetrics {
-  LCP: number;
-  FID: number;
-  CLS: number;
-  FCP: number;
-  TTFB: number;
-}
-
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Track Core Web Vitals
