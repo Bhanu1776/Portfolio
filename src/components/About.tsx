@@ -1,449 +1,460 @@
-import Tilt from "react-parallax-tilt";
-import { Tooltip } from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css";
-import tw from "twin.macro";
-import { Languages, Other, Tools, Web } from "./LangData";
+import { useEffect, useRef, useState } from "react";
+import styled, { keyframes } from "styled-components";
+
+const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/";
+const CLICKHOUSE =
+  "data:image/svg+xml," +
+  encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#FFCC01"><rect x="2" y="2" width="2.6" height="20" rx=".4"/><rect x="6.6" y="2" width="2.6" height="20" rx=".4"/><rect x="11.2" y="2" width="2.6" height="20" rx=".4"/><rect x="15.8" y="2" width="2.6" height="20" rx=".4"/><rect x="20.4" y="9.5" width="2.6" height="5" rx=".4"/></g></svg>'
+  );
+
+// [name, icon, invert-in-dark-mode]
+type Tech = [string, string, boolean?];
+const ROW_1: Tech[] = [
+  ["Node.js", "nodejs/nodejs-original.svg"],
+  ["TypeScript", "typescript/typescript-original.svg"],
+  ["ClickHouse", CLICKHOUSE],
+  ["MongoDB", "mongodb/mongodb-original.svg"],
+  ["Express", "express/express-original.svg", true],
+  ["MySQL", "mysql/mysql-original.svg"],
+  ["Firebase", "firebase/firebase-original.svg"],
+  ["Java", "java/java-original.svg"],
+  ["Python", "python/python-original.svg"],
+];
+const ROW_2: Tech[] = [
+  ["React", "react/react-original.svg"],
+  ["Next.js", "nextjs/nextjs-original.svg", true],
+  ["Redux Toolkit", "redux/redux-original.svg"],
+  ["Tailwind CSS", "tailwindcss/tailwindcss-original.svg"],
+  ["JavaScript", "javascript/javascript-original.svg"],
+  ["AWS", "amazonwebservices/amazonwebservices-plain-wordmark.svg"],
+  ["Linux", "linux/linux-original.svg"],
+  ["Git", "git/git-original.svg"],
+  ["Vim", "vim/vim-original.svg"],
+  ["Jenkins", "jenkins/jenkins-original.svg"],
+];
+
+// // What SetuAgent does, typed out line by line (an illustration, not real logs).
+// const TERMINAL: [string, string][] = [
+//   ["setuagent triage --incident latest", "cmd"],
+//   ["› reading alerts, logs and metrics", "dim"],
+//   ["› checking recent deploys", "dim"],
+//   ["› root cause found", "ok"],
+//   ["› posting diagnosis to on-call channel", "ok"],
+// ];
+const KEYS = ["h", "j", "k", "l"];
+
+const reduceMotion =
+  typeof window !== "undefined" &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const About = () => {
+  const bento = useRef<HTMLDivElement>(null);
+  // const [lines, setLines] = useState(reduceMotion ? TERMINAL.length : 0); // SetuAgent tile hidden
+  const [pressed, setPressed] = useState(-1);
+
+  // // Terminal: add a line every ~0.7s, then pause and start over.
+  // useEffect(() => {
+  //   if (reduceMotion) return;
+  //   const done = lines >= TERMINAL.length;
+  //   const t = setTimeout(
+  //     () => setLines(done ? 0 : lines + 1),
+  //     done ? 3200 : lines === 0 ? 900 : 700
+  //   );
+  //   return () => clearTimeout(t);
+  // }, [lines]);
+
+  // Keycaps press h j k l in turn.
+  useEffect(() => {
+    if (reduceMotion) return;
+    let k = 0;
+    let up: ReturnType<typeof setTimeout>;
+    const id = setInterval(() => {
+      setPressed(k++ % KEYS.length);
+      up = setTimeout(() => setPressed(-1), 140);
+    }, 420);
+    return () => {
+      clearInterval(id);
+      clearTimeout(up);
+    };
+  }, []);
+
+  // Cursor spotlight: each tile gets the pointer position in its own coordinates.
+  const onPointerMove = (e: React.PointerEvent) => {
+    for (const tile of Array.from(bento.current?.children ?? []) as HTMLElement[]) {
+      const r = tile.getBoundingClientRect();
+      tile.style.setProperty("--x", `${e.clientX - r.left}px`);
+      tile.style.setProperty("--y", `${e.clientY - r.top}px`);
+    }
+  };
+
+  const aos = (i: number) => ({
+    "data-aos": "fade-up",
+    "data-aos-delay": i * 70,
+    "data-aos-duration": 600,
+    "data-aos-once": "true",
+  });
+
   return (
-    <>
-      <GridDiv id="About">
-        <LeftGrid>
-          <header className="flex items-center gap-4">
-            <div className="md:h-12 h-24 w-1.5 bg-gradient-to-b from-teal-500 to-teal-300" />
-            <LeftTitle>A Bit About Me & My Skills</LeftTitle>
-          </header>
-          {/* <TitleDivider /> */}
+    <Section id="About" aria-labelledby="about-title">
+      <header className="flex items-end justify-between gap-6 mb-[3.2rem]">
+        <h2
+          id="about-title"
+          className="text-5xl tablet:text-6xl font-headings font-extrabold tracking-tight text-slate-900 dark:text-gray-200"
+        >
+          About me<span className="text-teal-500 dark:text-teal-400">.</span>
+        </h2>
+        <p className="hidden laptop:block text-[1.6rem] text-slate-500 dark:text-slate-400">
+          Backend at Setu. Frontend roots.
+        </p>
+      </header>
 
-          <article className="mt-8">
-            <LeftPara>
-              I architect scalable solutions that transform startup ideas into market-ready MVPs. My expertise spans full-stack development, where I craft robust systems that can handle rapid growth while maintaining exceptional user experiences. Each project is designed with scalability in mind, ensuring your startup can scale seamlessly from launch to success.
-            </LeftPara>
-            <LeftPara>
-              What sets me apart is my deep understanding of startup challenges and my ability to deliver production-ready code at startup speed. I specialize in rapid prototyping, performance optimization, and building systems that can handle explosive growth. My approach combines technical excellence with business acumen to deliver MVPs that investors and users love. Check out my recent projects to see examples of my work.
-            </LeftPara>
-          </article>
-        </LeftGrid>
-
-        <RightGrid>
-          <BgImg
-            src="https://ik.imagekit.io/bhanu1776/Portfolio/Footer-bg.png?updatedAt=1679832383622"
-            alt=""
-          />
-          <Tilt
-            tiltMaxAngleX={15}
-            tiltMaxAngleY={15}
-            perspective={1000}
-            gyroscope={true}
-          >
-            <Card1
-              data-aos="fade-down-right"
-              data-aos-easing="ease-in-sine"
-              data-aos-offset="200"
-              data-aos-duration="400"
-              data-aos-once="true"
+      <Bento ref={bento} onPointerMove={onPointerMove}>
+        <div className="tile intro" {...aos(0)}>
+          <p className="statement font-headings font-bold text-slate-900 dark:text-gray-100">
+            I like the 3&nbsp;a.m. problems:{" "}
+            <span className="text-teal-600 dark:text-teal-400">outages, broken data,</span>{" "}
+            and fixes that stick.
+          </p>
+          <p className="text-[1.7rem] leading-relaxed max-w-[60ch] text-slate-600 dark:text-slate-300">
+            I'm an SDE at{" "}
+            <a
+              href="https://setu.co/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline decoration-teal-500 underline-offset-4 hover:text-teal-500"
             >
-              <CardHeading>Programming Languages</CardHeading>
-              <LangDiv1>
-                {Languages.map((val) => {
-                  return [
-                    <img
-                      src={val.src}
-                      alt={val.alt}
-                      width={val.width}
-                      key={val.index}
-                      id={val.alt}
-                      data-tooltip-content={val.alt}
-                      data-tooltip-place="top"
-                      data-tooltip-delay-show={300}
-                      loading="lazy"
-                    />,
-                    <Tooltip anchorId={val.alt} />,
-                  ];
-                })}
-              </LangDiv1>
-            </Card1>
-          </Tilt>
+              Setu by Pine&nbsp;Labs
+            </a>
+            , on the service every Setu product uses to authenticate and process
+            transactions. I started on the frontend with React and Next.js, so I
+            still care how the product feels at the other end of the API.
+          </p>
+        </div>
 
-          <Tilt
-            tiltMaxAngleX={15}
-            tiltMaxAngleY={15}
-            perspective={1000}
-            gyroscope={true}
-          >
-            <Card2
-              data-aos="fade-down-left"
-              data-aos-easing="ease-in-sine"
-              data-aos-offset="200"
-              data-aos-duration="400"
-              data-aos-once="true"
-            >
-              <CardHeading>Web Development</CardHeading>
-              <LangDiv2>
-                {Web.map((val) => {
-                  return [
-                    <img
-                      src={val.src}
-                      alt={val.alt}
-                      width={val.width}
-                      key={val.alt}
-                      id={val.alt}
-                      data-tooltip-content={val.alt}
-                      data-tooltip-place="top"
-                      data-tooltip-delay-show={300}
-                      loading="lazy"
-                    />,
-                    <Tooltip anchorId={val.alt} />,
-                  ];
-                })}
-              </LangDiv2>
-            </Card2>
-          </Tilt>
+        <div className="tile keys" {...aos(1)}>
+          <span className="label">Typing</span>
+          <div className="flex gap-3" aria-hidden="true">
+            {KEYS.map((key, i) => (
+              <span key={key} className={`cap${pressed === i ? " down" : ""}`}>
+                {key}
+              </span>
+            ))}
+          </div>
+          <div>
+            <b className="block font-headings font-extrabold text-[4.4rem] leading-none tracking-tight text-slate-900 dark:text-gray-100">
+              100 wpm
+            </b>
+            <p className="mt-3 text-[1.5rem] text-slate-500 dark:text-slate-400">
+              Touch typist. Vim keys, of course.
+            </p>
+          </div>
+        </div>
 
-          <Tilt
-            tiltMaxAngleX={15}
-            tiltMaxAngleY={15}
-            perspective={1000}
-            gyroscope={true}
-          >
-            <Card3
-              data-aos="fade-up-right"
-              data-aos-easing="ease-in-sine"
-              data-aos-offset="200"
-              data-aos-duration="400"
-              data-aos-once="true"
-            >
-              <CardHeading>Tools</CardHeading>
-              <LangDiv3>
-                {Tools.map((val) => {
-                  return [
-                    <img
-                      src={val.src}
-                      alt={val.alt}
-                      width={val.width}
-                      key={val.alt}
-                      id={val.alt}
-                      data-tooltip-content={val.alt}
-                      data-tooltip-place="top"
-                      data-tooltip-delay-show={300}
-                      loading="lazy"
-                    />,
-                    <Tooltip anchorId={val.alt} />,
-                  ];
-                })}
-              </LangDiv3>
-            </Card3>
-          </Tilt>
+        {/* SetuAgent tile: hidden for now.
+        <div className="tile agent" {...aos(2)}>
+          <div>
+            <span className="label">Built at Setu</span>
+            <h3 className="mt-3 font-headings font-bold text-[2.8rem] tracking-tight text-slate-900 dark:text-gray-100">
+              SetuAgent
+            </h3>
+            <p className="mt-3 max-w-[40ch] text-[1.6rem] text-slate-500 dark:text-slate-400">
+              An on-call bot that diagnoses production incidents. DevOps now runs
+              it for their own workflows.
+            </p>
+          </div>
+          <div className="terminal" aria-hidden="true">
+            <div className="flex gap-2 mb-4">
+              <i /> <i /> <i />
+            </div>
+            {TERMINAL.slice(0, lines).map(([text, kind], i) => (
+              <div key={i} className={`line ${kind}`}>
+                {kind === "cmd" && <span className="dim">$ </span>}
+                {text}
+                {i === lines - 1 && !reduceMotion && <span className="caret" />}
+              </div>
+            ))}
+          </div>
+        </div>
+        */}
 
-          <Tilt
-            tiltMaxAngleX={15}
-            tiltMaxAngleY={15}
-            perspective={1000}
-            gyroscope={true}
-          >
-            <Card4
-              data-aos="fade-up-left"
-              data-aos-easing="ease-in-sine"
-              data-aos-offset="200"
-              data-aos-duration="400"
-              data-aos-once="true"
-            >
-              <CardHeading>Other</CardHeading>
-              <LangDiv4>
-                {Other.map((val) => {
-                  return [
-                    <img
-                      src={val.src}
-                      alt={val.alt}
-                      width={val.width}
-                      key={val.alt}
-                      id={val.alt}
-                      data-tooltip-content={val.alt}
-                      data-tooltip-place="top"
-                      data-tooltip-delay-show={100}
-                      loading="lazy"
-                    />,
-                    <Tooltip anchorId={val.alt} />,
-                  ];
-                })}
-              </LangDiv4>
-            </Card4>
-          </Tilt>
-        </RightGrid>
-      </GridDiv>
-    </>
+        <div className="tile stack" {...aos(3)}>
+          <span className="label px-[2.8rem]">What I work with</span>
+          {[ROW_1, ROW_2].map((row, r) => (
+            <div key={r} className={`marquee${r ? " rev" : ""}`}>
+              <div className="track">
+                {(reduceMotion ? [row] : [row, row]).map((copy, c) =>
+                  copy.map(([name, icon, invert]) => (
+                    <span key={`${c}-${name}`} className="tech" aria-hidden={c > 0}>
+                      <img
+                        src={icon.startsWith("data:") ? icon : DEVICON + icon}
+                        alt=""
+                        width={28}
+                        height={28}
+                        loading="lazy"
+                        className={invert ? "dark:invert" : ""}
+                      />
+                      {name}
+                    </span>
+                  ))
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Bento>
+    </Section>
   );
 };
 
-const GridDiv = tw.main`
-grid 
-gap-2 
-md:grid-cols-2 
-// sm:grid-rows-2 
+const scroll = keyframes`to { transform: translateX(-50%); }`;
+const blink = keyframes`50% { opacity: 0; }`;
+
+const Section = styled.section`
+  padding: 4rem 0 6rem;
 `;
 
-const LeftGrid = tw.div`
-flex 
-flex-col 
-justify-center 
-xxsm:px-2
-tablet:pr-14 
-`;
+const Bento = styled.div`
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-areas:
+    "intro intro intro keys"
+    /* "agent agent agent agent" */
+    "stack stack stack stack";
 
-// const LeftTitle = tw.h1`
-// font-headings 
-// tracking-wide 
-// font-extrabold
-// leading-tight 
-// text-slate-900
-// xxsm:flex
-// xxsm:justify-center
-// xxsm:text-[2.50rem] 
-// md:block
-// mobile:text-5xl 
-// dark:text-gray-200
-// `;
+  .tile {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 2.8rem;
+    border-radius: 2.4rem;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    transition: border-color 0.3s;
+  }
+  .dark & .tile {
+    border-color: rgba(255, 255, 255, 0.07);
+    background: #111827;
+  }
+  .tile:hover {
+    border-color: rgba(45, 212, 191, 0.35);
+  }
+  /* Cursor spotlight */
+  .tile::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background: radial-gradient(
+      420px circle at var(--x, 50%) var(--y, 50%),
+      rgba(45, 212, 191, 0.12),
+      transparent 45%
+    );
+  }
+  &:hover .tile::before {
+    opacity: 1;
+  }
+  .label {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #64748b;
+  }
+  .dark & .label {
+    color: #94a3b8;
+  }
 
-const LeftTitle = tw.h1`
-font-headings 
-tracking-wide 
-font-extrabold
-leading-tight 
-text-slate-900
-xxsm:text-[2.50rem] 
-mobile:text-5xl 
-dark:text-gray-200
-`;
+  /* Intro */
+  .intro {
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    padding: 4rem;
+  }
+  .statement {
+    max-width: 26ch;
+    font-size: clamp(2.6rem, 2.8vw, 3.6rem);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+  }
 
-// const TitleDivider = tw.span`
-// bg-teal-500 
-// mt-4 
-// h-2 
-// bg-gradient-to-r 
-// from-teal-500 
-// to-teal-300
-// // min-w-20 
-// mobile:w-[22rem] 
-// md:w-[23rem] 
-// xxsm:w-[16rem] 
-// xxsm:h-[0.40rem]
-// xxsm:mx-auto
-// md:mt-7
-// md:mx-0
-// `;
+  /* Keys */
+  .keys {
+    grid-area: keys;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.4rem;
+  }
+  .cap {
+    display: grid;
+    place-items: center;
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 1rem;
+    border: 1px solid #cbd5e1;
+    border-bottom-width: 4px;
+    background: #f1f5f9;
+    color: #334155;
+    font: 600 1.6rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    transition: transform 0.08s, border-bottom-width 0.08s, color 0.08s;
+  }
+  .dark & .cap {
+    border-color: rgba(255, 255, 255, 0.07);
+    background: #172033;
+    color: #cbd5e1;
+  }
+  .cap.down {
+    transform: translateY(3px);
+    border-bottom-width: 1px;
+    color: #14b8a6;
+  }
 
-const LeftPara = tw.p`
-font-sans
-tracking-wide 
-text-left
-leading-relaxed
-dark:text-gray-200
-`;
+  /* Agent */
+  .agent {
+    grid-area: agent;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 3.2rem;
+    align-items: center;
+    padding: 3.2rem;
+  }
+  .terminal {
+    min-height: 19rem;
+    padding: 1.6rem 2rem;
+    border-radius: 1.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: #070b13;
+    color: #cbd5e1;
+    font: 400 1.4rem/1.75 ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .terminal i {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #334155;
+  }
+  .terminal .line {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .terminal .dim {
+    color: #64748b;
+  }
+  .terminal .ok {
+    color: #2dd4bf;
+  }
+  .caret {
+    display: inline-block;
+    width: 7px;
+    height: 14px;
+    margin-left: 6px;
+    vertical-align: -2px;
+    background: #2dd4bf;
+    animation: ${blink} 1s steps(1) infinite;
+  }
 
-const RightGrid = tw.section`
-grid 
-gap-1 
-gap-x-14 
-xxsm:mt-12 
-xsm:grid-cols-1 
-sm:grid-cols-2 
-sm:grid-rows-2 
-md:mt-0 
-select-none
-`;
+  /* Stack marquee */
+  .stack {
+    grid-area: stack;
+    padding: 2.8rem 0;
+  }
+  .marquee {
+    margin-top: 1.6rem;
+    padding: 4px 0;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .marquee + .marquee {
+    margin-top: 4px;
+  }
+  .track {
+    display: flex;
+    gap: 1.2rem;
+    width: max-content;
+    animation: ${scroll} 40s linear infinite;
+  }
+  .rev .track {
+    animation-direction: reverse;
+    animation-duration: 46s;
+  }
+  .marquee:hover .track {
+    animation-play-state: paused;
+  }
+  .tech {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 2rem 1.2rem 1.4rem;
+    border-radius: 1.4rem;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    color: #0f172a;
+    font-size: 1.6rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .dark & .tech {
+    border-color: rgba(255, 255, 255, 0.07);
+    background: #172033;
+    color: #eef2f7;
+  }
+  .tech:hover {
+    border-color: rgba(45, 212, 191, 0.45);
+    transform: translateY(-2px);
+  }
+  .tech img {
+    width: 28px;
+    height: 28px;
+  }
 
-const BgImg = tw.img`
-absolute 
-right-0 
--scale-x-100 
-mr-[-3.6rem] 
-mt-[-13.7rem] 
-xxsm:h-[80rem] 
-xxsm:opacity-40 
-tablet:h-[70rem] 
-tablet:opacity-60 
-// -z-40
-`;
-
-const Card1 = tw.div`
-bg-[#f2e8f39e] 
-z-10 
-mb-3 
-max-h-[40rem] 
-drop-shadow-xl
-overflow-y-auto 
-overflow-x-hidden 
-hover:drop-shadow-none 
-hover:bg-transparent 
-hover:border-2 
-hover:border-pink-300 
-hover:border-dashed 
-hover:transition
-hover:ease-in-out
-dark:hover:border-none
-transition 
-ease-in-out
-duration-700
-xxsm:h-[19rem] 
-xxsm:rounded-3xl 
-tablet:h-[25rem] 
-tablet:mb-0 
-tablet:rounded-2xl 
-laptop:text-2xl 
-dark:from-slate-900 
-dark:to-purple-700 
-dark:border-purple-700 
-dark:border-r 
-md:dark:bg-gradient-to-br
-dark:bg-gradient-to-br
-`;
-
-const CardHeading = tw.h1`
-flex 
-font-mono 
-justify-center 
-mt-10 
-text-slate-700 
-font-bold 
-text-[1.7rem]
-dark:text-slate-200 
-`;
-
-const LangDiv1 = tw.div`
-flex 
-flex-wrap 
-space-x-7 
-space-y-4 
-mt-8 
-mx-8
-`;
-
-const Card2 = tw.div`
-bg-[#fdffba59] 
-z-10 
-overflow-y-auto 
-overflow-x-hidden 
-drop-shadow-2xl
-text-2xl 
-max-h-[40rem] 
-mb-2 
-hover:drop-shadow-none 
-hover:bg-transparent 
-hover:border-2 
-hover:border-yellow-300 
-hover:border-dashed 
-hover:transition
-hover:ease-in-out
-dark:hover:border-none
-transition 
-ease-in-out 
-duration-700
-xxsm:rounded-3xl 
-xxsm:h-[19rem] 
-tablet:mt-14 
-tablet:h-[25rem] 
-tablet:rounded-2xl 
-tablet:mb-0 
-dark:from-slate-900 
-dark:to-yellow-600 
-dark:border-yellow-300 
-dark:border-b 
-dark:bg-gradient-to-bl
-`;
-
-const LangDiv2 = tw.div`
-flex 
-space-x-6 
-space-y-4 
-mt-8 
-flex-wrap 
-mx-6
-`;
-
-const Card3 = tw.div`
-bg-[#a8f9e84f] 
-drop-shadow-2xl
-overflow-y-auto 
-overflow-x-hidden 
-z-10 
-mt-2 
-max-h-[40rem] 
-mb-2 
-text-2xl 
-hover:bg-transparent 
-hover:border-2 
-hover:border-teal-300 
-hover:border-dashed 
-hover:drop-shadow-none 
-hover:transition
-hover:ease-in-out
-dark:hover:border-none
-transition 
-ease-in-out 
-duration-700
-xxsm:rounded-3xl 
-xxsm:h-[19rem] 
-tablet:mb-0 
-tablet:rounded-2xl 
-tablet:h-[25rem] 
-dark:from-slate-900 
-dark:to-pink-500 
-dark:border-pink-500 
-dark:border-t 
-md:dark:bg-gradient-to-tr
-dark:bg-gradient-to-tr
-`;
-
-const LangDiv3 = tw.div`
-flex 
-flex-wrap 
-space-x-7 
-space-y-4 
-mx-8
-mt-8 
-`;
-
-const Card4 = tw.div`
-bg-[#d6cfff52] 
-z-10 
-overflow-y-auto 
-overflow-x-hidden 
-drop-shadow-xl
-text-2xl 
-max-h-[40rem] 
-mb-2 
-hover:drop-shadow-none 
-hover:bg-transparent 
-hover:border-2 
-hover:border-purple-400 
-hover:border-dashed 
-hover:transition
-hover:ease-in-out
-dark:hover:border-none
-transition 
-ease-in-out 
-duration-700
-xxsm:h-[19rem] 
-xxsm:rounded-3xl 
-tablet:mt-14 
-tablet:h-[25rem]
-tablet:mb-0 
-tablet:rounded-2xl 
-dark:from-slate-900 
-dark:to-teal-500 
-dark:border-teal-500 
-dark:border-t 
-md:dark:bg-gradient-to-tl
-dark:bg-gradient-to-tl
-`;
-
-const LangDiv4 = tw.div`
-flex 
-flex-wrap 
-space-x-6 
-space-y-4 
-mx-7
-mt-8 
+  @media (max-width: 1023px) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "intro" "keys" /* "agent" */ "stack";
+    .keys {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+  @media (max-width: 640px) {
+    .intro,
+    .agent {
+      padding: 2.4rem;
+    }
+    .tile {
+      border-radius: 2rem;
+    }
+    .agent {
+      grid-template-columns: 1fr;
+    }
+    .terminal {
+      font-size: 1.3rem;
+    }
+    .keys {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .track {
+      animation: none;
+      flex-wrap: wrap;
+      width: auto;
+      padding: 0 2.8rem;
+    }
+    .marquee {
+      mask-image: none;
+    }
+    .rev {
+      display: none;
+    }
+  }
 `;
 
 export default About;
