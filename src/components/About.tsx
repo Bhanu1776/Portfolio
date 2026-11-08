@@ -34,14 +34,14 @@ const ROW_2: Tech[] = [
   ["Jenkins", "jenkins/jenkins-original.svg"],
 ];
 
-// What SetuAgent does, typed out line by line (an illustration, not real logs).
-const TERMINAL: [string, string][] = [
-  ["setuagent triage --incident latest", "cmd"],
-  ["› reading alerts, logs and metrics", "dim"],
-  ["› checking recent deploys", "dim"],
-  ["› root cause found", "ok"],
-  ["› posting diagnosis to on-call channel", "ok"],
-];
+// // What SetuAgent does, typed out line by line (an illustration, not real logs).
+// const TERMINAL: [string, string][] = [
+//   ["setuagent triage --incident latest", "cmd"],
+//   ["› reading alerts, logs and metrics", "dim"],
+//   ["› checking recent deploys", "dim"],
+//   ["› root cause found", "ok"],
+//   ["› posting diagnosis to on-call channel", "ok"],
+// ];
 const KEYS = ["h", "j", "k", "l"];
 
 const reduceMotion =
@@ -50,19 +50,19 @@ const reduceMotion =
 
 const About = () => {
   const bento = useRef<HTMLDivElement>(null);
-  const [lines, setLines] = useState(reduceMotion ? TERMINAL.length : 0);
+  // const [lines, setLines] = useState(reduceMotion ? TERMINAL.length : 0); // SetuAgent tile hidden
   const [pressed, setPressed] = useState(-1);
 
-  // Terminal: add a line every ~0.7s, then pause and start over.
-  useEffect(() => {
-    if (reduceMotion) return;
-    const done = lines >= TERMINAL.length;
-    const t = setTimeout(
-      () => setLines(done ? 0 : lines + 1),
-      done ? 3200 : lines === 0 ? 900 : 700
-    );
-    return () => clearTimeout(t);
-  }, [lines]);
+  // // Terminal: add a line every ~0.7s, then pause and start over.
+  // useEffect(() => {
+  //   if (reduceMotion) return;
+  //   const done = lines >= TERMINAL.length;
+  //   const t = setTimeout(
+  //     () => setLines(done ? 0 : lines + 1),
+  //     done ? 3200 : lines === 0 ? 900 : 700
+  //   );
+  //   return () => clearTimeout(t);
+  // }, [lines]);
 
   // Keycaps press h j k l in turn.
   useEffect(() => {
@@ -151,6 +151,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* SetuAgent tile: hidden for now.
         <div className="tile agent" {...aos(2)}>
           <div>
             <span className="label">Built at Setu</span>
@@ -175,6 +176,7 @@ const About = () => {
             ))}
           </div>
         </div>
+        */}
 
         <div className="tile stack" {...aos(3)}>
           <span className="label px-[2.8rem]">What I work with</span>
@@ -218,7 +220,7 @@ const Bento = styled.div`
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-areas:
     "intro intro intro keys"
-    "agent agent agent agent"
+    /* "agent agent agent agent" */
     "stack stack stack stack";
 
   .tile {
@@ -413,7 +415,7 @@ const Bento = styled.div`
 
   @media (max-width: 1023px) {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "intro" "keys" "agent" "stack";
+    grid-template-areas: "intro" "keys" /* "agent" */ "stack";
     .keys {
       flex-direction: row;
       flex-wrap: wrap;
